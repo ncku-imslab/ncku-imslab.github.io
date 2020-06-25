@@ -17,3 +17,7 @@ button {
 *:focus {
   outline: 0 !important;
 }
+
+.min-500 {
+  min-width: 500px;
+}

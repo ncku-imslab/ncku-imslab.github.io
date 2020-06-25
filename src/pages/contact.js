@@ -1,4 +1,5 @@
 import React, { Component, createRef } from 'react';
+import './contact.css';
 
 class Contact extends Component {
 
@@ -31,24 +32,25 @@ class Contact extends Component {
 
     render() {
         return (
-            <div class="flex pa5 center mb0 mt0">
-                <div class=" w-50 mr4 bw1">
-                    <iframe width="100%" height="100%" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=zh-TW&amp;coord=22.997143,120.221371&amp;q=22.997143,120.221371&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" />
+            <div class="mw8 ph5 center mb0 justify-center black">
+                <div class="imgrid tc mb2 mt0 collapse justify-center ph4 pb4 pt2">
+                    <div class="width-300 mb1">
+                        <h4 class="f4 f4-l fw6">E-mail</h4>
+                        <span class="dim f5 f5-l black-70">imslab@imslab.org</span>
+                    </div>
+                    <div class="width-300 mb1">
+                        <h4 class="f4 f4-l fw6">電話 Tel.</h4>
+                        <a class="f5 db black-70">+886-6-275-7575</a>
+                        <a class="f5 black-70">Ext.62520-1004</a>
+                    </div>
+                    <div class="mb1 w-60">
+                        <h4 class="f4 f4-l fw6">地址 Addr.</h4>
+                        <a class="dim f5 db mb3 black-70">701 台南市東區大學路 1 號 國立成功大學 成功校區 資訊系館 10 樓 65A04 室</a>
+                        <a class="dim f5 black-70">Room 65A04, 10th Floor, CSIE Building, Cheng-Kung Campus, No. 1, Daxue Road, East District, Tainan City 701, Taiwan (R.O.C.)</a>
+                    </div>
+                    
                 </div>
-                <div class=" w-50 white bg-black-90 tl pa4">
-                    <h4 class="f4 f4-l mt0 fw6">E-mail</h4>
-                    <span class="white dim f5 f5-l black-70">imslab@imslab.org</span>
-                    <br />
-                    <br />
-                    <h4 class="f4 f4-l fw6">電話 Tel.</h4>
-                    <a class="white f5 db black-70">+886-6-275-7575</a>
-                    <a class="white f5 black-70">Ext.62520-1004</a>
-                    <br />
-                    <br />
-                    <h4 class="f4 f4-l fw6">地址 Addr.</h4>
-                    <a class="white dim f5 db mb3 black-70">701 台南市東區大學路 1 號 國立成功大學 成功校區 資訊系館 65A04 室</a>
-                    <a class="white dim f5 black-70">Room 65A04, 10th Floor, CSIE Building, Cheng-Kung Campus, No. 1, Daxue Road, East District, Tainan City 701, Taiwan (R.O.C.)</a>
-                </div>
+                    <iframe width="100%" height="400px" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=zh-TW&amp;coord=22.997143,120.221371&amp;q=22.997143,120.221371&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" />
             </div>
 
         );

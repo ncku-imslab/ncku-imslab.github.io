@@ -1,0 +1,14 @@
+.imgrid {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.width-300 {
+    width: 300px;
+}
+
+@media (max-width: 1000px) {
+    .collapse {
+        flex: 1 1 auto;
+    }
+}
