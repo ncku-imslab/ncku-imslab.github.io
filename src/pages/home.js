@@ -143,21 +143,19 @@ class Home extends React.Component {
                                     <td
                                         class="pv3 pl3 f5 dark-red"
                                         style={{ opacity: opacity }}
-                                    >
-                                        <b>{news[arrayIndex].type}</b>
+                                    ><b>{news[arrayIndex].type}</b>
                                     </td>
                                     <td
                                         class="pv3 f5"
                                         style={{ opacity: opacity }}
-                                    >
-                                        {news[arrayIndex].description}
+                                    >{news[arrayIndex].description}
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </article>
-                <section class="mt4 mb3 mw5 mw7-ns center bg-light-gray pa2 ph5-ns">
+                <section class="mt4 mw5 mw7-ns center bg-light-gray pa2 ph5-ns">
                     <h3></h3>
                     <h1 class="mb4" >{Welcome.head1}</h1>
                     <p class="lh-copy center f5">

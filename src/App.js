@@ -85,9 +85,9 @@ const routes = [
 // Too few lines
 const Footer = () => {
   return (
-      <footer class="pt4 pb3 mid-gray">
-          <small class="f6 db tc">© <b>IMS Lab</b> 2020 </small>
-      </footer>
+    <footer class="pt4 mt2 pb3 mid-gray">
+      <small class="f6 db tc">© <b>IMS Lab</b> 2020 </small>
+    </footer>
   );
 }
 
@@ -95,7 +95,6 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-
     }
   }
 
