@@ -34,8 +34,8 @@ class Home extends React.Component {
             news: News[yearIndex],
             mustreadLength: mustreadLength,
             mustreadOpen: list,
-            shiftDown: 0,
-            shiftUp: 0
+            shiftDown: -2,
+            shiftUp: 4
         }
         this.handleClick = this.handleClick.bind(this);
     }
@@ -67,12 +67,12 @@ class Home extends React.Component {
                     this.setState({ arrayIndex: index + 1 })
                 }
                 this.setState({ opacity: 1, timer: 0 });
-            } else if (time % 800 === 0 && shiftDown === 0) {
-                this.setState({ shiftDown: 4 });
-                this.setState({ shiftUp: -4 });
-            } else if (time % 800 === 0 && shiftDown !== 0) {
-                this.setState({ shiftDown: 0 });
+            } else if (time % 800 === 0 && shiftDown !== 2) {
+                this.setState({ shiftDown: 2 });
                 this.setState({ shiftUp: 0 });
+            } else if (time % 800 === 0 && shiftDown === 2) {
+                this.setState({ shiftDown: -2 });
+                this.setState({ shiftUp: 4 });
             }
             // When resetting time from 4000 to 0, shifts twices.
         }, 100);
@@ -99,11 +99,22 @@ class Home extends React.Component {
                     <button
                         class="dim w-100 f4 mv0 pv2 ph3 bn"
                         onClick={() => this.handleClick(key)}
-                    >{value[0]}{" "}{!mustreadOpen[key] ?
-                        <a className="dib" style={{ transform: `translateY(${shiftDown}px)` }}>↓</a>
-                        : <a className="dib" style={{ transform: `translateY(${shiftUp}px)` }}>↑</a>
+                    >
+                        {value[0]}{" "}
+                        {!mustreadOpen[key] ?
+                            <a
+                                className="dib"
+                                style={{ transform: `translateY(${shiftDown}px)` }}
+                            >↓
+                            </a>
+                            : <a
+                                className="dib"
+                                style={{ transform: `translateY(${shiftUp}px)` }}
+                            >↑
+                            </a>
                         }
                     </button>
+
                     {mustreadOpen[key] ?
                         <div class="tl pa3 bt b--dark-gray">
                             <p class="tl f5 f5-ns lh-copy mv0 center">
@@ -111,7 +122,6 @@ class Home extends React.Component {
                             </p>
                             <button
                                 class="dim grow w-100 f4 mv0 pv2 ph3 bn"
-                                style={{ transform: `translateY(${shiftUp}px)` }}
                                 onClick={() => this.handleClick(key)}
                             >↑
                             </button>
@@ -126,11 +136,22 @@ class Home extends React.Component {
                 <article class="mv4 center mw6 mw6-ns br3 hidden ba b--black-10">
                     <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">最新消息</h1>
                     <div class="pa3 bt b--black-10">
-                        <table class="f6 w-100 center" cellspacing="0">
+                        <table class="f6 w-100 center"
+                            cellspacing="0">
                             <tbody class="lh-copy">
                                 <tr>
-                                    <td class="pv3 pl3 f5 dark-red" style={{ opacity: opacity }}><b>{news[arrayIndex].type}</b></td>
-                                    <td class="pv3 f5" style={{ opacity: opacity }}>{news[arrayIndex].description}</td>
+                                    <td
+                                        class="pv3 pl3 f5 dark-red"
+                                        style={{ opacity: opacity }}
+                                    >
+                                        <b>{news[arrayIndex].type}</b>
+                                    </td>
+                                    <td
+                                        class="pv3 f5"
+                                        style={{ opacity: opacity }}
+                                    >
+                                        {news[arrayIndex].description}
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

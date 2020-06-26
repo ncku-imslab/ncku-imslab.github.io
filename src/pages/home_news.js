@@ -33,7 +33,9 @@ class Home extends React.Component {
             timer: 0,
             news: News[yearIndex],
             mustreadLength: mustreadLength,
-            mustreadOpen: list
+            mustreadOpen: list,
+            shiftDown: -2,
+            shiftUp: 4
         }
         this.handleClick = this.handleClick.bind(this);
     }
@@ -51,7 +53,10 @@ class Home extends React.Component {
             const opacity = this.state.opacity;
             const time = this.state.timer;
             const index = this.state.arrayIndex;
+            const shiftDown = this.state.shiftDown;
+            const shiftUp = this.state.shiftUp;
             this.setState({ timer: time + 100 });
+
             if (time >= 3000) {
                 this.setState({ opacity: opacity - 0.1 });
             }
@@ -62,7 +67,14 @@ class Home extends React.Component {
                     this.setState({ arrayIndex: index + 1 })
                 }
                 this.setState({ opacity: 1, timer: 0 });
+            } else if (time % 800 === 0 && shiftDown !== 2) {
+                this.setState({ shiftDown: 2 });
+                this.setState({ shiftUp: 0 });
+            } else if (time % 800 === 0 && shiftDown === 2) {
+                this.setState({ shiftDown: -2 });
+                this.setState({ shiftUp: 4 });
             }
+            // When resetting time from 4000 to 0, shifts twices.
         }, 100);
 
     }
@@ -72,29 +84,47 @@ class Home extends React.Component {
     }
 
     render() {
-        const Mustread = {...MustreadData};
+        const Mustread = { ...MustreadData };
         Object.entries(Mustread).forEach(([key]) => {
-            console.log(Mustread[key])
+            // console.log(Mustread[key])
             Mustread[key] = <Markdown
                 source={Mustread[key]}
                 renderers={{ code: ({ value }) => <Markdown source={value} /> }}
                 linkTarget="_blank" />
         });
-
-        const { arrayIndex, opacity, news, mustreadOpen } = this.state;
+        const { arrayIndex, opacity, news, mustreadOpen, shiftUp, shiftDown } = this.state;
         const mustreadList = Object.entries(Mustread).map((value, key) => {
             return (
-                <article class="center mw7 mw7-ns hidden ba mv4 br2 b--dark-gray bw1">
+                <article class="center mw6 mw7-ns hidden ba mv4 br2 b--dark-gray bg-white">
                     <button
-                        class="link w-100 f4 bg-near-white mv0 pv2 ph3 bn"
+                        class="dim w-100 f4 mv0 pv2 ph3 bn"
                         onClick={() => this.handleClick(key)}
-                    >{value[0]}
+                    >
+                        {value[0]}{" "}
+                        {!mustreadOpen[key] ?
+                            <a
+                                className="dib"
+                                style={{ transform: `translateY(${shiftDown}px)` }}
+                            >↓
+                            </a>
+                            : <a
+                                className="dib"
+                                style={{ transform: `translateY(${shiftUp}px)` }}
+                            >↑
+                            </a>
+                        }
                     </button>
+
                     {mustreadOpen[key] ?
-                        <div class="tl pa3 bg-near-white bt b--dark-gray bw1">
+                        <div class="tl pa3 bt b--dark-gray">
                             <p class="tl f5 f5-ns lh-copy mv0 center">
                                 {value[1]}
                             </p>
+                            <button
+                                class="dim grow w-100 f4 mv0 pv2 ph3 bn"
+                                onClick={() => this.handleClick(key)}
+                            >↑
+                            </button>
                         </div>
                         : null
                     }
@@ -103,23 +133,34 @@ class Home extends React.Component {
         });
         return (
             <div>
-                <article class="center mw6 mw6-ns br3 hidden ba b--black-10 mv4">
+                <article class="mv4 center mw6 mw6-ns br3 hidden ba b--black-10">
                     <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">最新消息</h1>
                     <div class="pa3 bt b--black-10">
-                        <table class="f6 w-100 center" cellspacing="0">
+                        <table class="f6 w-100 center"
+                            cellspacing="0">
                             <tbody class="lh-copy">
                                 <tr>
-                                    <td class="pv3 pl3 f5 dark-red" style={{ opacity: opacity }}><b>{news[arrayIndex].type}</b></td>
-                                    <td class="pv3 f5" style={{ opacity: opacity }}>{news[arrayIndex].description}</td>
+                                    <td
+                                        class="pv3 pl3 f5 dark-red"
+                                        style={{ opacity: opacity }}
+                                    >
+                                        <b>{news[arrayIndex].type}</b>
+                                    </td>
+                                    <td
+                                        class="pv3 f5"
+                                        style={{ opacity: opacity }}
+                                    >
+                                        {news[arrayIndex].description}
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </article>
-                <section class="mv5 mw5 mw8-ns center bg-moon-gray pa2 ph5-ns">
+                <section class="mt4 mb3 mw5 mw7-ns center bg-light-gray pa2 ph5-ns">
                     <h3></h3>
-                    <h1 class="mb4 " >{Welcome.head1}</h1>
-                    <p class="lh-copy center f5 w-90">
+                    <h1 class="mb4" >{Welcome.head1}</h1>
+                    <p class="lh-copy center f5">
                         {Welcome.content1}
                     </p>
                     {mustreadList}

@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { renderRoutes } from 'react-router-config';
 import './App.css';
 
-import Navigation from './components/navigation';
-import Footer from './components/footer';
+import Navigation from './pages/navigation';
 import Home from './pages/home';
 import Researches from './pages/researches';
 import Members from './pages/members';
@@ -83,6 +82,15 @@ const routes = [
   }
 ]
 
+// Too few lines
+const Footer = () => {
+  return (
+      <footer class="pt4 pb3 mid-gray">
+          <small class="f6 db tc">© <b>IMS Lab</b> 2020 </small>
+      </footer>
+  );
+}
+
 class App extends Component {
   constructor() {
     super();
@@ -93,8 +101,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="height-for-footer">
+      <div className="App pa3">
+        <div>
           <Particles className="particles" params={particlesParameter} />
           <Navigation />
           {renderRoutes(routes)}
