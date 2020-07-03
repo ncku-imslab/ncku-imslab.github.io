@@ -5,7 +5,7 @@ import './App.css';
 import Navigation from './pages/navigation';
 import Home from './pages/home';
 import Researches from './pages/researches';
-import Members from './pages/members';
+import Professor from './pages/professor';
 import Honors from './pages/honors';
 import Resources from './pages/resources';
 import Contact from './pages/contact';
@@ -65,8 +65,8 @@ const routes = [
     component: Researches
   },
   {
-    path: '/members',
-    component: Members
+    path: '/professor',
+    component: Professor
   },
   {
     path: '/honors',

@@ -34,8 +34,8 @@ class Home extends React.Component {
             news: News[yearIndex],
             mustreadLength: mustreadLength,
             mustreadOpen: list,
-            shiftDown: -2,
-            shiftUp: 4
+            shiftDown: 0,
+            shiftUp: 3
         }
         this.handleClick = this.handleClick.bind(this);
     }
@@ -67,12 +67,12 @@ class Home extends React.Component {
                     this.setState({ arrayIndex: index + 1 })
                 }
                 this.setState({ opacity: 1, timer: 0 });
-            } else if (time % 800 === 0 && shiftDown !== 2) {
-                this.setState({ shiftDown: 2 });
+            } else if (time % 800 === 0 && shiftDown !== 0) {
+                this.setState({ shiftDown: 0 });
                 this.setState({ shiftUp: 0 });
-            } else if (time % 800 === 0 && shiftDown === 2) {
-                this.setState({ shiftDown: -2 });
-                this.setState({ shiftUp: 4 });
+            } else if (time % 800 === 0 && shiftDown === 0) {
+                this.setState({ shiftDown: 3 });
+                this.setState({ shiftUp: 3 });
             }
             // When resetting time from 4000 to 0, shifts twices.
         }, 100);
@@ -95,7 +95,7 @@ class Home extends React.Component {
         const { arrayIndex, opacity, news, mustreadOpen, shiftUp, shiftDown } = this.state;
         const mustreadList = Object.entries(Mustread).map((value, key) => {
             return (
-                <article class="center mw6 mw7-ns hidden ba mv4 br2 b--dark-gray bg-white">
+                <article class="center mw6 mw7-ns hidden ba mv3 br2 b--dark-gray bg-white">
                     <button
                         class="dim w-100 f4 mv0 pv2 ph3 bn"
                         onClick={() => this.handleClick(key)}
@@ -135,18 +135,19 @@ class Home extends React.Component {
             <div>
                 <article class="mv4 center mw6 mw6-ns br3 hidden ba b--black-10">
                     <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">最新消息</h1>
-                    <div class="pa3 bt b--black-10">
+                    <div class="pv3 ph2 bt b--black-10">
                         <table class="f6 w-100 center"
                             cellspacing="0">
                             <tbody class="lh-copy">
                                 <tr>
                                     <td
-                                        class="pv3 pl3 f5 dark-red"
+                                        class="pv2 ph1 f5 dark-red"
                                         style={{ opacity: opacity }}
                                     ><b>{news[arrayIndex].type}</b>
+                                    <br />
                                     </td>
                                     <td
-                                        class="pv3 f5"
+                                        class="pv2 ph3 f5"
                                         style={{ opacity: opacity }}
                                     >{news[arrayIndex].description}
                                     </td>
@@ -155,13 +156,16 @@ class Home extends React.Component {
                         </table>
                     </div>
                 </article>
-                <section class="mt4 mw5 mw7-ns center bg-light-gray pa2 ph5-ns">
+                <section class="mt4 mw7 mw7-ns center bg-light-gray pa2 ph5-ns">
                     <h3></h3>
                     <h1 class="mb4" >{Welcome.head1}</h1>
-                    <p class="lh-copy center f5">
+                    <p class="lh-copy center f5 ph4 pb2">
                         {Welcome.content1}
                     </p>
-                    {mustreadList}
+                    <div class="ph2">
+                        {mustreadList}
+                    </div>
+
                 </section>
             </div >
         );
