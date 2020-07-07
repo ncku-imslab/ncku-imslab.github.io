@@ -20,7 +20,7 @@ const Contact = () => {
                     <a class="dim f5 db black-70">Room 65A04, 10th Floor, CSIE Building, Cheng-Kung Campus, No. 1, Daxue Road, East District, Tainan City 701, Taiwan (R.O.C.)</a>
                 </div>
             </div>
-            <div class="pt2 w-100 center b--dark-gray">
+            <div class="mt2 w-100 center b--dark-gray shadow-1">
                 <iframe width="100%" height="400px" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=zh-TW&amp;coord=22.997143,120.221371&amp;q=22.997143,120.221371&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" />
             </div>
         </div>

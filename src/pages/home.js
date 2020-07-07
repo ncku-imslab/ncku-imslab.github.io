@@ -133,7 +133,10 @@ class Home extends React.Component {
         });
         return (
             <div>
-                <article class="mv4 center mw6 mw6-ns br3 hidden ba b--black-10">
+                <article
+                    class="mv4 center mw6 mw6-ns br3 hidden ba b--black-10"
+                    style={{"box-shadow": "2px 2px 4px 0px rgba( 0, 0, 0, 0.2 )"}}
+                >
                     <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">最新消息</h1>
                     <div class="pv3 ph2 bt b--black-10">
                         <table class="f6 w-100 center"
@@ -144,7 +147,7 @@ class Home extends React.Component {
                                         class="pv2 ph1 f5 dark-red"
                                         style={{ opacity: opacity }}
                                     ><b>{news[arrayIndex].type}</b>
-                                    <br />
+                                        <br />
                                     </td>
                                     <td
                                         class="pv2 ph3 f5"
@@ -156,7 +159,7 @@ class Home extends React.Component {
                         </table>
                     </div>
                 </article>
-                <section class="mt4 mw7 mw7-ns center bg-light-gray pa2 ph5-ns">
+                <section class="mt4 mw7 mw7-ns center bg-light-gray pa2 ph5-ns shadow-2">
                     <h3></h3>
                     <h1 class="mb4" >{Welcome.head1}</h1>
                     <p class="lh-copy center f5 ph4 pb2">
