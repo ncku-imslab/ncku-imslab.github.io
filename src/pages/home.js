@@ -54,7 +54,7 @@ class Home extends React.Component {
             const time = this.state.timer;
             const index = this.state.arrayIndex;
             const shiftDown = this.state.shiftDown;
-            const shiftUp = this.state.shiftUp;
+            // const shiftUp = this.state.shiftUp;
             this.setState({ timer: time + 100 });
 
             if (time >= 3000) {
@@ -95,20 +95,22 @@ class Home extends React.Component {
         const { arrayIndex, opacity, news, mustreadOpen, shiftUp, shiftDown } = this.state;
         const mustreadList = Object.entries(Mustread).map((value, key) => {
             return (
-                <article class="center mw6 mw7-ns hidden ba mv3 br2 b--dark-gray bg-white">
+                <article className="center mw6 mw7-ns hidden ba mv3 br2 b--dark-gray bg-white">
                     <button
-                        class="dim w-100 f4 mv0 pv2 ph3 bn"
+                        className="dim w-100 f4 mv0 pv2 ph3 bn"
                         onClick={() => this.handleClick(key)}
                     >
                         {value[0]}{" "}
                         {!mustreadOpen[key] ?
-                            <a
-                                className="dib"
+                            <a 
+                                href=""
+                                className="dib link black"
                                 style={{ transform: `translateY(${shiftDown}px)` }}
                             >↓
                             </a>
                             : <a
-                                className="dib"
+                                href=""
+                                className="dib link black"
                                 style={{ transform: `translateY(${shiftUp}px)` }}
                             >↑
                             </a>
@@ -116,12 +118,12 @@ class Home extends React.Component {
                     </button>
 
                     {mustreadOpen[key] ?
-                        <div class="tl pa3 bt b--dark-gray">
-                            <p class="tl f5 f5-ns lh-copy mv0 center">
+                        <div className="tl pa3 bt b--dark-gray">
+                            <p className="tl f5 f5-ns lh-copy mv0 center">
                                 {value[1]}
                             </p>
                             <button
-                                class="dim grow w-100 f4 mv0 pv2 ph3 bn"
+                                className="dim grow w-100 f4 mv0 pv2 ph3 bn"
                                 onClick={() => this.handleClick(key)}
                             >↑
                             </button>
@@ -134,23 +136,23 @@ class Home extends React.Component {
         return (
             <div>
                 <article
-                    class="mv4 center mw6 mw6-ns br3 hidden ba b--black-10"
+                    className="center mw6 mw6-ns br3 hidden ba b--black-10"
                     style={{"box-shadow": "2px 2px 4px 0px rgba( 0, 0, 0, 0.2 )"}}
                 >
-                    <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">最新消息</h1>
-                    <div class="pv3 ph2 bt b--black-10">
-                        <table class="f6 w-100 center"
+                    <h1 className="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">最新消息</h1>
+                    <div className="pv3 ph2 bt b--black-10">
+                        <table className="f6 w-100 center"
                             cellspacing="0">
-                            <tbody class="lh-copy">
+                            <tbody className="lh-copy">
                                 <tr>
                                     <td
-                                        class="pv2 ph1 f5 dark-red"
+                                        className="pv2 ph1 f5 dark-red"
                                         style={{ opacity: opacity }}
                                     ><b>{news[arrayIndex].type}</b>
                                         <br />
                                     </td>
                                     <td
-                                        class="pv2 ph3 f5"
+                                        className="pv2 ph3 f5"
                                         style={{ opacity: opacity }}
                                     >{news[arrayIndex].description}
                                     </td>
@@ -159,13 +161,13 @@ class Home extends React.Component {
                         </table>
                     </div>
                 </article>
-                <section class="mt4 mw7 mw7-ns center bg-light-gray pa2 ph5-ns shadow-2">
+                <section className="mt4 mw7 mw7-ns center bg-light-gray pa2 ph5-ns shadow-2">
                     <h3></h3>
-                    <h1 class="mb4" >{Welcome.head1}</h1>
-                    <p class="lh-copy center f5 ph4 pb2">
+                    <h1 className="mb4" >{Welcome.head1}</h1>
+                    <p className="lh-copy center f5 ph4 pb2">
                         {Welcome.content1}
                     </p>
-                    <div class="ph2">
+                    <div className="ph2">
                         {mustreadList}
                     </div>
 

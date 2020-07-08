@@ -6,6 +6,8 @@ import Navigation from './pages/navigation';
 import Home from './pages/home';
 import Researches from './pages/researches';
 import Professor from './pages/professor';
+import Students from './pages/students';
+import Alumni from './pages/alumni';
 import Honors from './pages/honors';
 import Resources from './pages/resources';
 import Contact from './pages/contact';
@@ -69,6 +71,14 @@ const routes = [
     component: Professor
   },
   {
+    path: '/students',
+    component: Students
+  },
+  {
+    path: '/alumni',
+    component: Alumni
+  },
+  {
     path: '/honors',
     component: Honors
   },
@@ -85,8 +95,8 @@ const routes = [
 // Too few lines
 const Footer = () => {
   return (
-    <footer class="pt4 mt2 pb3 mid-gray">
-      <small class="f6 db tc">© <b>IMS Lab</b> 2020 </small>
+    <footer className="pt4 mt2 pb3 mid-gray">
+      <small className="f6 db tc">© <b>IMS Lab</b> 2020 </small>
     </footer>
   );
 }
