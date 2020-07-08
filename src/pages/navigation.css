@@ -1,0 +1,12 @@
+@media screen and (max-width: 1145px) {
+    .disappear1145 {
+        display: none!important;
+    }
+    .response1145 {
+        width: 90%!important;
+    }
+    .appear1145 {
+        display: table-cell!important;
+        width: 10%!important;
+    }
+}
