@@ -39,6 +39,7 @@ class Navigation extends React.Component {
                     <p className="link near-white db pt2 f5 f5-l tl b-white mh4 mb0 mt2">智慧化行動服務實驗室</p>
                     <p className="link near-white db f5 f5-l tl b-white mh4 mt0">@ 國立成功大學</p>
                     <p className="link near-white db pb2 f5 f5-l tl bb b-near-white mh4 mb4 mt0">Intelligent Mobile Service Laboratory @ NCKU</p>
+
                     <Link
                         className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
                         style={{
@@ -69,12 +70,12 @@ class Navigation extends React.Component {
                             <div
                                 className="dib fw7"
                                 style={{ animation: "shiftDownAnimation 2.5s infinite" }}
-                            >
-                                <small> ▽ </small>
+                            ><small> ▽ </small>
                             </div>
                         </Link>
+
                         <div
-                            className="dn dropdown-content tc "
+                            className="dn dropdown-content tc"
                             style={{ zIndex: "1" }}
                         >
                             <Link
@@ -130,7 +131,7 @@ class Navigation extends React.Component {
                 <img
                     src={logo}
                     className="dib dtc-l w4 ph3 pb2"
-                    style={{ "minWidth": "200px" }}
+                    style={{ minWidth: "200px" }}
                     alt=""
                 ></img>
 
@@ -140,7 +141,6 @@ class Navigation extends React.Component {
                         <a className="dark-gray db f5 f5-l fw5 pb2">Intelligent Mobile Service Laboratory @ NCKU</a>
                         <p></p>
                     </div>
-
                     <p
                         className="dim dn appear960 mb3 center pointer mt1 mw3 mw3-ns"
                         style={{ animation: "pulseAnimation 3s infinite" }}
@@ -163,6 +163,7 @@ class Navigation extends React.Component {
                             to="/researches"
                         >研究 Researches
                         </Link>
+                        
                         <div className="dib relative dropdown">
                             <a
                                 className="link dark-gray f5 f5-l dib ph3 pb3"
@@ -173,20 +174,21 @@ class Navigation extends React.Component {
                                     className="dib fw7"
                                     style={{ animation: "shiftDownAnimation 2.5s infinite" }}
                                 >
-                                    <small> ▽ </small>
+                                    <small>▽</small>
                                 </div>
                             </a>
+
                             <div
-                                className="dn w-100 absolute dropdown-content tc ba br1 bg-white"
+                                className="dn w-100 absolute dropdown-content tc ba b-dark-gray br1 bg-white"
                                 style={{ zIndex: "1" }}
                             >
                                 <Link
-                                    className="dim link dark-gray pa2 db tc bb"
+                                    className="dim link dark-gray pa2 db tc bb b-dark-gray"
                                     to="/professor"
                                 >教授 Professor
                                 </Link>
                                 <Link
-                                    className="dim link dark-gray pa2 db tc bb"
+                                    className="dim link dark-gray pa2 db tc bb b-dark-gray"
                                     to="/students"
                                 >學生 Students
                                 </Link>
@@ -213,7 +215,6 @@ class Navigation extends React.Component {
                             to="/contact"
                         >聯絡我們 Contact
                         </Link>
-
                     </div>
                 </div>
             </nav >
