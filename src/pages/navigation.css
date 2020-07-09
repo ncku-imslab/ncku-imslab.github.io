@@ -28,19 +28,19 @@
 }
 
 .pulse {
-    animation: pulseAnimation 2.5s infinite;
+    animation: pulseAnimation 3s infinite;
 }
 
 @keyframes pulseAnimation {
 	0% {
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
-	}
-
-	70% {
+		box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+    }
+    
+	60% {
 		box-shadow: 0 0 0 7px rgba(0, 0, 0, 0);
 	}
 
 	100% {
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
 	}
 }
