@@ -43,7 +43,7 @@ class Navigation extends React.Component {
                         className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
                         style={{
                             transition: "0.3s",
-                            letterSpacing:  "0.05em"
+                            letterSpacing: "0.05em"
                         }}
                         to="/"
                         onClick={() => this.closeNav()}
@@ -52,25 +52,57 @@ class Navigation extends React.Component {
                         className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
                         style={{
                             transition: "0.3s",
-                            letterSpacing:  "0.05em"
+                            letterSpacing: "0.05em"
                         }}
                         to="/researches"
                         onClick={() => this.closeNav()}
                     >研究 Researches</Link>
+                    <div class="db dropdown">
+                        <Link
+                            className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
+                            style={{
+                                transition: "0.3s",
+                                letterSpacing: "0.05em"
+                            }}
+                        >成員 Members
+                        <b> </b>
+                            <div
+                                className="dib fw7"
+                                style={{ animation: "shiftDownAnimation 2.5s infinite" }}
+                            >
+                                <small> ▽ </small>
+                            </div>
+                        </Link>
+                        <div
+                            className="dn dropdown-content tc "
+                            style={{ zIndex: "1" }}
+                        >
+                            <Link
+                                className="dim link near-white pv2 f5 f5-l tl fw5 pl5 db"
+                                to="/professor"
+                                onClick={() => this.closeNav()}
+                            >教授 Professor
+                                </Link>
+                            <Link
+                                className="dim link near-white pv2 f5 f5-l tl fw5 pl5 db"
+                                to="/students"
+                                onClick={() => this.closeNav()}
+                            >學生 Students
+                                </Link>
+                            <Link
+                                className="dim link near-white pv2 f5 f5-l tl fw5 pl5 db"
+                                to="/alumni"
+                                onClick={() => this.closeNav()}
+                            >學成下山 Alumni
+                                </Link>
+                        </div>
+                    </div>
+
                     <Link
                         className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
                         style={{
                             transition: "0.3s",
-                            letterSpacing:  "0.05em"
-                        }}
-                    >成員 Members
-                    <small><b> ▽</b></small>
-                    </Link>
-                    <Link
-                        className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
-                        style={{
-                            transition: "0.3s",
-                            letterSpacing:  "0.05em"
+                            letterSpacing: "0.05em"
                         }}
                         to="/honors"
                         onClick={() => this.closeNav()}
@@ -79,7 +111,7 @@ class Navigation extends React.Component {
                         className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
                         style={{
                             transition: "0.3s",
-                            letterSpacing:  "0.05em"
+                            letterSpacing: "0.05em"
                         }}
                         to="/resources"
                         onClick={() => this.closeNav()}
@@ -88,7 +120,7 @@ class Navigation extends React.Component {
                         className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
                         style={{
                             transition: "0.3s",
-                            letterSpacing:  "0.05em"
+                            letterSpacing: "0.05em"
                         }}
                         to="/contact"
                         onClick={() => this.closeNav()}
@@ -110,7 +142,8 @@ class Navigation extends React.Component {
                     </div>
 
                     <p
-                        className="dim dn appear960 mb3 center pointer mt1 mw3 mw3-ns pulse"
+                        className="dim dn appear960 mb3 center pointer mt1 mw3 mw3-ns"
+                        style={{ animation: "pulseAnimation 3s infinite" }}
                         onClick={() => this.openNav()}
                     >
                         <img
@@ -121,24 +154,30 @@ class Navigation extends React.Component {
 
                     <div className="pr2 disappear960">
                         <Link
-                            className="link dim grow dark-gray f5 f5-l dib ph3 pb2"
+                            className="link dim grow dark-gray f5 f5-l dib ph3 pb3"
                             to="/"
                         >首頁 Home
                         </Link>
                         <Link
-                            className="link dim grow dark-gray f5 f5-l dib ph3 pb2"
+                            className="link dim grow dark-gray f5 f5-l dib ph3 pb3"
                             to="/researches"
                         >研究 Researches
                         </Link>
                         <div className="dib relative dropdown">
                             <a
-                                className="link dark-gray f5 f5-l dib ph3 pb2"
+                                className="link dark-gray f5 f5-l dib ph3 pb3"
                                 style={{ cursor: "default" }}
-                            >成員 Members 
-                            <small><b> ▽</b></small>
+                            >成員 Members
+                            <b> </b>
+                                <div
+                                    className="dib fw7"
+                                    style={{ animation: "shiftDownAnimation 2.5s infinite" }}
+                                >
+                                    <small> ▽ </small>
+                                </div>
                             </a>
                             <div
-                                className="dn absolute dropdown-content tc ba br1 bg-white"
+                                className="dn w-100 absolute dropdown-content tc ba br1 bg-white"
                                 style={{ zIndex: "1" }}
                             >
                                 <Link
@@ -160,24 +199,24 @@ class Navigation extends React.Component {
                         </div>
 
                         <Link
-                            className="link dim grow dark-gray f5 f5-l dib ph3 pb2"
+                            className="link dim grow dark-gray f5 f5-l dib ph3 pb3"
                             to="/honors"
                         >榮譽 Honors
                         </Link>
                         <Link
-                            className="link dim grow dark-gray f5 f5-l dib ph3 pb2"
+                            className="link dim grow dark-gray f5 f5-l dib ph3 pb3"
                             to="/resources"
                         >相關資源 Resources
                         </Link>
                         <Link
-                            className="link dim grow dark-gray f5 f5-l dib ph3 pb2"
+                            className="link dim grow dark-gray f5 f5-l dib ph3 pb3"
                             to="/contact"
                         >聯絡我們 Contact
                         </Link>
 
                     </div>
                 </div>
-            </nav>
+            </nav >
         );
     }
 }

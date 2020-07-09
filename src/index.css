@@ -17,3 +17,27 @@ button {
 *:focus {
   outline: 0 !important;
 }
+
+@keyframes shiftDownAnimation {
+  0% {
+      transform: translateY(-5%);
+  }
+  50% {
+      transform: translateY(10%);
+  }
+  100% {
+      transform: translateY(-5%);
+  }
+}
+
+@keyframes shiftUpAnimation {
+  0% {
+      transform: translateY(5%);
+  }
+  50% {
+      transform: translateY(-10%);
+  }
+  100% {
+      transform: translateY(5%);
+  }
+}
