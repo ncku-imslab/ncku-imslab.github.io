@@ -141,8 +141,8 @@ class Navigation extends React.Component {
                         <a className="dark-gray db f5 f5-l fw5 pb2">Intelligent Mobile Service Laboratory @ NCKU</a>
                         <p></p>
                     </div>
-                    <p
-                        className="dim dn appear960 mb3 center pointer mt1 mw3 mw3-ns"
+                    <button
+                        className="dim dn appear960 mb3 center pointer mt1 bn"
                         style={{ animation: "pulseAnimation 3s infinite" }}
                         onClick={() => this.openNav()}
                     >
@@ -150,7 +150,7 @@ class Navigation extends React.Component {
                             className="pa2"
                             src={menu_icon}
                         />
-                    </p>
+                    </button>
 
                     <div className="pr2 disappear960">
                         <Link
