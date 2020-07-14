@@ -128,12 +128,14 @@ class Navigation extends React.Component {
                     >聯絡我們 Contact</Link>
                 </div>
 
-                <img
-                    src={logo}
-                    className="dib dtc-l w4 ph3 pb2"
-                    style={{ minWidth: "200px" }}
-                    alt=""
-                ></img>
+                <Link to="/">
+                    <img
+                        src={logo}
+                        className="dib dtc-l w4 ph3"
+                        style={{ minWidth: "200px" }}
+                        alt=""
+                    ></img>
+                </Link>
 
                 <div className="mw8 dib dtc-l v-mid w-100 w-75-l tr-l ph3">
                     <div className="ph2 justify-center disappear960 mr3">
@@ -163,7 +165,7 @@ class Navigation extends React.Component {
                             to="/researches"
                         >研究 Researches
                         </Link>
-                        
+
                         <div className="dib relative dropdown">
                             <a
                                 className="link dark-gray f5 f5-l dib ph3 pb3"

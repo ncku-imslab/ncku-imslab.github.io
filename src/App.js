@@ -96,11 +96,11 @@ const routes = [
 const Footer = () => {
   return (
     <footer className="pt4 mt2 pb3 mid-gray">
-      <small className="f6 db tc">© <b>IMS Lab</b> 2020 </small>
-      <small className="f6 db tc mt2 pt1">Powered by
+      <small className="f6 db tc" style={{ letterSpacing: "0.01em" }}>© <b>IMS Lab</b> 2020 </small>
+      <small className="f6 db tc mt2 pt1" style={{ letterSpacing: "0.01em" }}>Powered by
         <a class="b link dim mid-gray" href="https://reactjs.org/"> React </a>
         and
-        <a class="b link dim mid-gray" href="https://tachyons.io/"> Tachyons</a>
+        <a class="b link dim mid-gray" href="https://tachyons.io/"> Tachyons </a>
       </small>
     </footer>
   );
