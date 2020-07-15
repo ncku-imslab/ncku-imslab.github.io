@@ -18,26 +18,26 @@ class Navigation extends React.Component {
             <nav className="dt w-100 pb4 response960">
                 <div
                     id="sideNavbar"
-                    className="h-100 fixed bg-dark-gray pt5"
+                    className="h-100 fixed bg-near-black pt5"
                     style={{
                         width: "0",
                         zIndex: "10",
                         top: "0",
-                        left: "0",
+                        right: "0",
                         overflowX: "hidden",
                         transition: "0.5s"
                     }}
                 >
                     <p
-                        className="link dim near-white absolute db pv3 ph4 fw6 f3 pv0 mv0 pointer"
+                        className="link dim light-green absolute db pv3 ph4 fw6 f3 pv0 mv0 pointer"
                         style={{
                             top: "0",
-                            right: "0px"
+                            left: "0px"
                         }}
                         onClick={() => this.closeNav()}
-                    >←</p>
-                    <p className="link near-white db pt2 f5 f5-l tl b-white mh4 mb0 mt2">智慧化行動服務實驗室</p>
-                    <p className="link near-white db f5 f5-l tl b-white mh4 mt0">@ 國立成功大學</p>
+                    >→</p>
+                    <p className="link near-white db pt2 f5 f5-l tl mh4 mb0 mt2">智慧化行動服務實驗室</p>
+                    <p className="link near-white db f5 f5-l tl mh4 mt0">@ 國立成功大學</p>
                     <p className="link near-white db pb2 f5 f5-l tl bb b-near-white mh4 mb4 mt0">Intelligent Mobile Service Laboratory @ NCKU</p>
 
                     <Link
@@ -58,7 +58,7 @@ class Navigation extends React.Component {
                         to="/researches"
                         onClick={() => this.closeNav()}
                     >研究 Researches</Link>
-                    <div class="db dropdown">
+                    <div className="db dropdown">
                         <Link
                             className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
                             style={{
@@ -70,7 +70,7 @@ class Navigation extends React.Component {
                             <div
                                 className="dib fw7"
                                 style={{ animation: "shiftDownAnimation 2.5s infinite" }}
-                            ><small> ▽ </small>
+                            ><small class="light-green"> ▽ </small>
                             </div>
                         </Link>
 
@@ -173,7 +173,7 @@ class Navigation extends React.Component {
                             >成員 Members
                             <b> </b>
                                 <div
-                                    className="dib fw7"
+                                    className="dib fw7 navy"
                                     style={{ animation: "shiftDownAnimation 2.5s infinite" }}
                                 >
                                     <small>▽</small>

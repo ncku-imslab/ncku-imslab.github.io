@@ -95,9 +95,9 @@ class Home extends React.Component {
         const { arrayIndex, opacity, news, mustreadOpen, shiftUp, shiftDown } = this.state;
         const mustreadList = Object.entries(Mustread).map((value, key) => {
             return (
-                <article className="center mw6 mw7-ns hidden ba mv3 br2 b--dark-gray bg-white">
+                <article className="center mw6 mw7-ns hidden ba mv3 br2 b--dark-gray bg-near-white">
                     <button
-                        className="dim w-100 f4 mv0 pv2 ph3 bn"
+                        className="dim w-100 f4 mv0 pv2 ph3 bn near-black"
                         onClick={() => this.handleClick(key)}
                     >
                         {value[0]}{" "}
@@ -137,9 +137,9 @@ class Home extends React.Component {
             <div>
                 <article
                     className="center mw6 mw6-ns br3 hidden ba b--black-10"
-                    style={{"box-shadow": "2px 2px 4px 0px rgba( 0, 0, 0, 0.2 )"}}
+                    style={{ boxShadow: "2px 2px 4px 0px rgba( 0, 0, 0, 0.2 )" }}
                 >
-                    <h1 className="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">最新消息</h1>
+                    <h1 className="f4 bg-near-white br3 br--top mid-gray mv0 pv2 ph3">最新消息</h1>
                     <div className="pv3 ph2 bt b--black-10">
                         <table className="f6 w-100 center"
                             cellspacing="0">
@@ -152,7 +152,7 @@ class Home extends React.Component {
                                         <br />
                                     </td>
                                     <td
-                                        className="pv2 ph3 f5"
+                                        className="pv2 ph3 f5 near-black"
                                         style={{ opacity: opacity }}
                                     >{news[arrayIndex].description}
                                     </td>
@@ -161,18 +161,18 @@ class Home extends React.Component {
                         </table>
                     </div>
                 </article>
-                <section className="mt4 mw7 mw7-ns center bg-light-gray pa2 ph5-ns shadow-2">
+
+                <section className="mt4 mw7 mw7-ns center bg-dark-gray pv3 ph5-ns shadow-2">
                     <h3></h3>
-                    <h1 className="mb4" >{Welcome.head1}</h1>
-                    <p className="lh-copy center f5 ph4 pb2">
+                    <h1 className="mb4 gold" >{Welcome.head1}</h1>
+                    <p className="lh-copy center f5 ph4 pb2 near-white">
                         {Welcome.content1}
                     </p>
                     <div className="ph2">
                         {mustreadList}
                     </div>
-
                 </section>
-            </div >
+            </div>
         );
     }
 }
