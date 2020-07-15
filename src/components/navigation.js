@@ -5,7 +5,7 @@ import menu_icon from '../assets/menu_icon.png';
 import './navigation.css';
 
 // It's better to provide the key attribute, while whether it's necessary is unclear.
-const expandedAttributes = [
+const expandedObject = [
     {
         title: "教授 Professor",
         to: "/professor",
@@ -24,16 +24,12 @@ const expandedAttributes = [
 ]
 
 class Navigation extends React.Component {
-    openNav() {
-        document.getElementById("sideNavbar").style.width = "245px";
-    }
+    openNav() { document.getElementById("sideNavbar").style.width = "245px"; }
 
-    closeNav() {
-        document.getElementById("sideNavbar").style.width = "0";
-    }
+    closeNav() { document.getElementById("sideNavbar").style.width = "0"; }
 
     render() {
-        const expandedList = expandedAttributes.map((object) => {
+        const expandedList = expandedObject.map((object) => {
             return (
                 <Link
                     className="dim link near-white pv2 f5 f5-l tl fw5 pl5 db"
@@ -43,6 +39,13 @@ class Navigation extends React.Component {
                 >{object.title}</Link>
             )
         });
+        const expandedAttributes = "link dim near-white db pl4 pv2 f5 f5-l tl fw5";
+        const expandedStyles = {
+            transition: "0.3s",
+            letterSpacing: "0.05em"
+        };
+        const originalAttributes = "link dim grow dark-gray f5 f5-l dib ph3 pb3";
+
         return (
             <nav className="dt w-100 pb4 response960">
                 <div
@@ -70,40 +73,28 @@ class Navigation extends React.Component {
                     <p className="link near-white db pb2 f5 f5-l tl bb b-near-white mh4 mb4 mt0">Intelligent Mobile Service Laboratory @ NCKU</p>
 
                     <Link
-                        className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
-                        style={{
-                            transition: "0.3s",
-                            letterSpacing: "0.05em"
-                        }}
+                        className={expandedAttributes}
+                        style={expandedStyles}
                         to="/"
                         onClick={() => this.closeNav()}
                     >首頁 Home</Link>
                     <Link
-                        className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
-                        style={{
-                            transition: "0.3s",
-                            letterSpacing: "0.05em"
-                        }}
+                        className={expandedAttributes}
+                        style={expandedStyles}
                         to="/researches"
                         onClick={() => this.closeNav()}
                     >研究 Researches</Link>
                     <div className="db dropdown">
-                        <Link
-                            className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
-                            style={{
-                                transition: "0.3s",
-                                letterSpacing: "0.05em"
-                            }}
-                            to=""
+                        <a
+                            className={expandedAttributes}
+                            style={expandedStyles}
                         >成員 Members
-                        <b> </b>
-                            <div
-                                className="dib fw7"
+                            <b> </b>
+                            <small
+                                className="dib fw7 light-green"
                                 style={{ animation: "shiftDownAnimation 2s infinite" }}
-                            ><small className="light-green"> ▽ </small>
-                            </div>
-                        </Link>
-
+                            > ▽ </small>
+                        </a>
                         <div
                             className="dn dropdown-content tc"
                             style={{ zIndex: "1" }}
@@ -113,29 +104,20 @@ class Navigation extends React.Component {
                     </div>
 
                     <Link
-                        className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
-                        style={{
-                            transition: "0.3s",
-                            letterSpacing: "0.05em"
-                        }}
+                        className={expandedAttributes}
+                        style={expandedStyles}
                         to="/honors"
                         onClick={() => this.closeNav()}
                     >榮譽 Honors</Link>
                     <Link
-                        className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
-                        style={{
-                            transition: "0.3s",
-                            letterSpacing: "0.05em"
-                        }}
+                        className={expandedAttributes}
+                        style={expandedStyles}
                         to="/resources"
                         onClick={() => this.closeNav()}
                     >相關資源 Resources</Link>
                     <Link
-                        className="link dim near-white db pl4 pv2 f5 f5-l tl fw5"
-                        style={{
-                            transition: "0.3s",
-                            letterSpacing: "0.05em"
-                        }}
+                        className={expandedAttributes}
+                        style={expandedStyles}
                         to="/contact"
                         onClick={() => this.closeNav()}
                     >聯絡我們 Contact</Link>
@@ -170,12 +152,12 @@ class Navigation extends React.Component {
 
                     <div className="pr2 disappear960">
                         <Link
-                            className="link dim grow dark-gray f5 f5-l dib ph3 pb3"
+                            className={originalAttributes}
                             to="/"
                         >首頁 Home
                         </Link>
                         <Link
-                            className="link dim grow dark-gray f5 f5-l dib ph3 pb3"
+                            className={originalAttributes}
                             to="/researches"
                         >研究 Researches
                         </Link>
@@ -185,15 +167,12 @@ class Navigation extends React.Component {
                                 className="link dark-gray f5 f5-l dib ph3 pb3"
                                 style={{ cursor: "default" }}
                             >成員 Members
-                            <b> </b>
-                                <div
+                                <b> </b>
+                                <small
                                     className="dib fw7 navy"
                                     style={{ animation: "shiftDownAnimation 2s infinite" }}
-                                >
-                                    <small>▽</small>
-                                </div>
+                                >▽</small>
                             </a>
-
                             <div
                                 className="dn w-100 absolute dropdown-content tc ba b-dark-gray br1 bg-white"
                                 style={{ zIndex: "1" }}
@@ -217,17 +196,17 @@ class Navigation extends React.Component {
                         </div>
 
                         <Link
-                            className="link dim grow dark-gray f5 f5-l dib ph3 pb3"
+                            className={originalAttributes}
                             to="/honors"
                         >榮譽 Honors
                         </Link>
                         <Link
-                            className="link dim grow dark-gray f5 f5-l dib ph3 pb3"
+                            className={originalAttributes}
                             to="/resources"
                         >相關資源 Resources
                         </Link>
                         <Link
-                            className="link dim grow dark-gray f5 f5-l dib ph3 pb3"
+                            className={originalAttributes}
                             to="/contact"
                         >聯絡我們 Contact
                         </Link>

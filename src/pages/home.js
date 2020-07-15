@@ -29,8 +29,6 @@ class Home extends React.Component {
         this.state = {
             arrayIndex: 0,
             arrayLength: arrayLength,
-            opacity: 1,
-            timer: 0,
             news: News[yearIndex],
             mustreadLength: mustreadLength,
             mustreadOpen: list
@@ -39,33 +37,19 @@ class Home extends React.Component {
     }
 
     handleClick(index) {
-        let list = this.state.mustreadOpen;
-        list[index] = !list[index];
-        this.setState(() => {
-            return list;
-        })
+        // The idea of setstate() being asynchronous is perhaps that only after the state is retrieved can we proceed.
+       this.setState(state => {
+           let list = state.mustreadOpen;
+           list[index] = !list[index];
+           return list;
+       })
     }
 
     componentDidMount() {
         this.timeout = setInterval(() => {
-            const opacity = this.state.opacity;
-            const time = this.state.timer;
             const index = this.state.arrayIndex;
-
-            this.setState({ timer: time + 100 });
-            if (time >= 3000) {
-                this.setState({ opacity: opacity - 0.1 });
-            }
-            if (time === 4000) {
-                if (index === this.state.arrayLength - 1) {
-                    this.setState({ arrayIndex: 0 });
-                } else {
-                    this.setState({ arrayIndex: index + 1 })
-                }
-                this.setState({ opacity: 1, timer: 0 });
-            }
-        }, 100);
-
+            this.setState({ arrayIndex: index === this.state.arrayLength - 1 ? 0 : index + 1 });
+        }, 6000);
     }
 
     componentWillUnmount() {
@@ -73,7 +57,7 @@ class Home extends React.Component {
     }
 
     render() {
-        const { arrayIndex, opacity, news, mustreadOpen } = this.state;
+        const { arrayIndex, news, mustreadOpen } = this.state;
 
         const Mustread = { ...MustreadData };
         Object.entries(Mustread).forEach(([key]) => {
@@ -95,13 +79,13 @@ class Home extends React.Component {
                             <a
                                 href=""
                                 className="dib link black"
-                                style={{ animation: "shiftDownAnimation 1.5s infinite" }}
+                                style={{ animation: "shiftDownAnimation 2s infinite" }}
                             > ↓
                             </a>
                             : <a
                                 href=""
                                 className="dib link black"
-                                style={{ animation: "shiftUpAnimation 1.5s infinite" }}
+                                style={{ animation: "shiftUpAnimation 2s infinite" }}
                             >↑
                             </a>
                         }
@@ -133,12 +117,12 @@ class Home extends React.Component {
                     <div className="db pv3 ph2 bt b--black-10 v-mid tc">
                         <a
                             className="ph2 f5 dark-red"
-                            style={{ opacity: opacity }}
+                            style={{ animation: "fadedAnimation 6s infinite" }}
                         ><b>{news[arrayIndex].type}</b>
                         </a>
                         <a
                             className="ph2 f5 near-black"
-                            style={{ opacity: opacity }}
+                            style={{ animation: "fadedAnimation 6s infinite" }}
                         >{news[arrayIndex].description}
                         </a>
                     </div>

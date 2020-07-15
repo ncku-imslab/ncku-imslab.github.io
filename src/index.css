@@ -20,24 +20,39 @@ button {
 
 @keyframes shiftDownAnimation {
   0% {
-      transform: translateY(-5%);
+    transform: translateY(-5%);
   }
   50% {
-      transform: translateY(10%);
+    transform: translateY(5%);
   }
   100% {
-      transform: translateY(-5%);
+    transform: translateY(-5%);
   }
 }
 
 @keyframes shiftUpAnimation {
   0% {
-      transform: translateY(5%);
+    transform: translateY(10%);
   }
   50% {
-      transform: translateY(-10%);
+    transform: translateY(0%);
   }
   100% {
-      transform: translateY(5%);
+    transform: translateY(10%);
+  }
+}
+
+@keyframes fadedAnimation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
