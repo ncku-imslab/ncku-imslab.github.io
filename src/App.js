@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { renderRoutes } from 'react-router-config';
+import Particles from 'react-particles-js';
 import './App.css';
 
-import Navigation from './pages/navigation';
+import Navigation from './components/navigation';
+import Footer from './components/footer';
 import Home from './pages/home';
 import Researches from './pages/researches';
 import Professor from './pages/professor';
@@ -11,7 +13,6 @@ import Alumni from './pages/alumni';
 import Honors from './pages/honors';
 import Resources from './pages/resources';
 import Contact from './pages/contact';
-import Particles from 'react-particles-js';
 
 const particlesParameter = {
   "particles": {
@@ -91,20 +92,6 @@ const routes = [
     component: Contact
   }
 ]
-
-// Too few lines
-const Footer = () => {
-  return (
-    <footer className="pt4 mt2 pb3 mid-gray">
-      <small className="f6 db tc" style={{ letterSpacing: "0.01em" }}>© <b>IMS Lab</b> 2020 </small>
-      <small className="f6 db tc mt2 pt1" style={{ letterSpacing: "0.01em" }}>Powered by
-        <a className="b link dim mid-gray" href="https://reactjs.org/" key=""> React </a>
-        and
-        <a className="b link dim mid-gray" href="https://tachyons.io/" key=""> Tachyons </a>
-      </small>
-    </footer>
-  );
-}
 
 class App extends Component {
   constructor() {

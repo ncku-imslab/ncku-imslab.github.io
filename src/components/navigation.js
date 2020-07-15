@@ -4,9 +4,28 @@ import logo from '../assets/imslab_logo.jpg';
 import menu_icon from '../assets/menu_icon.png';
 import './navigation.css';
 
+// It's better to provide the key attribute, while whether it's necessary is unclear.
+const expandedAttributes = [
+    {
+        title: "教授 Professor",
+        to: "/professor",
+        key: "professor"
+    },
+    {
+        title: "學生 Students",
+        to: "/students",
+        key: "students"
+    },
+    {
+        title: "學成下山 Alumni",
+        to: "/alumni",
+        key: "alumni"
+    }
+]
+
 class Navigation extends React.Component {
     openNav() {
-        document.getElementById("sideNavbar").style.width = "250px";
+        document.getElementById("sideNavbar").style.width = "245px";
     }
 
     closeNav() {
@@ -14,6 +33,16 @@ class Navigation extends React.Component {
     }
 
     render() {
+        const expandedList = expandedAttributes.map((object) => {
+            return (
+                <Link
+                    className="dim link near-white pv2 f5 f5-l tl fw5 pl5 db"
+                    to={object.to}
+                    key={object.key}
+                    onClick={() => this.closeNav()}
+                >{object.title}</Link>
+            )
+        });
         return (
             <nav className="dt w-100 pb4 response960">
                 <div
@@ -65,12 +94,13 @@ class Navigation extends React.Component {
                                 transition: "0.3s",
                                 letterSpacing: "0.05em"
                             }}
+                            to=""
                         >成員 Members
                         <b> </b>
                             <div
                                 className="dib fw7"
-                                style={{ animation: "shiftDownAnimation 2.5s infinite" }}
-                            ><small class="light-green"> ▽ </small>
+                                style={{ animation: "shiftDownAnimation 2s infinite" }}
+                            ><small className="light-green"> ▽ </small>
                             </div>
                         </Link>
 
@@ -78,24 +108,7 @@ class Navigation extends React.Component {
                             className="dn dropdown-content tc"
                             style={{ zIndex: "1" }}
                         >
-                            <Link
-                                className="dim link near-white pv2 f5 f5-l tl fw5 pl5 db"
-                                to="/professor"
-                                onClick={() => this.closeNav()}
-                            >教授 Professor
-                                </Link>
-                            <Link
-                                className="dim link near-white pv2 f5 f5-l tl fw5 pl5 db"
-                                to="/students"
-                                onClick={() => this.closeNav()}
-                            >學生 Students
-                                </Link>
-                            <Link
-                                className="dim link near-white pv2 f5 f5-l tl fw5 pl5 db"
-                                to="/alumni"
-                                onClick={() => this.closeNav()}
-                            >學成下山 Alumni
-                                </Link>
+                            {expandedList}
                         </div>
                     </div>
 
@@ -134,7 +147,7 @@ class Navigation extends React.Component {
                         className="dib dtc-l w4 ph3"
                         style={{ minWidth: "200px" }}
                         alt=""
-                    ></img>
+                    />
                 </Link>
 
                 <div className="mw8 dib dtc-l v-mid w-100 w-75-l tr-l ph3">
@@ -144,13 +157,14 @@ class Navigation extends React.Component {
                         <p></p>
                     </div>
                     <button
-                        className="dim dn appear960 mb3 center pointer mt1 bn"
+                        className="dim dn appear960 mb3 center pointer mt2 bn"
                         style={{ animation: "pulseAnimation 3s infinite" }}
                         onClick={() => this.openNav()}
                     >
                         <img
                             className="pa2"
                             src={menu_icon}
+                            alt=""
                         />
                     </button>
 
@@ -174,7 +188,7 @@ class Navigation extends React.Component {
                             <b> </b>
                                 <div
                                     className="dib fw7 navy"
-                                    style={{ animation: "shiftDownAnimation 2.5s infinite" }}
+                                    style={{ animation: "shiftDownAnimation 2s infinite" }}
                                 >
                                     <small>▽</small>
                                 </div>

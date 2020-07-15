@@ -33,9 +33,7 @@ class Home extends React.Component {
             timer: 0,
             news: News[yearIndex],
             mustreadLength: mustreadLength,
-            mustreadOpen: list,
-            shiftDown: 0,
-            shiftUp: 3
+            mustreadOpen: list
         }
         this.handleClick = this.handleClick.bind(this);
     }
@@ -53,10 +51,8 @@ class Home extends React.Component {
             const opacity = this.state.opacity;
             const time = this.state.timer;
             const index = this.state.arrayIndex;
-            const shiftDown = this.state.shiftDown;
-            // const shiftUp = this.state.shiftUp;
-            this.setState({ timer: time + 100 });
 
+            this.setState({ timer: time + 100 });
             if (time >= 3000) {
                 this.setState({ opacity: opacity - 0.1 });
             }
@@ -67,14 +63,7 @@ class Home extends React.Component {
                     this.setState({ arrayIndex: index + 1 })
                 }
                 this.setState({ opacity: 1, timer: 0 });
-            } else if (time % 800 === 0 && shiftDown !== 0) {
-                this.setState({ shiftDown: 0 });
-                this.setState({ shiftUp: 0 });
-            } else if (time % 800 === 0 && shiftDown === 0) {
-                this.setState({ shiftDown: 3 });
-                this.setState({ shiftUp: 3 });
             }
-            // When resetting time from 4000 to 0, shifts twices.
         }, 100);
 
     }
@@ -84,6 +73,8 @@ class Home extends React.Component {
     }
 
     render() {
+        const { arrayIndex, opacity, news, mustreadOpen } = this.state;
+
         const Mustread = { ...MustreadData };
         Object.entries(Mustread).forEach(([key]) => {
             // console.log(Mustread[key])
@@ -92,7 +83,6 @@ class Home extends React.Component {
                 renderers={{ code: ({ value }) => <Markdown source={value} /> }}
                 linkTarget="_blank" />
         });
-        const { arrayIndex, opacity, news, mustreadOpen, shiftUp, shiftDown } = this.state;
         const mustreadList = Object.entries(Mustread).map((value, key) => {
             return (
                 <article className="center mw6 mw7-ns hidden ba mv3 br2 b--dark-gray bg-near-white">
@@ -102,16 +92,16 @@ class Home extends React.Component {
                     >
                         {value[0]}{" "}
                         {!mustreadOpen[key] ?
-                            <a 
+                            <a
                                 href=""
                                 className="dib link black"
-                                style={{ transform: `translateY(${shiftDown}px)` }}
-                            >↓
+                                style={{ animation: "shiftDownAnimation 1.5s infinite" }}
+                            > ↓
                             </a>
                             : <a
                                 href=""
                                 className="dib link black"
-                                style={{ transform: `translateY(${shiftUp}px)` }}
+                                style={{ animation: "shiftUpAnimation 1.5s infinite" }}
                             >↑
                             </a>
                         }
@@ -119,11 +109,11 @@ class Home extends React.Component {
 
                     {mustreadOpen[key] ?
                         <div className="tl pa3 bt b--dark-gray">
-                            <p className="tl f5 f5-ns lh-copy mv0 center">
+                            <p className="f5 f5-ns ph1 lh-copy center">
                                 {value[1]}
                             </p>
                             <button
-                                className="dim grow w-100 f4 mv0 pv2 ph3 bn"
+                                className="dim grow w-100 f4 pv1 bn"
                                 onClick={() => this.handleClick(key)}
                             >↑
                             </button>
@@ -137,35 +127,29 @@ class Home extends React.Component {
             <div>
                 <article
                     className="center mw6 mw6-ns br3 hidden ba b--black-10"
-                    style={{ boxShadow: "2px 2px 4px 0px rgba( 0, 0, 0, 0.2 )" }}
+                    style={{ boxShadow: "2px 2px 4px 0px rgba( 0, 0, 0, 0.25 )" }}
                 >
                     <h1 className="f4 bg-near-white br3 br--top mid-gray mv0 pv2 ph3">最新消息</h1>
-                    <div className="pv3 ph2 bt b--black-10">
-                        <table className="f6 w-100 center"
-                            cellspacing="0">
-                            <tbody className="lh-copy">
-                                <tr>
-                                    <td
-                                        className="pv2 ph1 f5 dark-red"
-                                        style={{ opacity: opacity }}
-                                    ><b>{news[arrayIndex].type}</b>
-                                        <br />
-                                    </td>
-                                    <td
-                                        className="pv2 ph3 f5 near-black"
-                                        style={{ opacity: opacity }}
-                                    >{news[arrayIndex].description}
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div className="db pv3 ph2 bt b--black-10 v-mid tc">
+                        <a
+                            className="ph2 f5 dark-red"
+                            style={{ opacity: opacity }}
+                        ><b>{news[arrayIndex].type}</b>
+                        </a>
+                        <a
+                            className="ph2 f5 near-black"
+                            style={{ opacity: opacity }}
+                        >{news[arrayIndex].description}
+                        </a>
                     </div>
                 </article>
 
-                <section className="mt4 mw7 mw7-ns center bg-dark-gray pv3 ph5-ns shadow-2">
-                    <h3></h3>
-                    <h1 className="mb4 gold" >{Welcome.head1}</h1>
-                    <p className="lh-copy center f5 ph4 pb2 near-white">
+                <section className="mt4 mw7 mw7-ns center bg-dark-gray pv3 ph5-ns"
+                    style={{ boxShadow: "0px 10px 8px -2px rgba( 0, 0, 0, 0.6 )" }}>
+                    <h1 className="mb4 gold">
+                        {Welcome.head1}
+                    </h1>
+                    <p className="lh-copy center f5 ph4 pb2 white">
                         {Welcome.content1}
                     </p>
                     <div className="ph2">
