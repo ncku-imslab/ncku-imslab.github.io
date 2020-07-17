@@ -2,13 +2,13 @@ import React from 'react';
 import Markdown from 'react-markdown';
 import News from '../data/home/news.json';
 import Welcome from '../data/home/home.json';
-import MustreadData from '../data/home/must-read';
+import mustReadData from '../data/home/mustRead';
 
 class Home extends React.Component {
     constructor(props) {
         super(props);
         const today = new Date();
-        let year, yearIndex, arrayLength, mustreadLength;
+        let year, yearIndex, arrayLength, mustReadLength;
         try {
             year = today.getFullYear();
             yearIndex = "year " + year.toString();
@@ -21,8 +21,8 @@ class Home extends React.Component {
         }
 
         let list = [];
-        mustreadLength = Object.entries(MustreadData).length;
-        for (let i = 0; i < mustreadLength; i++) {
+        mustReadLength = Object.entries(mustReadData).length;
+        for (let i = 0; i < mustReadLength; i++) {
             list.push(false);
         }
 
@@ -30,19 +30,19 @@ class Home extends React.Component {
             arrayIndex: 0,
             arrayLength: arrayLength,
             news: News[yearIndex],
-            mustreadLength: mustreadLength,
-            mustreadOpen: list
+            mustReadLength: mustReadLength,
+            mustReadOpen: list
         }
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(index) {
         // The idea of setstate() being asynchronous is perhaps that only after the state is retrieved can we proceed.
-       this.setState(state => {
-           let list = state.mustreadOpen;
-           list[index] = !list[index];
-           return list;
-       })
+        this.setState(state => {
+            let list = state.mustReadOpen;
+            list[index] = !list[index];
+            return list;
+        })
     }
 
     componentDidMount() {
@@ -57,25 +57,33 @@ class Home extends React.Component {
     }
 
     render() {
-        const { arrayIndex, news, mustreadOpen } = this.state;
+        const { arrayIndex, news, mustReadOpen } = this.state;
+        const mustRead = { ...mustReadData };
 
-        const Mustread = { ...MustreadData };
-        Object.entries(Mustread).forEach(([key]) => {
-            // console.log(Mustread[key])
-            Mustread[key] = <Markdown
-                source={Mustread[key]}
+        /*
+        1. Each (key, value) pair is viewed as an array, thus: [key]
+        2. The following codes convert the value of a kv-pair directly to the .md format
+        3. The outer Markdown tag makes the whole section in the .md format,
+           while the inner Markdown tag is another react component to solve the unwrapped problem according to:
+           https://github.com/rexxars/react-markdown/issues/134
+        */
+        Object.entries(mustRead).forEach(([key]) => {
+            mustRead[key] = <Markdown
+                source={mustRead[key]}
                 renderers={{ code: ({ value }) => <Markdown source={value} /> }}
                 linkTarget="_blank" />
+            console.log(mustRead[key])
         });
-        const mustreadList = Object.entries(Mustread).map((value, key) => {
+        
+        const mustReadList = Object.entries(mustRead).map((value, index) => {
             return (
-                <article className="center mw6 mw7-ns hidden ba mv3 br2 b--dark-gray bg-near-white">
+                <article className="center mw6 mw7-ns hidden mv3 br1 bg-near-white">
                     <button
                         className="dim w-100 f4 mv0 pv2 ph3 bn near-black"
-                        onClick={() => this.handleClick(key)}
+                        onClick={() => this.handleClick(index)}
                     >
                         {value[0]}{" "}
-                        {!mustreadOpen[key] ?
+                        {!mustReadOpen[index] ?
                             <a
                                 href=""
                                 className="dib link black"
@@ -91,14 +99,14 @@ class Home extends React.Component {
                         }
                     </button>
 
-                    {mustreadOpen[key] ?
+                    {mustReadOpen[index] ?
                         <div className="tl pa3 bt b--dark-gray">
                             <p className="f5 f5-ns ph1 lh-copy center">
                                 {value[1]}
                             </p>
                             <button
                                 className="dim grow w-100 f4 pv1 bn"
-                                onClick={() => this.handleClick(key)}
+                                onClick={() => this.handleClick(index)}
                             >↑
                             </button>
                         </div>
@@ -137,7 +145,7 @@ class Home extends React.Component {
                         {Welcome.content1}
                     </p>
                     <div className="ph2">
-                        {mustreadList}
+                        {mustReadList}
                     </div>
                 </section>
             </div>

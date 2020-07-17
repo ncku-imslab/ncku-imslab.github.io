@@ -47,7 +47,7 @@ class Navigation extends React.Component {
         const originalAttributes = "link dim grow dark-gray f5 f5-l dib ph3 pb3";
 
         return (
-            <nav className="dt w-100 pb4 response960">
+            <nav className="dt w-100 pb4 mb1 response960">
                 <div
                     id="sideNavbar"
                     className="h-100 fixed bg-near-black pt5"
