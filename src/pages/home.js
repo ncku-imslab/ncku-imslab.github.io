@@ -61,21 +61,26 @@ class Home extends React.Component {
         const mustRead = { ...mustReadData };
 
         /*
-        1. Each (key, value) pair is viewed as an array, thus: [key]
+        1. (key, value) pairs are viewed as an array, thus: [key, value]
         2. The following codes convert the value of a kv-pair directly to the .md format
-        3. The outer Markdown tag makes the whole section in the .md format,
-           while the inner Markdown tag is another react component to solve the unwrapped problem according to:
-           https://github.com/rexxars/react-markdown/issues/134
+        Extra: 
+            If there is a tab in front of lines of .md file, ex:
+            `
+                ## content here
+            `
+            The tab is viewed as a "code block", thus changing the font of the content and preventing the h2 tag from behaving the way we expected.
+            Therefore, do not format the data and start from the beginning of each line instead.
+            If the data is already formatted as the above, we can convert code blocks into individual Markdown components:
+            > renderers={{ code: ({ value }) => <Markdown source={value} /> }}
+            source: https://github.com/rexxars/react-markdown/issues/134
         */
-        Object.entries(mustRead).forEach(([key]) => {
+        Object.entries(mustRead).forEach(([key, value]) => {
             mustRead[key] = <Markdown
-                source={mustRead[key]}
-                renderers={{ code: ({ value }) => <Markdown source={value} /> }}
+                source={value}
                 linkTarget="_blank" />
-            console.log(mustRead[key])
         });
-        
-        const mustReadList = Object.entries(mustRead).map((value, index) => {
+
+        const mustReadSection = Object.entries(mustRead).map((value, index) => {
             return (
                 <article className="center mw6 mw7-ns hidden mv3 br1 bg-near-white">
                     <button
@@ -145,7 +150,7 @@ class Home extends React.Component {
                         {Welcome.content1}
                     </p>
                     <div className="ph2">
-                        {mustReadList}
+                        {mustReadSection}
                     </div>
                 </section>
             </div>
