@@ -1,16 +1,89 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Markdown from 'react-markdown';
+import resourcesData from '../data/resources';
 
-// sub color: light-yellow, yellow
-const Resources = () => {
-    return (
-        <div className="mw8 mw8-ns center bg-near-white pa2 ph5-ns shadow-5 br1">
-            <h1 className="navy pb2 bb bw1" >相關資源 Resources</h1>
-            <p className="lh-copy f5 ph4 pb2">
-                hello
-            </p>
+const resources = { ...resourcesData };
 
-        </div>
-    );
+Object.entries(resources).forEach(([key, value]) => {
+    resources[key] = <Markdown
+        source={value}
+        linkTarget="_blank" />
+});
+
+class Resources extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            open: []
+        }
+    }
+
+    componentDidMount() {
+        this.setState(state => {
+            let list = state.open;
+            list[0] = true;
+            return list;
+        })
+    }
+
+    handleClick = (index) => {
+        this.setState(state => {
+            let list = state.open;
+            list[index] = !list[index];
+            return list;
+        })
+    }
+
+    render() {
+        const { open } = this.state;
+        const resourcesSection = Object.entries(resources).map((entries, index) => {
+            return (
+                <div className="black tl pv2 ph2 ba b--navy br1 mb2 mt3" key={entries[0]}>
+                    <button className="dim navy f4 b w-100 tl bn pt1 pl2"
+                        onClick={() => this.handleClick(index)}
+                    > {entries[0]} {}
+                        {!open[index] ?
+                            <span
+                                className="navy dib link"
+                                style={{ animation: "shiftDownAnimation 2s infinite" }}
+                            > ↓
+                            </span>
+                            :
+                            <span
+                                className="navy dib link"
+                                style={{ animation: "shiftUpAnimation 2s infinite" }}
+                            > ↑
+                            </span>
+                        }
+                    </button>
+
+                    {open[index] ?
+                        <div className="pt2 ph3 tl f5 f5-ns lh-copy fw5">
+                            <span className="f5">
+                                {entries[1]}
+                            </span>
+                            <button
+                                className="dim grow w-100 center f4 pb1 bn"
+                                onClick={() => this.handleClick(index)}
+                            >↑
+                            </button>
+                        </div>
+                        : null
+                    }
+                </div>
+            );
+        });
+        return (
+            <div className="mw8 mw8-ns center bg-near-white pa2 ph5-ns shadow-5 br1">
+                <div className="pb4">
+                    <h1 className="navy pb2 bb bw1">
+                        相關資源 Resources
+                    </h1>
+                    {resourcesSection}
+                </div>
+            </div>
+        );
+    }
 }
 
 export default Resources;

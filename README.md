@@ -10,8 +10,15 @@
 - Activation (default port: 3000): `$ npm start`
 
 
-## Data Usages 
-*files under /src/data*
+## Data Descriptions 
+
+### Types 
+/src/data
 
 - .json: general usage; fetched with (key,value)
 - .js: **for markdown(.md)**
+
+### Specifications
+
+- honors.json: 
+The reason for redundant key names as "year + 20xx" instead of "20xx" is that **keys of numbers are automatically sorted in the unwanted direction** :(

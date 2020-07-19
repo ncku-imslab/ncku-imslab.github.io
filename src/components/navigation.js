@@ -85,7 +85,7 @@ class Navigation extends React.Component {
                         onClick={() => this.closeNav()}
                     >研究 Research</Link>
                     <div className="db dropdown">
-                        <a
+                        <span
                             className={expandedAttributes}
                             style={expandedStyles}
                         >成員 Members
@@ -94,7 +94,7 @@ class Navigation extends React.Component {
                                 className="dib fw7 light-green"
                                 style={{ animation: "shiftDownAnimation 2s infinite" }}
                             > ▽ </small>
-                        </a>
+                        </span>
                         <div
                             className="dn dropdown-content tc"
                             style={{ zIndex: "1" }}
@@ -134,8 +134,8 @@ class Navigation extends React.Component {
 
                 <div className="mw8 dib dtc-l v-mid w-100 w-75-l tr-l ph3">
                     <div className="ph2 justify-center disappear960 mr3">
-                        <a className="dark-gray db f5 f5-l fw5 mb2">智慧化行動服務實驗室 @ 國立成功大學</a>
-                        <a className="dark-gray db f5 f5-l fw5 pb2">Intelligent Mobile Service Laboratory @ NCKU</a>
+                        <span className="dark-gray db f5 f5-l fw5 mb2">智慧化行動服務實驗室 @ 國立成功大學</span>
+                        <span className="dark-gray db f5 f5-l fw5 pb2">Intelligent Mobile Service Laboratory @ NCKU</span>
                         <p></p>
                     </div>
                     <button
@@ -163,7 +163,7 @@ class Navigation extends React.Component {
                         </Link>
 
                         <div className="dib relative dropdown">
-                            <a
+                            <span
                                 className="link dark-gray f5 f5-l dib ph3 pb3"
                                 style={{ cursor: "default" }}
                             >成員 Members
@@ -172,7 +172,7 @@ class Navigation extends React.Component {
                                     className="dib fw7 navy"
                                     style={{ animation: "shiftDownAnimation 2s infinite" }}
                                 >▽</small>
-                            </a>
+                            </span>
                             <div
                                 className="dn w-100 absolute dropdown-content tc ba b-dark-gray br1 bg-white"
                                 style={{ zIndex: "1" }}

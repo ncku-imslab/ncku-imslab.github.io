@@ -111,7 +111,7 @@ class Home extends React.Component {
                                 {value[1]}
                             </div>
                             <button
-                                className="dim grow w-100 f4 pv1 bn"
+                                className="dim grow w-100 f4 pt1 bn"
                                 onClick={() => this.handleClick(index)}
                             >↑
                             </button>

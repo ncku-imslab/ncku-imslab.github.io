@@ -13,7 +13,7 @@ Object.entries(researches).forEach(([key, value]) => {
 
 const researchSection = Object.entries(researches).map((entries) => {
     return (
-        <div className="pb2" key={entries[0]}>
+        <div className="pb4" key={entries[0]}>
             <h1 className="navy pb2 bb bw1">
                 {entries[0]}
             </h1>
@@ -29,14 +29,9 @@ class Research extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            open: [2]
+            open: []
         }
         //this.handleClick = this.handleClick.bind(this);
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.timeout);
-        this.setState({ state: []})
     }
 
     handleClick = (index) => {
@@ -76,8 +71,7 @@ class Research extends Component {
                     </button>
                     
                     {open[index] ?
-                        <div className="pl4 pr3">
-                            <p className="pt1 mt1"></p>
+                        <div className="pl4 pr3 pt1 mt1">
                             {values.map((value, idx) => {
                                 return (
                                     <div className="normal" key={idx}>
@@ -85,16 +79,16 @@ class Research extends Component {
                                             {value.name}
                                         </p>
                                         <p className="f5">
-                                            <a className="near-black">- 時間 Duration: </a>{value.duration}
+                                            <span className="near-black">- 時間 Duration: </span>{value.duration}
                                         </p>
                                         <p className="f5 pb3">
-                                            <a className="near-black">- 補助單位 Sponsor:</a> {value.subsidy}
+                                            <span className="near-black">- 補助單位 Sponsor:</span> {value.subsidy}
                                         </p>
                                     </div>
                                 );
                             })}
                             <button
-                                className="dim grow w-100 center f4 pb2 bn"
+                                className="dim grow w-100 center f4 pb1 bn"
                                 onClick={() => this.handleClick(index)}
                             >↑
                             </button>
@@ -108,9 +102,9 @@ class Research extends Component {
         return (
             <div className="mw8 mw8-ns center bg-near-white pa2 ph5-ns shadow-5 br1">
                 {researchSection}
-                <div className="pb3">
+                <div className="pb4">
                     <h1 className="navy pb2 bb bw1">
-                        研究計畫 Projects
+                        研究計畫 Research Projects
                     </h1>
                     {projectsSection}
                 </div>
