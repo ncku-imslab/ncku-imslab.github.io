@@ -91,27 +91,25 @@ class Home extends React.Component {
                     >
                         {value[0]}{" "}
                         {!mustReadOpen[index] ?
-                            <a
-                                href=""
+                            <span
                                 className="dib link black"
                                 style={{ animation: "shiftDownAnimation 2s infinite" }}
                             > ↓
-                            </a>
+                            </span>
                             : 
-                            <a
-                                href=""
+                            <span
                                 className="dib link black"
                                 style={{ animation: "shiftUpAnimation 2s infinite" }}
                             >↑
-                            </a>
+                            </span>
                         }
                     </button>
 
                     {mustReadOpen[index] ?
                         <div className="tl pa3 bt b--dark-gray">
-                            <p className="f5 f5-ns ph1 lh-copy center">
+                            <div className="f5 f5-ns ph1 lh-copy center">
                                 {value[1]}
-                            </p>
+                            </div>
                             <button
                                 className="dim grow w-100 f4 pv1 bn"
                                 onClick={() => this.handleClick(index)}
@@ -135,8 +133,8 @@ class Home extends React.Component {
                         className="db pv3 ph2 bt b--black-10 v-mid tc"
                         style={{ animation: "fadedAnimation 6s infinite" }}
                     >
-                        <a className="ph2 f5 dark-red"> <b> {news[arrayIndex].type} </b> </a>
-                        <a className="ph2 f5 near-black">{news[arrayIndex].description}</a>
+                        <span className="ph2 f5 dark-red"> <b> {news[arrayIndex].type} </b> </span>
+                        <span className="ph2 f5 near-black">{news[arrayIndex].description}</span>
                     </div>
                 </article>
 
@@ -145,9 +143,9 @@ class Home extends React.Component {
                     <h1 className="mb4 gold">
                         {Welcome.head1}
                     </h1>
-                    <p className="lh-copy center f5 ph4 pb3 white">
+                    <div className="lh-copy center f5 ph4 pb3 white">
                         {Welcome.content1}
-                    </p>
+                    </div>
                     <div className="ph2">
                         {mustReadSection}
                     </div>

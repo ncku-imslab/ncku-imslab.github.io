@@ -17,9 +17,9 @@ const researchSection = Object.entries(researches).map((entries) => {
             <h1 className="navy pb2 bb bw1">
                 {entries[0]}
             </h1>
-            <p className="pt1 ph3 tl f5 f5-ns lh-copy ba b--navy br1">
+            <div className="pt1 ph3 tl f5 f5-ns lh-copy ba b--navy br1">
                 {entries[1]}
-            </p>
+            </div>
         </div>
     );
 });
@@ -52,7 +52,7 @@ class Research extends Component {
         const projectsSection = Object.entries(Projects).map(([entries, values]) => {
             const index = entries === "independent";
             return (
-                <div className="black tl pv2 ph2 ba b--navy br1 mb2 mt3" key={index}>
+                <div className="black tl pv2 ph2 ba b--navy br1 mb2 mt3" key={entries}>
                     <button className="dim navy f4 b w-100 tl bn pt1 pl2"
                         onClick={() => this.handleClick(index)}
                     >
@@ -61,19 +61,17 @@ class Research extends Component {
                             "合作計畫 Co-PI Projects "
                         }
                         {!open[index] ?
-                            <a
-                                href=""
+                            <span
                                 className="navy dib link"
                                 style={{ animation: "shiftDownAnimation 2s infinite" }}
                             > ↓
-                            </a>
+                            </span>
                             :
-                            <a
-                                href=""
+                            <span
                                 className="navy dib link"
                                 style={{ animation: "shiftUpAnimation 2s infinite" }}
                             > ↑
-                            </a>
+                            </span>
                         }
                     </button>
                     
@@ -82,7 +80,7 @@ class Research extends Component {
                             <p className="pt1 mt1"></p>
                             {values.map((value, idx) => {
                                 return (
-                                    <div className="normal">
+                                    <div className="normal" key={idx}>
                                         <p className="b f5 pb1">
                                             {value.name}
                                         </p>
