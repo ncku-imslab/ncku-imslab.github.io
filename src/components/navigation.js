@@ -81,9 +81,9 @@ class Navigation extends React.Component {
                     <Link
                         className={expandedAttributes}
                         style={expandedStyles}
-                        to="/researches"
+                        to="/research"
                         onClick={() => this.closeNav()}
-                    >研究 Researches</Link>
+                    >研究 Research</Link>
                     <div className="db dropdown">
                         <a
                             className={expandedAttributes}
@@ -158,8 +158,8 @@ class Navigation extends React.Component {
                         </Link>
                         <Link
                             className={originalAttributes}
-                            to="/researches"
-                        >研究 Researches
+                            to="/research"
+                        >研究 Research
                         </Link>
 
                         <div className="dib relative dropdown">

@@ -2,7 +2,7 @@ import React from 'react';
 import Markdown from 'react-markdown';
 import News from '../data/home/news.json';
 import Welcome from '../data/home/home.json';
-import mustReadData from '../data/home/mustRead';
+import MustReadData from '../data/home/mustRead';
 
 class Home extends React.Component {
     constructor(props) {
@@ -21,7 +21,7 @@ class Home extends React.Component {
         }
 
         let list = [];
-        mustReadLength = Object.entries(mustReadData).length;
+        mustReadLength = Object.entries(MustReadData).length;
         for (let i = 0; i < mustReadLength; i++) {
             list.push(false);
         }
@@ -58,7 +58,7 @@ class Home extends React.Component {
 
     render() {
         const { arrayIndex, news, mustReadOpen } = this.state;
-        const mustRead = { ...mustReadData };
+        const mustRead = { ...MustReadData };
 
         /*
         1. (key, value) pairs are viewed as an array, thus: [key, value]
@@ -95,7 +95,8 @@ class Home extends React.Component {
                                 style={{ animation: "shiftDownAnimation 2s infinite" }}
                             > ↓
                             </a>
-                            : <a
+                            : 
+                            <a
                                 href=""
                                 className="dib link black"
                                 style={{ animation: "shiftUpAnimation 2s infinite" }}
@@ -120,6 +121,7 @@ class Home extends React.Component {
                 </article>
             )
         });
+        
         return (
             <div>
                 <article
@@ -127,17 +129,12 @@ class Home extends React.Component {
                     style={{ boxShadow: "2px 2px 4px 0px rgba( 0, 0, 0, 0.25 )" }}
                 >
                     <h1 className="f4 bg-near-white br3 br--top mid-gray mv0 pv2 ph3">最新消息</h1>
-                    <div className="db pv3 ph2 bt b--black-10 v-mid tc">
-                        <a
-                            className="ph2 f5 dark-red"
-                            style={{ animation: "fadedAnimation 6s infinite" }}
-                        ><b>{news[arrayIndex].type}</b>
-                        </a>
-                        <a
-                            className="ph2 f5 near-black"
-                            style={{ animation: "fadedAnimation 6s infinite" }}
-                        >{news[arrayIndex].description}
-                        </a>
+                    <div
+                        className="db pv3 ph2 bt b--black-10 v-mid tc"
+                        style={{ animation: "fadedAnimation 6s infinite" }}
+                    >
+                        <a className="ph2 f5 dark-red"> <b> {news[arrayIndex].type} </b> </a>
+                        <a className="ph2 f5 near-black">{news[arrayIndex].description}</a>
                     </div>
                 </article>
 
@@ -146,7 +143,7 @@ class Home extends React.Component {
                     <h1 className="mb4 gold">
                         {Welcome.head1}
                     </h1>
-                    <p className="lh-copy center f5 ph4 pb2 white">
+                    <p className="lh-copy center f5 ph4 pb3 white">
                         {Welcome.content1}
                     </p>
                     <div className="ph2">

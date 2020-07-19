@@ -6,7 +6,7 @@ import './App.css';
 import Navigation from './components/navigation';
 import Footer from './components/footer';
 import Home from './pages/home';
-import Researches from './pages/researches';
+import Research from './pages/research';
 import Professor from './pages/professor';
 import Students from './pages/students';
 import Alumni from './pages/alumni';
@@ -64,8 +64,8 @@ const routes = [
     exact: true
   },
   {
-    path: '/researches',
-    component: Researches
+    path: '/research',
+    component: Research
   },
   {
     path: '/professor',
