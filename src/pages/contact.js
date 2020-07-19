@@ -8,11 +8,16 @@ const Contact = () => {
             <div className="dt tc center mb4 mw7 mw7-ns shadow-5 bg-near-white navy br1">
                 <div className="dib w-50 tcl mb1 ph3">
                     <h4 className={titleClassNames}>E-mail</h4>
+<<<<<<< HEAD
                     <span className="dim db f5 black">imslab@imslab.org</span>
+=======
+                    <span className="dim db f5 near-black">imslab@imslab.org</span>
+>>>>>>> 5a29c0c98a41ba65ef5fc5fc510a8b1c722ad561
                     <br />
                 </div>
                 <div className="dib w-50 tcl mb1 ph3">
                     <h4 className={titleClassNames}>電話 Tel.</h4>
+<<<<<<< HEAD
                     <span className="f5 db black">+886-6-275-7575</span>
                     <span className="f5 black">Ext.62520-1004</span>
                 </div>
@@ -20,6 +25,15 @@ const Contact = () => {
                     <h4 className={titleClassNames}>地址 Addr.</h4>
                     <span className="dim f5 db mb3 black">701 台南市東區大學路 1 號 國立成功大學 成功校區 資訊系館 10 樓 65A04 室</span>
                     <span className="dim f5 db mb2 black">Room 65A04, 10th Floor, CSIE Building, Cheng-Kung Campus, No. 1, Daxue Road, East District, Tainan City 701, Taiwan (R.O.C.)</span>
+=======
+                    <span className="f5 db near-black">+886-6-275-7575</span>
+                    <span className="f5 near-black">Ext.62520-1004</span>
+                </div>
+                <div className="mb2 w-100 center pb2 ph3">
+                    <h4 className={titleClassNames}>地址 Addr.</h4>
+                    <span className="dim f5 db mb3 near-black">701 台南市東區大學路 1 號 國立成功大學 成功校區 資訊系館 10 樓 65A04 室</span>
+                    <span className="dim f5 db mb2 near-black">Room 65A04, 10th Floor, CSIE Building, Cheng-Kung Campus, No. 1, Daxue Road, East District, Tainan City 701, Taiwan (R.O.C.)</span>
+>>>>>>> 5a29c0c98a41ba65ef5fc5fc510a8b1c722ad561
                 </div>
             </div>
             <div className="mt2 w-100 center">
