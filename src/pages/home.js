@@ -33,10 +33,11 @@ class Home extends React.Component {
             mustReadLength: mustReadLength,
             mustReadOpen: list
         }
-        this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(index) {
+    // Instead of binding in constructor(), this arrow function approach seems to be perfectly stable (no re-rendering when pressing buttons).
+    // Refer to: https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/
+    handleClick = (index) => {
         // The idea of setstate() being asynchronous is perhaps that only after the state is retrieved can we proceed.
         this.setState(state => {
             let list = state.mustReadOpen;
@@ -54,6 +55,7 @@ class Home extends React.Component {
 
     componentWillUnmount() {
         clearInterval(this.timeout);
+        this.setState({ mustReadOpen: []})
     }
 
     render() {
@@ -82,7 +84,7 @@ class Home extends React.Component {
 
         const mustReadSection = Object.entries(mustRead).map((value, index) => {
             return (
-                <article className="center mw6 mw7-ns hidden mv3 br1 bg-near-white">
+                <div className="center mw6 mw7-ns hidden mv3 br1 bg-near-white" key={value[0]}>
                     <button
                         className="dim w-100 f4 mv0 pv2 ph3 bn near-black"
                         onClick={() => this.handleClick(index)}
@@ -118,7 +120,7 @@ class Home extends React.Component {
                         </div>
                         : null
                     }
-                </article>
+                </div>
             )
         });
         

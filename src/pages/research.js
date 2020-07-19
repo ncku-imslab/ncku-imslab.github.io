@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import Markdown from 'react-markdown';
 import ResearchesData from '../data/researches/researches';
 import Projects from '../data/researches/projects.json';
@@ -13,7 +13,7 @@ Object.entries(researches).forEach(([key, value]) => {
 
 const researchSection = Object.entries(researches).map((entries) => {
     return (
-        <div className="pb2">
+        <div className="pb2" key={entries[0]}>
             <h1 className="navy pb2 bb bw1">
                 {entries[0]}
             </h1>
@@ -31,11 +31,15 @@ class Research extends Component {
         this.state = {
             open: [2]
         }
-        this.handleClick = this.handleClick.bind(this);
+        //this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(index) {
-        // The idea of setstate() being asynchronous is perhaps that only after the state is retrieved can we proceed.
+    componentWillUnmount() {
+        clearInterval(this.timeout);
+        this.setState({ state: []})
+    }
+
+    handleClick = (index) => {
         this.setState(state => {
             let list = state.open;
             list[index] = !list[index];
@@ -48,7 +52,7 @@ class Research extends Component {
         const projectsSection = Object.entries(Projects).map(([entries, values]) => {
             const index = entries === "independent";
             return (
-                <div className="black tl pv2 ph1 ba b--navy br1 mb2 mt3">
+                <div className="black tl pv2 ph2 ba b--navy br1 mb2 mt3" key={index}>
                     <button className="dim navy f4 b w-100 tl bn pt1 pl2"
                         onClick={() => this.handleClick(index)}
                     >
@@ -76,7 +80,7 @@ class Research extends Component {
                     {open[index] ?
                         <div className="pl4 pr3">
                             <p className="pt1 mt1"></p>
-                            {values.map((value) => {
+                            {values.map((value, idx) => {
                                 return (
                                     <div className="normal">
                                         <p className="b f5 pb1">
