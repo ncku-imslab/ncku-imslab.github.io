@@ -13,7 +13,7 @@ Object.entries(researches).forEach(([key, value]) => {
 
 const researchSection = Object.entries(researches).map((entries) => {
     return (
-        <div className="pb4" key={entries[0]}>
+        <div className="mb4 pb2" key={entries[0]}>
             <h1 className="navy pb2 bb bw1">
                 {entries[0]}
             </h1>
@@ -44,7 +44,7 @@ class Research extends Component {
 
     render() {
         const { open } = this.state;
-        const projectsSection = Object.entries(Projects).map(([entries, values]) => {
+        const section = Object.entries(Projects).map(([entries, values]) => {
             const index = entries === "independent";
             return (
                 <div className="black tl pv2 ph2 ba b--navy br1 mb2 mt3" key={entries}>
@@ -102,11 +102,11 @@ class Research extends Component {
         return (
             <div className="mw8 mw8-ns center bg-near-white pa2 ph5-ns shadow-5 br1">
                 {researchSection}
-                <div className="pb4">
+                <div className="mb4 pb2">
                     <h1 className="navy pb2 bb bw1">
                         研究計畫 Research Projects
                     </h1>
-                    {projectsSection}
+                    {section}
                 </div>
             </div>
         );

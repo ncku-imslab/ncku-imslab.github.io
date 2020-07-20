@@ -35,9 +35,9 @@ class Honors extends Component {
 
     render() {
         const { open } = this.state;
-        const honorsSection = Object.entries(Honor).map((titleAndObject, index) => {
+        const section = Object.entries(Honor).map((titleAndObject, index) => {
             return (
-                <div className="pb4" key={titleAndObject[0]}>
+                <div className="mb4 pb2" key={titleAndObject[0]}>
                     <h1 className="navy pb2 near-black bb bw1" >{titleAndObject[0]}</h1>
                     {
                         Object.entries(titleAndObject[1]).map((yearAndObject, yearIndex) => {
@@ -68,7 +68,7 @@ class Honors extends Component {
                                                     return (
                                                         <div className="tl normal" key={contentIndex}>
                                                             <p className="b f5 pb1">
-                                                                ✰ {content.content}
+                                                            ✰ {content.content}
                                                             </p>
                                                             <p className="f5 pb2">
                                                                 {content.name}
@@ -97,7 +97,7 @@ class Honors extends Component {
 
         return (
             <div className="mw8 mw8-ns center bg-near-white pa2 ph5-ns shadow-5 br1">
-                {honorsSection}
+                {section}
             </div>
         );
     }

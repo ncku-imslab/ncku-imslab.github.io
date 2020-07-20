@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/imslab_logo.jpg';
 import menu_icon from '../assets/menu_icon.png';
 import './navigation.css';
 
-// It's better to provide the key attribute, while whether it's necessary is unclear.
+// It's better to provide the key attribute such that rendering is more stable.
 const expandedObject = [
     {
-        title: "教授 Professor",
+        title: "指導教授 Professor",
         to: "/professor",
         key: "professor"
     },
@@ -23,7 +23,7 @@ const expandedObject = [
     }
 ]
 
-class Navigation extends React.Component {
+class Navigation extends Component {
     openNav() { document.getElementById("sideNavbar").style.width = "245px"; }
 
     closeNav() { document.getElementById("sideNavbar").style.width = "0"; }
@@ -44,6 +44,16 @@ class Navigation extends React.Component {
             transition: "0.3s",
             letterSpacing: "0.05em"
         };
+
+        const originalList = expandedObject.map((object) => {
+            return (
+                <Link
+                    className="dim link dark-gray pa2 db tc bb b-dark-gray"
+                    to={object.to}
+                    key={object.key}
+                >{object.title}</Link>
+            )
+        });
         const originalAttributes = "link dim grow dark-gray f5 f5-l dib ph3 pb3";
 
         return (
@@ -61,13 +71,14 @@ class Navigation extends React.Component {
                     }}
                 >
                     <p
-                        className="link dim light-green absolute db pv3 ph4 fw6 f3 pv0 mv0 pointer"
+                        className="link dim near-white absolute db pv3 ph4 fw6 f3 pv0 mv0 pointer"
                         style={{
                             top: "0",
-                            left: "0px"
+                            left: "0px",
+                            animation: "shiftRightAnimation 2s infinite"
                         }}
                         onClick={() => this.closeNav()}
-                    >→</p>
+                    ><small>➢</small></p>
                     <p className="link near-white db pt2 f5 f5-l tl mh4 mb0 mt2">智慧化行動服務實驗室</p>
                     <p className="link near-white db f5 f5-l tl mh4 mt0">@ 國立成功大學</p>
                     <p className="link near-white db pb2 f5 f5-l tl bb b-near-white mh4 mb4 mt0">Intelligent Mobile Service Laboratory @ NCKU</p>
@@ -78,12 +89,6 @@ class Navigation extends React.Component {
                         to="/"
                         onClick={() => this.closeNav()}
                     >首頁 Home</Link>
-                    <Link
-                        className={expandedAttributes}
-                        style={expandedStyles}
-                        to="/research"
-                        onClick={() => this.closeNav()}
-                    >研究 Research</Link>
                     <div className="db dropdown">
                         <span
                             className={expandedAttributes}
@@ -103,6 +108,12 @@ class Navigation extends React.Component {
                         </div>
                     </div>
 
+                    <Link
+                        className={expandedAttributes}
+                        style={expandedStyles}
+                        to="/research"
+                        onClick={() => this.closeNav()}
+                    >研究 Research</Link>
                     <Link
                         className={expandedAttributes}
                         style={expandedStyles}
@@ -139,7 +150,7 @@ class Navigation extends React.Component {
                         <p></p>
                     </div>
                     <button
-                        className="dim dn appear960 mb3 center pointer mt2 bn"
+                        className="dim dn appear960 center pointer mv3 bn"
                         style={{ animation: "pulseAnimation 3s infinite" }}
                         onClick={() => this.openNav()}
                     >
@@ -156,11 +167,6 @@ class Navigation extends React.Component {
                             to="/"
                         >首頁 Home
                         </Link>
-                        <Link
-                            className={originalAttributes}
-                            to="/research"
-                        >研究 Research
-                        </Link>
 
                         <div className="dib relative dropdown">
                             <span
@@ -174,27 +180,18 @@ class Navigation extends React.Component {
                                 >▽</small>
                             </span>
                             <div
-                                className="dn w-100 absolute dropdown-content tc ba b-dark-gray br1 bg-white"
+                                className="dn w-90 absolute dropdown-content tc br bl bt br1 b-dark-gray bg-white"
                                 style={{ zIndex: "1" }}
                             >
-                                <Link
-                                    className="dim link dark-gray pa2 db tc bb b-dark-gray"
-                                    to="/professor"
-                                >教授 Professor
-                                </Link>
-                                <Link
-                                    className="dim link dark-gray pa2 db tc bb b-dark-gray"
-                                    to="/students"
-                                >學生 Students
-                                </Link>
-                                <Link
-                                    className="dim link dark-gray pa2 db tc"
-                                    to="/alumni"
-                                >學成下山 Alumni
-                                </Link>
+                                {originalList}
                             </div>
                         </div>
 
+                        <Link
+                            className={originalAttributes}
+                            to="/research"
+                        >研究 Research
+                        </Link>
                         <Link
                             className={originalAttributes}
                             to="/honors"

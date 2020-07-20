@@ -16,12 +16,24 @@
 
 @keyframes pulseAnimation {
     0% {
-        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
-    }
-    60% {
-        box-shadow: 0 0 0 7px rgba(0, 0, 0, 0);
-    }
-    100% {
         box-shadow: 0 0 0 0px rgba(0, 0, 0, 0);
     }
+    60% {
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 3);
+    }
 }
+
+@keyframes shiftRightAnimation {
+    0% {
+      transform: translateX(15%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(15%);
+    }
+  }

@@ -36,7 +36,7 @@ class Resources extends Component {
 
     render() {
         const { open } = this.state;
-        const resourcesSection = Object.entries(resources).map((entries, index) => {
+        const section = Object.entries(resources).map((entries, index) => {
             return (
                 <div className="black tl pv2 ph2 ba b--navy br1 mb2 mt3" key={entries[0]}>
                     <button className="dim navy f4 b w-100 tl bn pt1 pl2"
@@ -58,7 +58,7 @@ class Resources extends Component {
                     </button>
 
                     {open[index] ?
-                        <div className="pt2 ph3 tl f5 f5-ns lh-copy fw5">
+                        <div className="pt2 ph3 tl f5 f5-ns lh-copy">
                             <span className="f5">
                                 {entries[1]}
                             </span>
@@ -75,11 +75,11 @@ class Resources extends Component {
         });
         return (
             <div className="mw8 mw8-ns center bg-near-white pa2 ph5-ns shadow-5 br1">
-                <div className="pb4">
+                <div className="mb4 pb2">
                     <h1 className="navy pb2 bb bw1">
                         相關資源 Resources
                     </h1>
-                    {resourcesSection}
+                    {section}
                 </div>
             </div>
         );

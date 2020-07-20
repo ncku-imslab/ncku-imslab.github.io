@@ -1,0 +1,511 @@
+{
+    "students": {
+        "stu_phd": {
+            "": [{
+                    "name_ch": "莊琮暉",
+                    "name_en": "Tsung-Hui Chuang",
+                    "image": "thchuang.jpg"
+                },
+                {
+                    "name_ch": "蔡昀展",
+                    "name_en": "Yun-Zhan Cai",
+                    "image": "yzcai.jpg"
+                },
+                {
+                    "name_ch": "王俞婷",
+                    "name_en": "Yu-Ting Wang",
+                    "image": "ytwang.jpg"
+                },
+                {
+                    "name_ch": "陳珞安",
+                    "name_en": "Lo-An Chen",
+                    "image": "lachen.jpg"
+                },
+                {
+                    "name_ch": "張軍斌",
+                    "name_en": "",
+                    "image": "jbchang.jpg"
+                }
+            ]
+        },
+        "stu_master": {
+
+            "m2": [{
+                    "name_ch": "方鈞麒",
+                    "name_en": "Chun-Chi Fang",
+                    "image": "ccfang.jpg"
+                },
+                {
+                    "name_ch": "陳俊佑",
+                    "name_en": "",
+                    "image": "cychen.jpg"
+                },
+                {
+                    "name_ch": "田少谷",
+                    "name_en": "Shao-Ku Tien",
+                    "image": "sktien.jpg"
+                }
+            ],
+            "m1": [{
+                    "name_ch": "梁祐承",
+                    "name_en": "You-Cheng Liang",
+                    "image": "ycliang.jpg"
+                },
+                {
+                    "name_ch": "王靖元",
+                    "image": "jywang.jpg"
+                },
+                {
+                    "name_ch": "鄭皓中",
+                    "name_en": "Hao-Zhong Zheng",
+                    "image": "hzzheng.jpg"
+                },
+                {
+                    "name_ch": "詹之鋐",
+                    "name_en": "Chih-Hung Chan",
+                    "image": "chchan.jpg"
+                }
+            ]
+        },
+        "stu_bachelor": {
+
+            "b109": [{
+                    "name_ch": "黃政瑋",
+                    "name_en": "",
+                    "image": "jyhuang.jpg"
+                },
+                {
+                    "name_ch": "吳添毅",
+                    "name_en": "",
+                    "image": "tywu.jpg"
+                },
+                {
+                    "name_ch": "黃盈慈",
+                    "name_en": "",
+                    "image": "ythuang.jpg"
+                },
+                {
+                    "name_ch": "戴源",
+                    "name_en": "",
+                    "image": "ydai.jpg"
+                },
+                {
+                    "name_ch": "王聖中 (共同指導)",
+                    "name_en": "",
+                    "image": "scwang.jpg"
+                },
+                {
+                    "name_ch": "林信宇 (測量系)",
+                    "name_en": "",
+                    "image": "sylin.jpg"
+                }
+            ]
+        }
+    },
+    "alumni": {
+        "alu_phd": {
+            "g108": [{
+                    "name_ch": "張蕙玲",
+                    "name_en": "Hui-Ling Chang",
+                    "image": "hlchang.jpg",
+                    "paper": "物聯網裝置之省電機制研究",
+                    "job": "Microsoft Research (Redmond)"
+                },
+                {
+                    "name_ch": "林佳瑩",
+                    "name_en": "Chia-Ying Lin",
+                    "image": "cylin.jpg",
+                    "paper": "雲端無線存取網路架構於第五代行動通訊系統之聯結控制",
+                    "job": "LINE Taiwan"
+                }
+            ]
+        },
+        "alu_master": {
+            "g108": [
+ 		{   "name_ch": "卓景昭",
+                    "name_en": "Jing-Zhao Zhuo",
+                    "image": "jzzhuo.jpg",
+		    "paper": "物聯網於軟體定義網路中基於週期子流之主動載入流表條目機制"
+                },
+		{
+                    "name_ch": "謝忠穎",
+                    "name_en": "Chung-Ying Hsieh",
+                    "image": "cyhsieh.jpg",
+                    "paper": "在蜂巢式物聯網中藉由提前釋放RRC連線以強化節電之方法"
+                },
+                {
+                    "name_ch": "瞿旭民",
+                    "name_en": "Shu-Min Cyu",
+                    "image": "hmchiu.jpg",
+                    "paper": "資料平面上基於洪氾攻擊之偵測系統",
+                    "job": "A10 Networks"
+                }
+            ],
+            "g107": [{
+                    "name_ch": "吳孟庭",
+                    "name_en": "Mong-Ting Wu",
+                    "image": "mtwu.jpg",
+                    "paper": "行動網路中可容許延遲之語音研究",
+                    "job": "Trend Micro"
+                },
+                {
+                    "name_ch": "林賢哲",
+                    "name_en": "Sian-Jhe Lin",
+                    "image": "sjlin.jpg",
+                    "paper": "基於回程網路之5G協作式小型基地台快取研究",
+                    "job": "群暉科技 (Synology) (研發替代役)"
+                }
+            ],
+            "g106": [{
+                    "name_ch": "呂宜龍",
+                    "name_en": "Yi Long Lu",
+                    "image": "yllu.jpg",
+                    "paper": "智慧城市中以使用率為基礎之停車位推薦方案",
+                    "job": "網銀國際"
+                },
+                {
+                    "name_ch": "張鶴騰",
+                    "name_en": "He-Teng Chang",
+                    "image": "htchang.jpg",
+                    "paper": "利用互斥對稱與內部節點的非確切投射布林配對",
+                    "job": "台大電機系博士班"
+                }
+            ],
+            "g105": [{
+                    "name_ch": "呂尚霖",
+                    "name_en": "Shang-Lin Lu",
+                    "image": "sllu.jpg",
+                    "paper": "機器型態通訊之樂觀 DRX 節能技術",
+                    "job": "中華電信企業分公司 (研發替代役)"
+                },
+                {
+                    "name_ch": "王正綱",
+                    "name_en": "Cheng-Gang Wang",
+                    "image": "cgwang.jpg",
+                    "paper": "可靠且輕量化的物聯網通訊之閘道器輔助重傳機制",
+                    "job": "晨星 (MStar)"
+                }
+            ],
+            "g104": [{
+                    "name_ch": "蘇珮華",
+                    "name_en": "Pei-Hua Su",
+                    "image": "phsu.jpg",
+                    "paper": "行動裝置上基於檔案傳輸剩餘大小之行動資料分流",
+                    "job": "IBM"
+                },
+                {
+                    "name_ch": "賴志豪",
+                    "name_en": "Chih-Hao Lai",
+                    "image": "chlai.jpg",
+                    "paper": "於基地台與支援LIPA之家用基地台間基於計時器之通話保留機制",
+                    "job": "聯發科 (研發替代役) / 台積電"
+                },
+                {
+                    "name_ch": "蔡婉萍",
+                    "name_en": "Wan-Ping Tsai",
+                    "image": "wptsai.jpg",
+                    "paper": "基於無線軟體定義網路聯結控制之自適應負載平衡機制",
+                    "job": "Trend Micro"
+                },
+                {
+                    "name_ch": "李思穎",
+                    "name_en": "Ssu-Yin Li",
+                    "image": "syli.jpg",
+                    "paper": "無線軟體定義網路中可用於不同SSID之Openflow AP間的單一金鑰認證機制",
+                    "job": "Trend Micro"
+                }
+            ],
+            "g103": [{
+                    "name_ch": "陳冠宏",
+                    "name_en": "Guan-Hong Chen",
+                    "image": "ghchen.jpg",
+                    "paper": "LTE-A 階層式網路下行傳輸中藉由感知無線電協調細胞間干擾之方法",
+                    "job": "合勤科技"
+                },
+                {
+                    "name_ch": "高宏瑋",
+                    "name_en": "Hung-Wei Kao",
+                    "image": "hwkao.jpg",
+                    "paper": "LTE-A 中基於分群之 MTC 兩階段無線電存取",
+                    "job": "台積電 (研發替代役)"
+                },
+                {
+                    "name_ch": "李冠賢",
+                    "name_en": "Kuan-Hsien Li",
+                    "image": "khli.jpg",
+                    "paper": "利用車載網路之機率路由及貪婪派遣改善計程車叫車服務",
+                    "job": "台積電 (研發替代役)"
+                },
+                {
+                    "name_ch": "郭至軒",
+                    "name_en": "Chih-Hsuan Kuo",
+                    "image": "chkuo.jpg",
+                    "paper": "慣性測量單元之雜訊抑制方法與其在手寫軌跡重建之應用",
+                    "job": "Mozilla Taiwan 美商謀智 (研發替代役) / Google"
+                }
+            ],
+            "g102": [{
+                    "name_ch": "俞中豪",
+                    "name_en": "Chung-Hau Yu",
+                    "image": "chyu.jpg",
+                    "paper": "LTE-A 上行傳輸中藉由正向回饋協調細胞間干擾之方法",
+                    "job": "富智康 (FIH Mobile Limited)"
+                },
+                {
+                    "name_ch": "余仲剴",
+                    "name_en": "Zhong-Kai Yu",
+                    "image": "zkyu.jpg",
+                    "paper": "設備對設備通訊中無線電資源重覆使用之研究",
+                    "job": "思銳科技 (研發替代役)"
+                }
+            ]
+        },
+        "alu_bachelor": {
+           "b109": [{
+                    "name_ch": "孫名柔",
+                    "name_en": "",
+                    "image": "mzsun.jpg",
+                    "proj": "ATG.io: A Network I/O Game with Q-learning"
+                },
+                {
+                    "name_ch": "林亭伃",
+                    "name_en": "",
+                    "image": "tylin.jpg",
+                    "proj": "SDN資料平面中SYN Flooding及ARP Spoofing 之偵測"
+                },
+                {
+                    "name_ch": "洪培軒",
+                    "name_en": "",
+                    "image": "phhung.jpg",
+                    "proj": "SDN資料平面中SYN Flooding及ARP Spoofing 之偵測"
+                },
+                {
+                    "name_ch": "吳偵平",
+                    "name_en": "",
+                    "image": "jpwu.jpg",
+                    "proj": "SDN資料平面中SYN Flooding及ARP Spoofing 之偵測"
+                },
+                {
+                    "name_ch": "黃俊豪 (共同指導)",
+                    "name_en": "",
+                    "image": "jhhuang.jpg",
+                    "proj": "ATG.io: A Network I/O Game with Q-learning"
+                },
+                {
+                    "name_ch": "邵鏡軒(共同指導)",
+                    "name_en": "",
+                    "image": "jhchao.jpg",
+                    "proj": "SDN資料平面中SYN Flooding及ARP Spoofing 之偵測"
+                }
+            ],
+            "b108": [{
+                    "name_ch": "劉俊林",
+                    "name_en": "Chan Lam Lao",
+                    "image": "cllao.jpg",
+                    "proj": "在軟體定義網路中透過卷積神經網絡檢測分散式阻斷服務攻擊"
+
+                },
+                {
+                    "name_ch": "廖其忻",
+                    "name_en": "Cayon Liow",
+                    "image": "cliow.jpg",
+                    "proj": "SDN中ARP形態之DoS攻擊應對效能改進"
+                },
+                {
+                    "name_ch": "梁祐承",
+                    "name_en": "You-Cheng Liang",
+                    "image": "ycliang.jpg",
+                    "proj": "互動式線上遊戲評量系統"
+                },
+                {
+                    "name_ch": "謝耀賢",
+                    "name_en": "",
+                    "image": "ychsieh.jpg",
+                    "proj": "互動式線上遊戲評量系統"
+                }
+            ],
+            "b107": [{
+                    "name_ch": "方鈞麒",
+                    "name_en": "Chun-Chi Fang",
+                    "image": "ccfang.jpg",
+                    "proj": "基於 SDN 之網路服務品質優化機制 (106 年科技部大專生專題研究計畫)",
+                    "job": "成大資工所碩士生"
+                },
+                {
+                    "name_ch": "趙珮均",
+                    "name_en": "Pei-Jyun Chao",
+                    "image": "pcchao.jpg",
+                    "proj": "整合智慧衣與語音通話之醫療應用照護開發",
+                    "job": "成大資工所碩士生"
+                },
+                {
+                    "name_ch": "陳珞安",
+                    "name_en": "Lo-An Chen",
+                    "image": "lachen.jpg",
+                    "proj": "整合智慧衣與語音通話之醫療應用照護開發 (106 年科技部大專生專題研究計畫)",
+                    "job": "成大資工所博士生"
+                }
+            ],
+            "b106": [{
+                    "name_ch": "徐朝逸",
+                    "image": "tyhsu.jpg",
+                    "proj": "教學用跨平台自動編譯開發環境實作",
+                    "job": "Skymizer"
+                },
+                {
+                    "name_ch": "瞿旭民",
+                    "name_en": "Shu-Min Cyu",
+                    "image": "hmchiu.jpg",
+                    "proj": "教學用跨平台自動編譯開發環境實作",
+                    "job": "成大資工所碩士生"
+                },
+                {
+                    "name_ch": "蔡昀展",
+                    "name_en": "Yun-Zhan Cai",
+                    "image": "yzcai.jpg",
+                    "proj": "以 OpenFlow 為基礎之視覺化網路即時監測 (105 年科技部大專生專題研究計畫; 科技部大專生專題研究計畫研究創作獎 )",
+                    "job": "成大資工所博士生"
+                },
+                {
+                    "name_ch": "陸勇盛",
+                    "image": "yslu.jpg",
+                    "proj": "以 OpenFlow 為基礎之視覺化網路即時監測",
+                    "job": "交大資工所碩士生"
+                },
+                {
+                    "name_ch": "劉心慈",
+                    "comment": "共同指導",
+                    "image": "ssliu.jpg",
+                    "proj": "穿搭推薦系統",
+                    "job": "成大資工所碩士生"
+                }
+            ],
+            "b105": [{
+                    "name_ch": "楊靜妃",
+                    "name_en": "Jingfei Yang",
+                    "image": "jfyang.jpg",
+                    "proj": "愛停車 -- 雲端停車格即時監控暨引導系統",
+                    "job": "Works Applications Singapore PTE LTD / Google LLC"
+                },
+                {
+                    "name_ch": "朱宥繐",
+                    "name_en": "You-Huei Ju",
+                    "comment": "工資管系",
+                    "image": "yhju.jpg",
+                    "proj": "愛停車 -- 雲端停車格即時監控暨引導系統 (104 年科技部大專生專題研究計畫; 科技部大專生專題研究計畫研究創作獎 )",
+                    "job": "工業技術研究院 / UCSD CSE / pony.ai"
+                },
+                {
+                    "name_ch": "謝忠穎",
+                    "name_en": "Chung-Ying Hsieh",
+                    "image": "cyhsieh.jpg",
+                    "proj": "愛停車 -- 雲端停車格即時監控暨引導系統",
+                    "job": "成大資工所碩士生"
+                },
+                {
+                    "name_ch": "林季伯",
+                    "name_en": "Chi-Bo Lin",
+                    "comment": "共同指導",
+                    "image": "cblin.jpg",
+                    "proj": "基於互動式臉部表情虛擬實境之視訊通話 (104 年科技部大專生專題研究計畫)",
+                    "job": "成大資工所碩士生"
+                }
+            ],
+            "b104": [{
+                    "name_ch": "林佳瑩",
+                    "name_en": "Chia-Ying Lin",
+                    "image": "cylin.jpg",
+                    "proj": "車位來了－基於視訊行車紀錄之停車格引導服務",
+                    "job": "成大資工所博士生"
+                },
+                {
+                    "name_ch": "蘇容德",
+                    "name_en": "Jung-Te Su",
+                    "image": "jtsu.jpg",
+                    "proj": "車位來了－基於視訊行車紀錄之停車格引導服務",
+                    "job": "交大資工所碩士生"
+                },
+                {
+                    "name_ch": "林賢哲",
+                    "name_en": "Sian-Jhe Lin",
+                    "image": "sjlin.jpg",
+                    "proj": "黎明志工銀行－你今天志工了嗎",
+                    "job": "成大資工所碩士生"
+                },
+                {
+                    "name_ch": "黃筱涵",
+                    "name_en": "Hsiao-Han Huang",
+                    "image": "hhhuang.jpg",
+                    "proj": "SDN 中增進視訊電話 QoE 之應用認知方法設計",
+                    "job": "工業技術研究院/UT Dallas"
+                }
+            ],
+            "b103": [{
+                    "name_ch": "張釗銘",
+                    "name_en": "Chao-Ming Chang",
+                    "image": "cmchang.jpg",
+                    "proj": "即時街景資訊擷取與分享之行動雲端計算平台與系統",
+                    "job": "報效國家"
+                },
+                {
+                    "name_ch": "蘇偉嘉",
+                    "name_en": "Wei-Chai Su",
+                    "image": "wcsu.jpg",
+                    "proj": "即時街景資訊擷取與分享之行動雲端計算平台與系統",
+                    "job": "交大資工所碩士生"
+                },
+                {
+                    "name_ch": "陳冠宇",
+                    "name_en": "Guan-Yu Chen",
+                    "image": "gychen.jpg",
+                    "proj": "管你停哪裡－適地性停車格引導服務 (102 年國科會大專生專題研究計畫)",
+                    "job": "台大資工所碩士生"
+                }
+            ],
+            "b102": [{
+                    "name_ch": "廖啟翔",
+                    "name_en": "Chi-Hsiang Liao",
+                    "image": "chliao.jpg",
+                    "proj": "D2D通訊模式可確保品質之高效能資源機制",
+                    "job": "IC 測試工程師 @ Cypress Semiconductor 美商賽普拉斯半導體"
+                },
+                {
+                    "name_ch": "賴志豪",
+                    "name_en": "Chih-Hao Lai",
+                    "image": "chlai.jpg",
+                    "proj": "D2D通訊模式可確保品質之高效能資源機制",
+                    "job": "成大資工所碩士生"
+                }
+            ],
+            "b101": [{
+                    "name_ch": "高宏瑋",
+                    "name_en": "Hung-Wei Kao",
+                    "image": "hwkao.jpg",
+                    "proj": "主動偵測與隔離記憶體不當使用之方法",
+                    "job": "成大資工所碩士生"
+                },
+                {
+                    "name_ch": "李冠賢",
+                    "name_en": "Kuan-Hsien Li",
+                    "image": "khli.jpg",
+                    "proj": "主動偵測與隔離記憶體不當使用之方法",
+                    "job": "成大資工所碩士生"
+                },
+                {
+                    "name_ch": "楊鵬穎",
+                    "name_en": "Peng-Ying Yang",
+                    "image": "pyyang.jpg",
+                    "proj": "資訊生活最知心",
+                    "job": "成大製造所碩士生"
+                },
+                {
+                    "name_ch": "吳惟郁",
+                    "name_en": "Wei-Yu Wu",
+                    "image": "wywu.jpg",
+                    "proj": "資訊生活最知心",
+                    "job": "清大資工所碩士生"
+                }
+            ]
+        }
+    }
+}

@@ -78,7 +78,7 @@ const resourcesData = {
 
 * [經濟部 搶鮮大賽](http://www.getfresh.org.tw/index.aspx) (Deadline: 五月中)
 
-* [中華電信 電信創新應用大賽](https: //iot.cht.com.tw/2019CHT-IoT/) (Deadline: 八月初)
+* [中華電信 電信創新應用大賽](https://iot.cht.com.tw/2019CHT-IoT/) (Deadline: 八月初)
 
 * [經濟部工業局 通訊大賽](http://www.mobilehero.com/) (Deadline: 九月初)
 

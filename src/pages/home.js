@@ -82,7 +82,7 @@ class Home extends React.Component {
                 linkTarget="_blank" />
         });
 
-        const mustReadSection = Object.entries(mustRead).map((value, index) => {
+        const section = Object.entries(mustRead).map((value, index) => {
             return (
                 <div className="center mw6 mw7-ns hidden mv3 br1 bg-near-white" key={value[0]}>
                     <button
@@ -92,13 +92,13 @@ class Home extends React.Component {
                         {value[0]}{" "}
                         {!mustReadOpen[index] ?
                             <span
-                                className="dib link black"
+                                className="dib link near-black"
                                 style={{ animation: "shiftDownAnimation 2s infinite" }}
                             > ↓
                             </span>
                             : 
                             <span
-                                className="dib link black"
+                                className="dib link near-black"
                                 style={{ animation: "shiftUpAnimation 2s infinite" }}
                             >↑
                             </span>
@@ -138,16 +138,18 @@ class Home extends React.Component {
                     </div>
                 </article>
 
-                <section className="mt4 mw7 mw7-ns center bg-dark-gray pv3 ph5-ns"
+                <section className="mt4 mw7 mw7-ns center bg-mid-gray pv3 ph5-ns"
                     style={{ boxShadow: "0px 10px 8px -2px rgba( 0, 0, 0, 0.6 )" }}>
-                    <h1 className="mb4 gold">
+                    <h1 className="mb4"
+                        style={{ color: "#ffca3d" }}
+                    >
                         {Welcome.head1}
                     </h1>
-                    <div className="lh-copy center f5 ph4 pb3 white">
+                    <div className="lh-copy center f5 ph4 pb3 near-white">
                         {Welcome.content1}
                     </div>
                     <div className="ph2">
-                        {mustReadSection}
+                        {section}
                     </div>
                 </section>
             </div>
