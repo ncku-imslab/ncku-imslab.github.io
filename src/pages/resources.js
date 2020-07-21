@@ -38,7 +38,7 @@ class Resources extends Component {
         const { open } = this.state;
         const section = Object.entries(resources).map((entries, index) => {
             return (
-                <div className="black tl pv2 ph2 ba b--navy br1 mb2 mt3" key={entries[0]}>
+                <div className="black tl pa2 ba b--navy br1 mb2 mt3" key={entries[0]}>
                     <button className="dim navy f4 b w-100 tl bn pt1 pl2"
                         onClick={() => this.handleClick(index)}
                     > {entries[0]} {}

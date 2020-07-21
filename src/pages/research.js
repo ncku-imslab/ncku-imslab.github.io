@@ -47,7 +47,7 @@ class Research extends Component {
         const section = Object.entries(Projects).map(([entries, values]) => {
             const index = entries === "independent";
             return (
-                <div className="black tl pv2 ph2 ba b--navy br1 mb2 mt3" key={entries}>
+                <div className="black tl pa2 ba b--navy br1 mb2 mt3" key={entries}>
                     <button className="dim navy f4 b w-100 tl bn pt1 pl2"
                         onClick={() => this.handleClick(index)}
                     >
@@ -71,7 +71,7 @@ class Research extends Component {
                     </button>
                     
                     {open[index] ?
-                        <div className="pl4 pr3 pt1 mt1">
+                        <div className="ph4 pt1 mt1">
                             {values.map((value, idx) => {
                                 return (
                                     <div className="normal" key={idx}>

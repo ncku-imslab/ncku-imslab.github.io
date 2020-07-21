@@ -140,11 +140,7 @@ class Home extends React.Component {
 
                 <section className="mt4 mw7 mw7-ns center bg-mid-gray pv3 ph5-ns"
                     style={{ boxShadow: "0px 10px 8px -2px rgba( 0, 0, 0, 0.6 )" }}>
-                    <h1 className="mb4"
-                        style={{ color: "#ffca3d" }}
-                    >
-                        {Welcome.head1}
-                    </h1>
+                    <h1 className="mb4 self-gold">{Welcome.head1}</h1>
                     <div className="lh-copy center f5 ph4 pb3 near-white">
                         {Welcome.content1}
                     </div>

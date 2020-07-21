@@ -28,12 +28,12 @@
 
 @keyframes shiftRightAnimation {
     0% {
-      transform: translateX(15%);
+      transform: translateX(12%);
     }
     50% {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(15%);
+      transform: translateX(12%);
     }
   }

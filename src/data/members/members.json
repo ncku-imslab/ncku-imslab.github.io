@@ -1,7 +1,8 @@
 {
     "students": {
-        "stu_phd": {
-            "": [{
+        "博士生 Ph.D. Students": {
+            "": [
+                {
                     "name_ch": "莊琮暉",
                     "name_en": "Tsung-Hui Chuang",
                     "image": "thchuang.jpg"
@@ -28,9 +29,9 @@
                 }
             ]
         },
-        "stu_master": {
-
-            "m2": [{
+        "碩士生 Master Students": {
+            "碩二 Second Year": [
+                {
                     "name_ch": "方鈞麒",
                     "name_en": "Chun-Chi Fang",
                     "image": "ccfang.jpg"
@@ -46,7 +47,8 @@
                     "image": "sktien.jpg"
                 }
             ],
-            "m1": [{
+            "碩一 First Year": [
+                {
                     "name_ch": "梁祐承",
                     "name_en": "You-Cheng Liang",
                     "image": "ycliang.jpg"
@@ -67,9 +69,9 @@
                 }
             ]
         },
-        "stu_bachelor": {
-
-            "b109": [{
+        "專題生 Bachelor Students": {
+            "b109": [
+                {
                     "name_ch": "黃政瑋",
                     "name_en": "",
                     "image": "jyhuang.jpg"
@@ -103,8 +105,9 @@
         }
     },
     "alumni": {
-        "alu_phd": {
-            "g108": [{
+        "博士 學成下山 Ph.D.": {
+            "g108": [
+                {
                     "name_ch": "張蕙玲",
                     "name_en": "Hui-Ling Chang",
                     "image": "hlchang.jpg",
@@ -120,14 +123,15 @@
                 }
             ]
         },
-        "alu_master": {
+        "碩士 學成下山 Master": {
             "g108": [
- 		{   "name_ch": "卓景昭",
+                {
+                    "name_ch": "卓景昭",
                     "name_en": "Jing-Zhao Zhuo",
                     "image": "jzzhuo.jpg",
-		    "paper": "物聯網於軟體定義網路中基於週期子流之主動載入流表條目機制"
+                    "paper": "物聯網於軟體定義網路中基於週期子流之主動載入流表條目機制"
                 },
-		{
+                {
                     "name_ch": "謝忠穎",
                     "name_en": "Chung-Ying Hsieh",
                     "image": "cyhsieh.jpg",
@@ -141,7 +145,8 @@
                     "job": "A10 Networks"
                 }
             ],
-            "g107": [{
+            "g107": [
+                {
                     "name_ch": "吳孟庭",
                     "name_en": "Mong-Ting Wu",
                     "image": "mtwu.jpg",
@@ -156,7 +161,8 @@
                     "job": "群暉科技 (Synology) (研發替代役)"
                 }
             ],
-            "g106": [{
+            "g106": [
+                {
                     "name_ch": "呂宜龍",
                     "name_en": "Yi Long Lu",
                     "image": "yllu.jpg",
@@ -171,7 +177,8 @@
                     "job": "台大電機系博士班"
                 }
             ],
-            "g105": [{
+            "g105": [
+                {
                     "name_ch": "呂尚霖",
                     "name_en": "Shang-Lin Lu",
                     "image": "sllu.jpg",
@@ -186,7 +193,8 @@
                     "job": "晨星 (MStar)"
                 }
             ],
-            "g104": [{
+            "g104": [
+                {
                     "name_ch": "蘇珮華",
                     "name_en": "Pei-Hua Su",
                     "image": "phsu.jpg",
@@ -215,7 +223,8 @@
                     "job": "Trend Micro"
                 }
             ],
-            "g103": [{
+            "g103": [
+                {
                     "name_ch": "陳冠宏",
                     "name_en": "Guan-Hong Chen",
                     "image": "ghchen.jpg",
@@ -244,7 +253,8 @@
                     "job": "Mozilla Taiwan 美商謀智 (研發替代役) / Google"
                 }
             ],
-            "g102": [{
+            "g102": [
+                {
                     "name_ch": "俞中豪",
                     "name_en": "Chung-Hau Yu",
                     "image": "chyu.jpg",
@@ -260,8 +270,9 @@
                 }
             ]
         },
-        "alu_bachelor": {
-           "b109": [{
+        "專題生 學成下山 Bachelor": {
+            "b109": [
+                {
                     "name_ch": "孫名柔",
                     "name_en": "",
                     "image": "mzsun.jpg",
@@ -298,12 +309,12 @@
                     "proj": "SDN資料平面中SYN Flooding及ARP Spoofing 之偵測"
                 }
             ],
-            "b108": [{
+            "b108": [
+                {
                     "name_ch": "劉俊林",
                     "name_en": "Chan Lam Lao",
                     "image": "cllao.jpg",
                     "proj": "在軟體定義網路中透過卷積神經網絡檢測分散式阻斷服務攻擊"
-
                 },
                 {
                     "name_ch": "廖其忻",
@@ -324,7 +335,8 @@
                     "proj": "互動式線上遊戲評量系統"
                 }
             ],
-            "b107": [{
+            "b107": [
+                {
                     "name_ch": "方鈞麒",
                     "name_en": "Chun-Chi Fang",
                     "image": "ccfang.jpg",
@@ -346,7 +358,8 @@
                     "job": "成大資工所博士生"
                 }
             ],
-            "b106": [{
+            "b106": [
+                {
                     "name_ch": "徐朝逸",
                     "image": "tyhsu.jpg",
                     "proj": "教學用跨平台自動編譯開發環境實作",
@@ -380,7 +393,8 @@
                     "job": "成大資工所碩士生"
                 }
             ],
-            "b105": [{
+            "b105": [
+                {
                     "name_ch": "楊靜妃",
                     "name_en": "Jingfei Yang",
                     "image": "jfyang.jpg",
@@ -411,7 +425,8 @@
                     "job": "成大資工所碩士生"
                 }
             ],
-            "b104": [{
+            "b104": [
+                {
                     "name_ch": "林佳瑩",
                     "name_en": "Chia-Ying Lin",
                     "image": "cylin.jpg",
@@ -440,7 +455,8 @@
                     "job": "工業技術研究院/UT Dallas"
                 }
             ],
-            "b103": [{
+            "b103": [
+                {
                     "name_ch": "張釗銘",
                     "name_en": "Chao-Ming Chang",
                     "image": "cmchang.jpg",
@@ -462,7 +478,8 @@
                     "job": "台大資工所碩士生"
                 }
             ],
-            "b102": [{
+            "b102": [
+                {
                     "name_ch": "廖啟翔",
                     "name_en": "Chi-Hsiang Liao",
                     "image": "chliao.jpg",
@@ -477,7 +494,8 @@
                     "job": "成大資工所碩士生"
                 }
             ],
-            "b101": [{
+            "b101": [
+                {
                     "name_ch": "高宏瑋",
                     "name_en": "Hung-Wei Kao",
                     "image": "hwkao.jpg",

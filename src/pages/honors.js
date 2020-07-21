@@ -38,11 +38,11 @@ class Honors extends Component {
         const section = Object.entries(Honor).map((titleAndObject, index) => {
             return (
                 <div className="mb4 pb2" key={titleAndObject[0]}>
-                    <h1 className="navy pb2 near-black bb bw1" >{titleAndObject[0]}</h1>
+                    <h1 className="navy pb2 bb bw1" >{titleAndObject[0]}</h1>
                     {
                         Object.entries(titleAndObject[1]).map((yearAndObject, yearIndex) => {
                             return (
-                                <div className="black tl pv2 ph2 ba b--navy br1 mb2 mt3" key={yearAndObject[0]}>
+                                <div className="black tl pa2 ba b--navy br1 mb2 mt3" key={yearAndObject[0]}>
                                     <button className="dim navy f4 b w-100 tl bn pl2"
                                         onClick={() => this.handleClick(index, yearIndex)}
                                     >
@@ -62,7 +62,7 @@ class Honors extends Component {
                                         }
                                     </button>
                                     {open[index][yearIndex] ?
-                                        <div className="pl4 pr3 pt1 mt1">
+                                        <div className="ph4 pt1 mt1">
                                             {
                                                 yearAndObject[1].map((content, contentIndex) => {
                                                     return (

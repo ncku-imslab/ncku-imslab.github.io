@@ -18,6 +18,10 @@ button {
   outline: 0 !important;
 }
 
+.self-gold {
+  color: #ffca3d;
+}
+
 @keyframes shiftDownAnimation {
   0% {
     transform: translateY(-3%);

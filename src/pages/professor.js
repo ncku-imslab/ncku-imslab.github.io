@@ -40,7 +40,7 @@ class Professor extends Component {
         const section = Object.entries(professor).map((entries, index) => {
             return (
                 <div
-                    className="black tl pv2 ph2 br1 mb2 mt3 bg-near-white"
+                    className="black tl pa2 br1 mb2 mt3 bg-near-white"
                     key={entries[0]}
                 >
                     <button className="navy dim f4 b w-100 tl bn pt1"
@@ -81,23 +81,20 @@ class Professor extends Component {
         return (
             <div className="mw8 mw8-ns center bg-mid-gray pa2 ph5-ns shadow-5 br1">
                 <div className="mb4 pb2">
-                    <h1 className="pb2"
-                        style={{ color: "#ffca3d" }}
-                    >指導教授 Professor
-                    </h1>
+                    <h1 className="pb2 self-gold">指導教授 Professor</h1>
                     <div className="pb3">
-                        <article className="center ph2 pv3 bg-near-white"
+                        <article className="center ph2 pv3 bg-white"
                             style={{ maxWidth: "21rem" }}
                         >
                             <img
                                 alt=""
                                 src={Tsaimh}
-                                className="br-100 h4 w4 center jusfity-center db ba b--near-black mv2"
+                                className="br-100 h4 w4 center db ba b--black-10 mv2 pa2"
                                 title={"The nicest professor in NCKU CSIE is staring at you σ`∀´)σ"}
                             />
-                            <div className="justify-center tc">
-                                <a className="tc ttu tracked dim link db f4 f4-ns navy b pt2 pb1 mv1" href="http://imslab.org/~tsaimh/">蔡孟勳</a>
-                                <a className="tc ttu tracked dim link db f5 f5-ns navy b pv1 mv1" href="http://imslab.org/~tsaimh/">Meng-Hsun Tsai</a>
+                            <div className="tc">
+                                <a className="ttu dim link db f4 f4-ns navy b pt2 pb1 mv1" href="http://imslab.org/~tsaimh/">蔡 孟 勳</a>
+                                <a className="ttu tracked dim link db f5 f5-ns navy b pv1 mv1" href="http://imslab.org/~tsaimh/">Meng-Hsun Tsai ↗</a>
                             </div>
                             <hr className="mw3 bb bw1 b--black-10 mt2 mb3" />
                             <div className="pb2">
@@ -128,6 +125,7 @@ class Professor extends Component {
                     </div>
 
                     {section}
+
                 </div>
             </div>
         );
