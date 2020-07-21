@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Markdown from 'react-markdown';
-import Tsaimh from '../assets/tsaimh.jpg';
 import professorData from '../data/members/prof';
 
 const professor = { ...professorData };
@@ -82,46 +81,44 @@ class Professor extends Component {
             <div className="mw8 mw8-ns center bg-mid-gray pa2 ph5-ns shadow-5 br1">
                 <div className="mb4 pb2">
                     <h1 className="pb2 self-gold">指導教授 Professor</h1>
-                    <div className="pb3">
-                        <article className="center ph2 pv3 bg-white"
-                            style={{ maxWidth: "21rem" }}
-                        >
-                            <img
-                                alt=""
-                                src={Tsaimh}
-                                className="br-100 h4 w4 center db ba b--black-10 mv2 pa2"
-                                title={"The nicest professor in NCKU CSIE is staring at you σ`∀´)σ"}
-                            />
-                            <div className="tc">
-                                <a className="ttu dim link db f4 f4-ns navy b pt2 pb1 mv1" href="http://imslab.org/~tsaimh/">蔡 孟 勳</a>
-                                <a className="ttu tracked dim link db f5 f5-ns navy b pv1 mv1" href="http://imslab.org/~tsaimh/">Meng-Hsun Tsai ↗</a>
-                            </div>
-                            <hr className="mw3 bb bw1 b--black-10 mt2 mb3" />
-                            <div className="pb2">
-                                <span className="lh-copy measure center f5 near-black db b pv1">
-                                    傳真 Fax.
+                    <div className="bg-white center pv3"
+                        style={{ maxWidth: "21rem" }}
+                    >
+                        <img
+                            alt="The nicest professor in NCKU CSIE is staring at you σ`∀´)σ"
+                            src={require('../images/tsaimh.jpg')}
+                            className="br-100 h4 w4 center db ba b--black-10 pa2"
+                            title=""
+                        />
+                        <div className="tc">
+                            <a className="ttu dim link db f4 f4-ns navy b pt2 pb1 mv1" href="http://imslab.org/~tsaimh/">蔡 孟 勳</a>
+                            <a className="ttu tracked dim link db f5 f5-ns navy b pv1 mv1" href="http://imslab.org/~tsaimh/">Meng-Hsun Tsai ↗</a>
+                        </div>
+                        <hr className="mw3 bb bw1 b--black-10 mt2 mb3" />
+                        <div className="pb2">
+                            <span className="lh-copy measure center f5 near-black db b pv1">
+                                傳真 Fax.
                                 </span>
-                                <span className="lh-copy measure center f5 near-black db pv1">
-                                    +886-6-2747076
+                            <span className="lh-copy measure center f5 near-black db pv1">
+                                +886-6-2747076
                                 </span>
-                            </div>
-                            <div className="pb2">
-                                <span className="lh-copy measure center f5 near-black db b pv1">
-                                    電話 Tel.
+                        </div>
+                        <div className="pb2">
+                            <span className="lh-copy measure center f5 near-black db b pv1">
+                                電話 Tel.
                                 </span>
-                                <span className="lh-copy measure center f5 near-black db pv1">
-                                    +886-6-275-7575 Ext.62518
+                            <span className="lh-copy measure center f5 near-black db pv1">
+                                +886-6-275-7575 Ext.62518
                                 </span>
-                            </div>
-                            <div>
-                                <span className="lh-copy measure center f5 near-black db b pv1">
-                                    信箱 Email
+                        </div>
+                        <div>
+                            <span className="lh-copy measure center f5 near-black db b pv1">
+                                信箱 Email
                                 </span>
-                                <span className="dim lh-copy measure center f5 near-black db pv1">
-                                    tsaimh@csie.ncku.edu.tw
+                            <span className="dim lh-copy measure center f5 near-black db pv1">
+                                tsaimh@csie.ncku.edu.tw
                                 </span>
-                            </div>
-                        </article>
+                        </div>
                     </div>
 
                     {section}

@@ -1,6 +1,16 @@
 {
     "year 2020": [
         {
+            "date": "2020-06-19",
+            "type": "賀",
+            "description": "恭喜 110 級專題生 黃政瑋 王聖中 通過科技部大專學生研究計畫!!!"
+        },
+        {
+            "date": "2020-06-15",
+            "type": "賀",
+            "description": "恭喜 專題生 林亭伃 獲得 台積電 實習機會!!"
+        },
+        {
             "date": "2020-06-08",
             "type": "賀",
             "description": "恭喜 專題生 邵鏡軒 獲得 中華電信研究院 實習機會!!"
@@ -49,7 +59,8 @@
             "description": "恭喜 博班 蔡昀展 的論文被接受!!",
             "description_en": "The paper \"Improving Programming Education Quality with Automatic Grading System\" was accepted by ICITL 2019",
             "comment": "恭喜 論文 \"Improving Programming Education Quality with Automatic Grading System\" 被 ICITL 2019 接受"
-        }, {
+        },
+        {
             "date": "2019-06-20",
             "type": "賀",
             "description": "恭喜 109 級專題生 孫名柔 通過科技部大專學生研究計畫!!!"

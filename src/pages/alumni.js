@@ -23,7 +23,6 @@ class Alumni extends Component {
         this.state = {
             open: { ...array }
         }
-        console.log(this.state)
     }
 
     handleClick = (index, yearIndex) => {
@@ -45,54 +44,86 @@ class Alumni extends Component {
                         Object.entries(titleAndObject[1]).map((yearAndObject, yearIndex) => {
                             return (
                                 <div className="black tl pa2 mb2 mt3 bg-near-white" key={yearAndObject[0]}>
-                                    <button className="dim navy f4 b w-100 tl bn pl2 pt1"
+                                    <button className="dim navy f4 b w-100 tl bn pl2 pt1 pb1 mb1"
                                         onClick={() => this.handleClick(index, yearIndex)}
                                     >
-                                        {yearAndObject[0].substr(5, 4)} {}
+                                        {yearAndObject[0][0] === 'b' ?
+                                            yearAndObject[0].substr(1, 3) + ' 級 Graduate in ' + (Number(yearAndObject[0].substr(1, 3)) + 1911).toString()
+                                            : yearAndObject[0].substr(1, 3) + ' 年畢 Graduate in ' + (Number(yearAndObject[0].substr(1, 3)) + 1911).toString()
+                                        }
+                                        {" "}
                                         {!open[index][yearIndex] ?
                                             <span
-                                                className="navy dib link"
+                                                className="dib link"
                                                 style={{ animation: "shiftDownAnimation 2s infinite" }}
                                             > ↓
                                             </span>
                                             :
                                             <span
-                                                className="navy dib link"
+                                                className="dib link"
                                                 style={{ animation: "shiftUpAnimation 2s infinite" }}
                                             > ↑
                                             </span>
                                         }
                                     </button>
                                     {open[index][yearIndex] ?
-                                        <div>
+                                        <div className="tc">
                                             {
                                                 yearAndObject[1].map((content, contentIndex) => {
                                                     return (
-                                                        <div className="tl normal" key={contentIndex}>
-                                                            <p className="b f5 pb1">
-                                                                ✰ {content.content}
-                                                            </p>
-                                                            <p className="f5 pb2">
-                                                                {content.name}
-                                                            </p>
+                                                        <div className="dib bg-white br3 ph2 pv3 ma3 ba b--black-10"
+                                                            style={{ width: "250px" }}
+                                                            key={contentIndex}>
+                                                            <div className="">
+                                                                <img src={content.image.length === 0 ?
+                                                                    require('../images/members/cat.jpg')
+                                                                    : require('../images/members/' + content.image)
+                                                                }
+                                                                    className="br-100 h4 w4 dib ba b--black-05 pa2 mv2"
+                                                                    style={{ objectFit: "cover" }}
+                                                                    title="Cat is the best. Image source: https://www.pickpik.com/black-cat-view-cat-eyes-cat-looking-cute-38005"
+                                                                    alt=""
+                                                                />
+                                                                <span className="tc ttu tracked link db f4 f4-ns navy b pt2">{content.name_ch}</span>
+                                                                <hr className="mw3 bb bw1 b--black-10 mt2 mb3" />
+                                                                <div className="pb2">
+                                                                    <div>
+                                                                        <span className="lh-copy measure center f5 near-black db b pv1">
+                                                                            {yearAndObject[0][0] === 'b' ? "專題題目 Project" : "論文題目 Thesis"}
+                                                                        </span>
+                                                                        <span className="lh-copy measure center f6 near-black db pv1 ph3">
+                                                                            {yearAndObject[0][0] === 'b' ? content.proj : content.paper}
+                                                                        </span>
+                                                                        {
+                                                                            content.job === undefined ? null :
+                                                                                <div>
+                                                                                    <span className="lh-copy measure center f5 near-black db b pv1">
+                                                                                        出路 Destination
+                                                                                    </span>
+                                                                                    <span className="lh-copy measure center f6 near-black db pv1 ph3">
+                                                                                        {content.job}
+                                                                                    </span>
+                                                                                </div>
+                                                                        }
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     );
                                                 })
                                             }
                                             <button
-                                                className="dim grow w-100 center f4 pb1 bn"
+                                                className="dim grow w-100 center f4 pb1 bn pv1"
                                                 onClick={() => this.handleClick(index, yearIndex)}
                                             >↑
                                             </button>
                                         </div>
                                         : null
                                     }
-
                                 </div>
                             );
                         })
                     }
-
                 </div>
             );
         })
