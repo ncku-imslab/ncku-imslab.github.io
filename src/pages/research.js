@@ -6,9 +6,7 @@ import Projects from '../data/researches/projects.json';
 const researches = { ...ResearchesData };
 
 Object.entries(researches).forEach(([key, value]) => {
-    researches[key] = <Markdown
-        source={value}
-        linkTarget="_blank" />
+    researches[key] = <Markdown source={value} />
 });
 
 const researchSection = Object.entries(researches).map((entries) => {

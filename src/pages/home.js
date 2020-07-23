@@ -55,7 +55,7 @@ class Home extends React.Component {
 
     componentWillUnmount() {
         clearInterval(this.timeout);
-        this.setState({ mustReadOpen: []})
+        this.setState({ mustReadOpen: [] })
     }
 
     render() {
@@ -77,9 +77,7 @@ class Home extends React.Component {
             source: https://github.com/rexxars/react-markdown/issues/134
         */
         Object.entries(mustRead).forEach(([key, value]) => {
-            mustRead[key] = <Markdown
-                source={value}
-                linkTarget="_blank" />
+            mustRead[key] = <Markdown source={value} />
         });
 
         const section = Object.entries(mustRead).map((value, index) => {
@@ -96,7 +94,7 @@ class Home extends React.Component {
                                 style={{ animation: "shiftDownAnimation 2s infinite" }}
                             > ↓
                             </span>
-                            : 
+                            :
                             <span
                                 className="dib link near-black"
                                 style={{ animation: "shiftUpAnimation 2s infinite" }}
@@ -121,7 +119,7 @@ class Home extends React.Component {
                 </div>
             )
         });
-        
+
         return (
             <div>
                 <article
@@ -133,7 +131,7 @@ class Home extends React.Component {
                         className="db pv3 ph2 bt b--black-10 v-mid tc"
                         style={{ animation: "fadedAnimation 6s infinite" }}
                     >
-                        <span className="ph2 f5 dark-red"> <b> {news[arrayIndex].type} </b> </span>
+                        <span className="ph2 f5 dark-red b"> {news[arrayIndex].type} </span>
                         <span className="ph2 f5 near-black">{news[arrayIndex].description}</span>
                     </div>
                 </article>

@@ -5,9 +5,7 @@ import resourcesData from '../data/resources';
 const resources = { ...resourcesData };
 
 Object.entries(resources).forEach(([key, value]) => {
-    resources[key] = <Markdown
-        source={value}
-        linkTarget="_blank" />
+    resources[key] = <Markdown source={value} />
 });
 
 class Resources extends Component {
