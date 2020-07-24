@@ -1,5 +1,5 @@
 # IMS Lab 
-![imslab_logo](./src/images/imslab_logo.jpg?s=100)
+<img src="./src/images/imslab_logo.jpg" width="50%">
 
 #### Powered by [React](https://reactjs.org/) and [Tachyons](https://tachyons.io/)
 
