@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/imslab_logo.jpg';
-import menu_icon from '../assets/menu_icon.png';
+import logo from '../images/imslab_logo.jpg';
+import menu_icon from '../images/menu_icon.png';
 import './navigation.css';
 
 // It's better to provide the key attribute such that rendering is more stable.

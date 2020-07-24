@@ -31,19 +31,25 @@ class Home extends React.Component {
             arrayLength: arrayLength,
             news: News[yearIndex],
             mustReadLength: mustReadLength,
-            mustReadOpen: list
+            mustReadOpen: list,
+            eng: false
         }
     }
 
     // Instead of binding in constructor(), this arrow function approach seems to be perfectly stable (no re-rendering when pressing buttons).
     // Refer to: https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/
-    handleClick = (index) => {
+    handleClickOpen = (index) => {
         // The idea of setstate() being asynchronous is perhaps that only after the state is retrieved can we proceed.
         this.setState(state => {
             let list = state.mustReadOpen;
             list[index] = !list[index];
             return list;
         })
+    }
+
+    handleClickEng() {
+        const eng = this.state.eng;
+        this.setState({ eng: !eng });
     }
 
     componentDidMount() {
@@ -59,7 +65,18 @@ class Home extends React.Component {
     }
 
     render() {
-        const { arrayIndex, news, mustReadOpen } = this.state;
+        const { arrayIndex, news, mustReadOpen, eng } = this.state;
+
+        const EngButton = props => <button
+            className={props.attributes + " absolute b link dim grow bn"}
+            style={{
+                right: props.border,
+                top: props.border
+            }}
+            onClick={() => this.handleClickEng()}
+        > {eng ? "中文" : "EN"}
+        </button>;
+
         const mustRead = { ...MustReadData };
 
         /*
@@ -85,7 +102,7 @@ class Home extends React.Component {
                 <div className="center mw6 mw7-ns hidden mv3 br1 bg-near-white" key={value[0]}>
                     <button
                         className="dim w-100 f4 mv0 pv2 ph3 bn near-black"
-                        onClick={() => this.handleClick(index)}
+                        onClick={() => this.handleClickOpen(index)}
                     >
                         {value[0]}{" "}
                         {!mustReadOpen[index] ?
@@ -110,7 +127,7 @@ class Home extends React.Component {
                             </div>
                             <button
                                 className="dim grow w-100 f4 pt1 bn"
-                                onClick={() => this.handleClick(index)}
+                                onClick={() => this.handleClickOpen(index)}
                             >↑
                             </button>
                         </div>
@@ -136,11 +153,14 @@ class Home extends React.Component {
                     </div>
                 </article>
 
-                <section className="mt4 mw7 mw7-ns center bg-mid-gray pv3 ph5-ns"
+                <section className="mt4 mw7 mw7-ns center bg-mid-gray pv3 ph5-ns relative"
                     style={{ boxShadow: "0px 10px 8px -2px rgba( 0, 0, 0, 0.6 )" }}>
-                    <h1 className="mb4 self-gold">{Welcome.head1}</h1>
+                    <EngButton border="12px" attributes="near-white f5" />
+                    <h1 className="mb4 self-gold">
+                        {eng ? Welcome["head-en"] : Welcome["head-ch"]}
+                    </h1>
                     <div className="lh-copy center f5 ph4 pb3 near-white">
-                        {Welcome.content1}
+                        {eng ? Welcome["content-en"] : Welcome["content-ch"]}
                     </div>
                     <div className="ph2">
                         {section}
