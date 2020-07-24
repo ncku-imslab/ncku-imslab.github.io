@@ -1,5 +1,5 @@
 # IMS Lab 
-![imslab_logo](./images/imslab_logo.jpg =200x)
+![imslab_logo](./src/images/imslab_logo.jpg =200x)
 
 #### Powered by [React](https://reactjs.org/) and [Tachyons](https://tachyons.io/)
 
