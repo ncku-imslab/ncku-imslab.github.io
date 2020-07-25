@@ -17,8 +17,8 @@ import Contact from './pages/contact';
 const particlesParameter = {
   "particles": {
     "color": {
-      // gray, green, violet, pink, blue
-      "value": ["#4a4e69", "#84a98c", "#9673d3", "#ed80d9", "#64a6bd"]
+      // gray, green, gold, pink, blue
+      "value": ["#4a4e69", "#84a98c", "#ffca3d", "#f2a2e3", "#64a6bd"]
     },
     "number": {
       "value": 100,

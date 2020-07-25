@@ -1,5 +1,5 @@
 {
-    "independent": [
+    "主持計畫 PI Projects": [
         {
             "name": "Anomaly Detection in SDN with PDP",
             "duration": "2019/7 ~ 2020/2",
@@ -86,7 +86,7 @@
             "subsidy": "國科會 (NSC 100-2218-E-006-015-MY2)"
         }
     ],
-    "cooperation": [
+    "合作計畫 Co-PI Projects": [
         {
             "name": "AIOT+SDN整合平台之前瞻邊緣交換機上的物聯網設備網路行為正常性分析技術研發",
             "duration": "2019/5 ~ 2020/4",

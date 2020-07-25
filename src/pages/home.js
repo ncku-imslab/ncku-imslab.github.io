@@ -68,7 +68,7 @@ class Home extends React.Component {
         const { arrayIndex, news, mustReadOpen, eng } = this.state;
 
         const EngButton = props => <button
-            className={props.attributes + " absolute b link dim grow bn"}
+            className={props.attributes + " absolute b link dim grow pa1 bn"}
             style={{
                 right: props.border,
                 top: props.border
@@ -139,17 +139,15 @@ class Home extends React.Component {
 
         return (
             <div>
-                <article
-                    className="center mw6 mw6-ns br3 hidden ba b--black-10"
+                <article className="center mw6 mw6-ns br3 hidden ba b--black-10"
                     style={{ boxShadow: "2px 2px 4px 0px rgba( 0, 0, 0, 0.25 )" }}
                 >
-                    <h1 className="f4 bg-near-white br3 br--top mid-gray mv0 pv2 ph3">最新消息</h1>
-                    <div
-                        className="db pv3 ph2 bt b--black-10 v-mid tc"
+                    <h1 className="f4 bg-near-white br3 br--top mid-gray mv0 pv2 ph3"> 最新消息 </h1>
+                    <div className="db pv3 ph2 bt b--black-10 v-mid tc"
                         style={{ animation: "fadedAnimation 6s infinite" }}
                     >
                         <span className="ph2 f5 dark-red b"> {news[arrayIndex].type} </span>
-                        <span className="ph2 f5 near-black">{news[arrayIndex].description}</span>
+                        <span className="ph2 f5 near-black"> {news[arrayIndex].description} </span>
                     </div>
                 </article>
 
@@ -159,7 +157,7 @@ class Home extends React.Component {
                     <h1 className="mb4 self-gold">
                         {eng ? Welcome["head-en"] : Welcome["head-ch"]}
                     </h1>
-                    <div className="lh-copy center f5 ph4 pb3 near-white">
+                    <div className="lh-copy center f5 ph4 pb3 white">
                         {eng ? Welcome["content-en"] : Welcome["content-ch"]}
                     </div>
                     <div className="ph2">

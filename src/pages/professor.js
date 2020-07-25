@@ -11,6 +11,7 @@ Object.entries(professor).forEach(([key, value]) => {
 // Use React Hook with arrays
 const Professor = () => {
     const [open, openUp] = useState([true]);
+
     const handleClick = (index) => {
         let list = { ...open };
         list[index] = !list[index];
@@ -30,14 +31,12 @@ const Professor = () => {
                         <span
                             className="dib link"
                             style={{ animation: "shiftDownAnimation 2s infinite" }}
-                        > ↓
-                        </span>
+                        > ↓ </span>
                         :
                         <span
                             className="dib link"
                             style={{ animation: "shiftUpAnimation 2s infinite" }}
-                        > ↑
-                        </span>
+                        > ↑ </span>
                     }
                 </button>
 
@@ -49,8 +48,7 @@ const Professor = () => {
                         <button
                             className="dim grow w-100 center f4 pb1 bn"
                             onClick={() => handleClick(index)}
-                        >↑
-                        </button>
+                        > ↑ </button>
                     </div>
                     : null
                 }
@@ -60,20 +58,18 @@ const Professor = () => {
     return (
         <div className="mw8 mw8-ns center bg-mid-gray pa2 ph5-ns shadow-5 br1">
             <div className="mb4 pb2">
-                <h1 className="pb2 self-gold">指導教授 Professor</h1>
+                <h1 className="pb2 self-gold"> 指導教授 Professor </h1>
                 <div className="bg-white center pv3"
                     style={{ maxWidth: "21rem" }}
                 >
-                    <img
-                        alt="The nicest professor in NCKU CSIE is staring at you σ`∀´)σ"
+                    <img alt="The nicest professor in NCKU CSIE is staring at you σ`∀´)σ"
                         src={require('../images/tsaimh.jpg')}
                         className="br-100 h4 w4 center db ba b--black-10 pa2"
                         title=""
                     />
-                    <div className="tc">
-                        <a className="ttu dim link db f4 f4-ns navy b pt2 pb1 mv1" href="http://imslab.org/~tsaimh/">蔡 孟 勳</a>
-                        <a className="ttu tracked dim link db f5 f5-ns navy b pv1 mv1" href="http://imslab.org/~tsaimh/">Meng-Hsun Tsai ↗</a>
-                    </div>
+                    <a className="ttu dim link db f4 f4-ns navy b pt2 pb1 mv1" href="http://imslab.org/~tsaimh/">蔡 孟 勳</a>
+                    <a className="ttu tracked dim link db f5 f5-ns navy b pv1 mv1" href="http://imslab.org/~tsaimh/"> Meng-Hsun Tsai ↗ </a>
+
                     <hr className="mw3 bb bw1 b--black-10 mt2 mb3" />
                     <div className="pb2">
                         <span className="lh-copy measure center f5 near-black db b pv1">

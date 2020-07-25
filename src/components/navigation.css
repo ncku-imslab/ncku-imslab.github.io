@@ -22,18 +22,18 @@
         box-shadow: 0 0 0 3px rgba(0, 0, 0, 0);
     }
     100% {
-        box-shadow: 0 0 0 0px rgba(0, 0, 0, 3);
+        box-shadow: 0 0 0 0px;
     }
 }
 
 @keyframes shiftRightAnimation {
     0% {
-      transform: translateX(12%);
+        transform: translateX(12%);
     }
     50% {
-      transform: translateX(0%);
+        transform: translateX(0%);
     }
     100% {
-      transform: translateX(12%);
+        transform: translateX(12%);
     }
-  }
+}
