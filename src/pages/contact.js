@@ -1,7 +1,6 @@
 import React from 'react';
 
 const titleClassNames = "f4 f4-l fw6";
-
 const Contact = () => {
     return (
         <div className="mw8 center center ph2 center">

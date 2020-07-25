@@ -20,11 +20,10 @@ const researchSection = Object.entries(researches).map((entries) => {
     );
 });
 
-// React Hook cannot be used in map() of line 47
 const Research = () => {
     const [open, openUp] = useState([]);
 
-    const handleClick = (index) => {
+    function handleClick(index) {
         let list = { ...open };
         list[index] = !list[index];
         openUp(list);

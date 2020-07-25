@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { renderRoutes } from 'react-router-config';
 import Particles from 'react-particles-js';
 import './App.css';
@@ -93,25 +93,18 @@ const routes = [
   }
 ]
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-    }
-  }
-
-  render() {
-    return (
-      <div className="App pa3">
-        <div>
-          <Particles className="particles" params={particlesParameter} />
-          <Navigation />
-          {renderRoutes(routes)}
-        </div>
-        <Footer />
+// wrap pages in empty div s.t. the length of each section remains consistent
+const App = () => {
+  return (
+    <div className="App pa3">
+      <Particles className="particles" params={particlesParameter} />
+      <div>
+        <Navigation />
+        {renderRoutes(routes)}
       </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

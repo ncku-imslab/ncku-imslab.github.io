@@ -15,7 +15,8 @@ const Students = () => {
                                     <div className="navy f4 b w-100 tl bn pl2 pt1 pb1 mb1">
                                         {yearAndObject[0][0] === 'b' ?
                                             yearAndObject[0].substr(1, 3) + ' 級 Graduate in ' + (Number(yearAndObject[0].substr(1, 3)) + 1911).toString()
-                                            : yearAndObject[0]}
+                                            : yearAndObject[0]
+                                        }
                                     </div>
                                 }
                                 {yearAndObject[1].map((content, contentIndex) => {
@@ -33,7 +34,7 @@ const Students = () => {
                                                 title="Cats are the best. Image source: https://www.pickpik.com/black-cat-view-cat-eyes-cat-looking-cute-38005"
                                                 alt=""
                                             />
-                                            <span className="db navy b tc ttu tracked f4 f4-ns link pt2">{content.name_ch}</span>
+                                            <span className="db navy b tc ttu tracked f4 f4-ns link pt2"> {content.name_ch} </span>
                                         </div>
                                     );
                                 })

@@ -11,7 +11,7 @@ Object.entries(resources).forEach(([key, value]) => {
 const Resources = () => {
     const [open, openUp] = useState([true]);
 
-    const handleClick = (index) => {
+    function handleClick(index) {
         let list = { ...open };
         list[index] = !list[index];
         openUp(list);

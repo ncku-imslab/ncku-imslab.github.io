@@ -100,23 +100,18 @@ class Home extends React.Component {
         const section = Object.entries(mustRead).map((value, index) => {
             return (
                 <div className="center mw6 mw7-ns hidden mv3 br1 bg-near-white" key={value[0]}>
-                    <button
-                        className="dim w-100 f4 mv0 pv2 ph3 bn near-black"
+                    <button className="dim w-100 f4 mv0 pv2 ph3 bn near-black"
                         onClick={() => this.handleClickOpen(index)}
                     >
                         {value[0]}{" "}
                         {!mustReadOpen[index] ?
-                            <span
-                                className="dib link near-black"
+                            <span className="dib link near-black"
                                 style={{ animation: "shiftDownAnimation 2s infinite" }}
-                            > ↓
-                            </span>
+                            > ↓ </span>
                             :
-                            <span
-                                className="dib link near-black"
+                            <span className="dib link near-black"
                                 style={{ animation: "shiftUpAnimation 2s infinite" }}
-                            >↑
-                            </span>
+                            > ↑ </span>
                         }
                     </button>
 
@@ -125,11 +120,9 @@ class Home extends React.Component {
                             <div className="f5 f5-ns ph1 lh-copy center">
                                 {value[1]}
                             </div>
-                            <button
-                                className="dim grow w-100 f4 pt1 bn"
+                            <button className="dim grow w-100 f4 pt1 bn"
                                 onClick={() => this.handleClickOpen(index)}
-                            >↑
-                            </button>
+                            > ↑ </button>
                         </div>
                         : null
                     }
@@ -152,7 +145,8 @@ class Home extends React.Component {
                 </article>
 
                 <section className="mt4 mw7 mw7-ns center bg-mid-gray pv3 ph5-ns relative"
-                    style={{ boxShadow: "0px 10px 8px -2px rgba( 0, 0, 0, 0.6 )" }}>
+                    style={{ boxShadow: "0px 10px 8px -2px rgba( 0, 0, 0, 0.6 )" }}
+                >
                     <EngButton border="12px" attributes="near-white f5" />
                     <h1 className="mb4 self-gold">
                         {eng ? Welcome["head-en"] : Welcome["head-ch"]}
@@ -160,9 +154,7 @@ class Home extends React.Component {
                     <div className="lh-copy center f5 ph4 pb3 white">
                         {eng ? Welcome["content-en"] : Welcome["content-ch"]}
                     </div>
-                    <div className="ph2">
-                        {section}
-                    </div>
+                    <div className="ph2"> {section} </div>
                 </section>
             </div>
         );
