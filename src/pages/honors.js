@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Honor from '../data/honors.json';
 
 const Honors = () => {
-    let outerLength = Object.keys(Honor).length;
-    let array = new Array(outerLength);
+    const outerLength = Object.keys(Honor).length;
+    const array = new Array(outerLength);
     for (let i = 0; i < outerLength; i++) {
-        let innerLength = Object.keys(Honor)[i].length;
+        const innerLength = Object.keys(Honor)[i].length;
         array[i] = new Array(innerLength);
 
         for (let j = 0; j < innerLength; j++) {
@@ -20,7 +20,7 @@ const Honors = () => {
     const [open, openUp] = useState(array);
 
     function handleClick(xIndex, yIndex) {
-        let list = { ...open };
+        const list = { ...open };
         list[xIndex][yIndex] = !list[xIndex][yIndex];
         openUp(list);
     }

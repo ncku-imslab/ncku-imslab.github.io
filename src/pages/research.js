@@ -24,7 +24,7 @@ const Research = () => {
     const [open, openUp] = useState([]);
 
     function handleClick(index) {
-        let list = { ...open };
+        const list = { ...open };
         list[index] = !list[index];
         openUp(list);
     }

@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import Data from "../data/members/members.json";
 
 const Alumni = () => {
-    let alumni = Data.alumni;
-    let outerLength = Object.keys(alumni).length;
-    let array = new Array(outerLength);
+    const alumni = Data.alumni;
+    const outerLength = Object.keys(alumni).length;
+    const array = new Array(outerLength);
     for (let i = 0; i < outerLength; i++) {
-        let innerLength = Object.keys(alumni)[i].length;
+        const innerLength = Object.keys(alumni)[i].length;
         array[i] = new Array(innerLength);
 
         for (let j = 0; j < innerLength; j++) {
@@ -21,7 +21,7 @@ const Alumni = () => {
     const [open, openUp] = useState(array);
 
     function handleClick(xIndex, yIndex) {
-        let list = { ...open };
+        const list = { ...open };
         list[xIndex][yIndex] = !list[xIndex][yIndex];
         openUp(list);
     }

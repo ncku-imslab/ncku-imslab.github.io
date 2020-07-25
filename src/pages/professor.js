@@ -14,7 +14,7 @@ const Professor = () => {
     const [open, openUp] = useState([true]);
 
     function handleClick(index) {
-        let list = { ...open };
+        const list = { ...open };
         list[index] = !list[index];
         openUp(list);
     }

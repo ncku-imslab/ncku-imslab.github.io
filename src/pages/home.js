@@ -20,7 +20,7 @@ class Home extends React.Component {
             arrayLength = News[yearIndex].length;
         }
 
-        let list = [];
+        const list = [];
         mustReadLength = Object.entries(MustReadData).length;
         for (let i = 0; i < mustReadLength; i++) {
             list.push(false);
@@ -36,12 +36,10 @@ class Home extends React.Component {
         }
     }
 
-    // Instead of binding in constructor(), this arrow function approach seems to be perfectly stable (no re-rendering when pressing buttons).
-    // Refer to: https://www.freecodecamp.org/news/react-binding-patterns-5-approaches-for-handling-this-92c651b5af56/
-    handleClickOpen = (index) => {
+    handleClickOpen(index) {
         // The idea of setstate() being asynchronous is perhaps that only after the state is retrieved can we proceed.
         this.setState(state => {
-            let list = state.mustReadOpen;
+            const list = state.mustReadOpen;
             list[index] = !list[index];
             return list;
         })
@@ -67,7 +65,7 @@ class Home extends React.Component {
     render() {
         const { arrayIndex, news, mustReadOpen, eng } = this.state;
 
-        const EngButton = props => <button
+        const EngButton = (props) => <button
             className={props.attributes + " absolute b link dim grow pa1 bn"}
             style={{
                 right: props.border,
