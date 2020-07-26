@@ -21,7 +21,7 @@ const Students = () => {
                                 }
                                 {yearAndObject[1].map((content, contentIndex) => {
                                     return (
-                                        <div className="dib ph2 pt3 pb4 ma3 bg-white ba b--black-10 br3"
+                                        <div className="dib ph2 pt3 pb4 ma3 bg-white ba b--black-10 br1"
                                             style={{ width: "225px" }}
                                             key={contentIndex}
                                         >
@@ -48,7 +48,7 @@ const Students = () => {
     })
 
     return (
-        <div className="mw8 mw8-ns center bg-mid-gray pa2 ph5-ns shadow-5 br1">
+        <div className="mw8 mw8-ns center bg-mid-gray pa2 ph5-ns shadow-5">
             {section}
         </div>
     );

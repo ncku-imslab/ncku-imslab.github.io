@@ -4,7 +4,7 @@ const titleClassNames = "f4 f4-l fw6";
 const Contact = () => {
     return (
         <div className="mw8 center center ph2 center">
-            <div className="dt tc center mb4 mw7 mw7-ns shadow-5 bg-near-white navy br1">
+            <div className="dt tc center mb4 mw7 mw7-ns shadow-5 bg-near-white navy">
                 <div className="dib w-50 tcl mb1 ph3">
                     <h4 className={titleClassNames}> E-mail </h4>
                     <span className="dim db f5 black"> imslab@imslab.org </span>

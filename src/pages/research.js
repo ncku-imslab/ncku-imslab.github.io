@@ -75,7 +75,7 @@ const Research = () => {
     })
 
     return (
-        <div className="mw8 mw8-ns center bg-near-white pa2 ph5-ns shadow-5 br1">
+        <div className="mw8 mw8-ns center bg-near-white pa2 ph5-ns shadow-5">
             {researchSection}
             <div className="mb4 pb2">
                 <h1 className="navy pb2 bb bw1"> 研究計畫 Research Projects </h1>

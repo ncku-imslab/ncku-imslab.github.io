@@ -142,13 +142,12 @@ const Navigation = () => {
                 <Navbar title="mobile" />
             </div>
 
-            <Link to="/"
-                onClick={month === 7 && date === 30 ? () => {window.alert("Today is Ethereum's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡\nToday is Ethereum's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡\nToday is Ethereum's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡")} 
-                : null}
-            >
+            <Link to="/" >
                 <img src={month === 7 && date === 30 ? specialLogo : logo}
                     className="dib dtc-l w4 ph3"
                     style={{ minWidth: month === 7 && date === 30 ? "180px" : "200px" }}
+                    onClick={month === 7 && date === 30 ? () => { window.alert("Today is Ethereum's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡\nToday is Ethereum's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡\nToday is Ethereum's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡") }
+                        : null}
                     alt=""
                 />
             </Link>

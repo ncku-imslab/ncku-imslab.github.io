@@ -55,7 +55,7 @@ const Alumni = () => {
                                 <div className="tc">
                                     {yearAndObject[1].map((content, contentIndex) => {
                                         return (
-                                            <div className="dib bg-white br3 ph2 pv3 ma3 ba b--black-10"
+                                            <div className="dib bg-white br1 ph2 pv3 ma3 ba b--black-10"
                                                 style={{ width: "250px" }}
                                                 key={contentIndex}>
                                                 <img src={content.image.length === 0 ?
@@ -106,7 +106,7 @@ const Alumni = () => {
     })
 
     return (
-        <div className="mw8 mw8-ns center bg-mid-gray pa2 ph5-ns shadow-5 br1">
+        <div className="mw8 mw8-ns center bg-mid-gray pa2 ph5-ns shadow-5">
             {section}
         </div>
     );

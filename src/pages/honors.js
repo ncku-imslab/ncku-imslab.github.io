@@ -72,7 +72,7 @@ const Honors = () => {
         );
     })
     return (
-        <div className="mw8 mw8-ns center bg-near-white pa2 ph5-ns shadow-5 br1">
+        <div className="mw8 mw8-ns center bg-near-white pa2 ph5-ns shadow-5">
             {section}
         </div>
     );

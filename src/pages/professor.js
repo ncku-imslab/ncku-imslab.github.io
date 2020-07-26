@@ -27,7 +27,7 @@ const Professor = () => {
                 </span>
                 <span className={titleAndObject[0] === "信箱 Email" ?
                     "dim lh-copy measure center f5 near-black db pv1"
-                    : "lh-copy measure center f5 near-black db pv1" }
+                    : "lh-copy measure center f5 near-black db pv1"}
                 > {titleAndObject[1]}
                 </span>
             </div>
@@ -64,17 +64,22 @@ const Professor = () => {
             </div>
         );
     });
+    const today = new Date();
+    const month = today.getMonth();
+    const date = today.getDate();
 
     return (
-        <div className="mw8 mw8-ns center bg-mid-gray pa2 ph5-ns shadow-5 br1">
+        <div className="mw8 mw8-ns center bg-mid-gray pa2 ph5-ns shadow-5">
             <div className="mb4 pb2">
                 <h1 className="pb2 self-gold"> 指導教授 Professor </h1>
-                <div className="bg-white center pv3"
+                <div className="bg-white center pv3 br1"
                     style={{ maxWidth: "21rem" }}
                 >
                     <img alt="The nicest professor in NCKU CSIE is staring at you σ`∀´)σ"
                         src={require('../images/tsaimh.jpg')}
-                        className="br-100 h4 w4 center db ba b--black-10 pa2"
+                        className="br-100 h4 w4 center db ba b--black-10 pa2 pointer"
+                        onClick={month === 2 && date === 20 ? () => { window.alert("Today is Meng-Hsun's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡\nToday is Meng-Hsun's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡\nToday is Meng-Hsun's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡") }
+                            : null}
                         title=""
                     />
                     <a className="ttu dim link db f4 f4-ns navy b pt2 pb1 mv1" href="http://imslab.org/~tsaimh/"> 蔡 孟 勳 </a>
