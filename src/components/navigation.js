@@ -106,8 +106,8 @@ const Navigation = () => {
                         key={object.key}
                         onClick={props.title === "desktop" ? null : () => closeNav()}
                     > {object.title} </Link>
-                )
-            };
+                );
+            }
         });
     }
     const today = new Date();
