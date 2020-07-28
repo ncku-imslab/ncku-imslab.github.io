@@ -4,6 +4,33 @@ import News from '../data/home/news.json';
 import Welcome from '../data/home/home.json';
 import MustReadData from '../data/home/mustRead';
 
+// Re-rendering is limited to this component only
+const NewsSection = (props) => {
+    const news = { ...News[props.yearIndex] };
+
+    const [arrayIndex, setArrayIndex] = useState(0);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setArrayIndex((arrayIndex + 1) % props.arrayLength);
+        }, 6000);
+        return () => { clearTimeout(timer) };
+    }, [arrayIndex]);
+
+    return (
+        <article className="center mw6 mw6-ns br3 hidden ba b--black-10"
+            style={{ boxShadow: "2px 2px 4px 0px rgba( 0, 0, 0, 0.25 )" }}
+        >
+            <h1 className="f4 bg-near-white br3 br--top mid-gray mv0 pv2 ph3"> 最新消息 </h1>
+            <div className="db pv3 ph1 bt b--black-10 v-mid tc"
+                style={{ animation: "fadedAnimation 6s infinite" }}
+            >
+                <span className="ph2 f5 dark-red b"> {news[arrayIndex].type} </span>
+                <span className="ph2 f5 near-black"> {news[arrayIndex].description} </span>
+            </div>
+        </article>
+    );
+}
+
 const Home = () => {
     const today = new Date();
     const year = today.getFullYear();
@@ -15,14 +42,6 @@ const Home = () => {
         yearIndex = "year " + (year - 1).toString();
         arrayLength = News[yearIndex].length;
     }
-
-    const [arrayIndex, setArrayIndex] = useState(0);
-    useEffect(() => {
-        const timeout = setInterval(() => {
-            setArrayIndex((arrayIndex + 1) % arrayLength);
-        }, 6000);
-        return () => clearInterval(timeout);
-    }, [arrayIndex]);
 
     const [open, setOpen] = useState([]);
     function handleClickOpen(index) {
@@ -92,21 +111,9 @@ const Home = () => {
         )
     });
 
-    const news = { ...News[yearIndex] };
-
     return (
         <div>
-            <article className="center mw6 mw6-ns br3 hidden ba b--black-10"
-                style={{ boxShadow: "2px 2px 4px 0px rgba( 0, 0, 0, 0.25 )" }}
-            >
-                <h1 className="f4 bg-near-white br3 br--top mid-gray mv0 pv2 ph3"> 最新消息 </h1>
-                <div className="db pv3 ph2 bt b--black-10 v-mid tc"
-                    style={{ animation: "fadedAnimation 6s infinite" }}
-                >
-                    <span className="ph2 f5 dark-red b"> {news[arrayIndex].type} </span>
-                    <span className="ph2 f5 near-black"> {news[arrayIndex].description} </span>
-                </div>
-            </article>
+            <NewsSection yearIndex={yearIndex} arrayLength={arrayLength} />
             <section className="mt4 mw7 mw7-ns center bg-mid-gray pv3 ph5-ns relative"
                 style={{ boxShadow: "0px 10px 8px -2px rgba( 0, 0, 0, 0.6 )" }}
             >
