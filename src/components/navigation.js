@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/imslab_logo.jpg';
 import specialLogo from '../images/imslab_eth.jpg';
@@ -58,8 +58,9 @@ const navbarObject = [
 ]
 
 const Navigation = () => {
-    function openNav() { document.getElementById("sideNavbar").style.width = "245px"; }
-    function closeNav() { document.getElementById("sideNavbar").style.width = "0"; }
+    const navRef = useRef(null);
+    function openNav() { navRef.current.style.width = "245px"; }
+    function closeNav() { navRef.current.style.width = "0"; }
 
     const Dropdown = (props) => {
         return dropdownObject.map((object) => {
@@ -116,7 +117,7 @@ const Navigation = () => {
 
     return (
         <nav className="dt w-100 pb4 mb1 response960">
-            <div id="sideNavbar"
+            <div ref={navRef}
                 className="h-100 fixed bg-near-black pt5"
                 style={{
                     width: "0",

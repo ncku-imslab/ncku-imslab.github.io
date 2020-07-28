@@ -9,12 +9,12 @@ Object.entries(resources).forEach(([key, value]) => {
 });
 
 const Resources = () => {
-    const [open, openUp] = useState([true]);
+    const [open, setOpen] = useState([true]);
 
     function handleClick(index) {
         const list = { ...open };
         list[index] = !list[index];
-        openUp(list);
+        setOpen(list);
     }
 
     const section = Object.entries(resources).map((entries, index) => {
@@ -47,7 +47,7 @@ const Resources = () => {
             </div>
         );
     });
-    
+
     return (
         <div className="mw8 mw8-ns center bg-near-white pa2 ph5-ns shadow-5">
             <div className="mb4 pb2">

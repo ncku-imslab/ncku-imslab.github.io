@@ -21,12 +21,12 @@ const researchSection = Object.entries(researches).map((entries) => {
 });
 
 const Research = () => {
-    const [open, openUp] = useState([]);
+    const [open, setOpen] = useState([]);
 
     function handleClick(index) {
         const list = { ...open };
         list[index] = !list[index];
-        openUp(list);
+        setOpen(list);
     }
 
     const section = Object.entries(Projects).map((titleAndObject, index) => {

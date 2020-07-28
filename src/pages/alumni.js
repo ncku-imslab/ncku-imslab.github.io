@@ -18,12 +18,12 @@ const Alumni = () => {
         }
     }
     // React Hooks for 2D array
-    const [open, openUp] = useState(array);
+    const [open, setOpen] = useState(array);
 
     function handleClick(xIndex, yIndex) {
         const list = { ...open };
         list[xIndex][yIndex] = !list[xIndex][yIndex];
-        openUp(list);
+        setOpen(list);
     }
 
     const section = Object.entries(alumni).map((titleAndObject, index) => {
@@ -68,7 +68,7 @@ const Alumni = () => {
                                                     alt=""
                                                 />
                                                 <span className="tc ttu tracked link db f4 f4-ns navy b pt2"> {content.name_ch} </span>
-                                                <hr className="mw3 bb bw1 b--black-10 mt2 mb3"/>
+                                                <hr className="mw3 bb bw1 b--black-10 mt2 mb3" />
                                                 <div className="pb2">
                                                     <span className="lh-copy measure center f5 near-black db b pv1">
                                                         {yearAndObject[0][0] === 'b' ? "專題題目 Project" : "論文題目 Thesis"}

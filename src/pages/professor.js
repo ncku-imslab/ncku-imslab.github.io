@@ -11,12 +11,12 @@ Object.entries(professor).forEach(([key, value]) => {
 
 // React Hooks for 1D array
 const Professor = () => {
-    const [open, openUp] = useState([true]);
+    const [open, setOpen] = useState([true]);
 
     function handleClick(index) {
         const list = { ...open };
         list[index] = !list[index];
-        openUp(list);
+        setOpen(list);
     }
 
     const contactSection = Object.entries(Prof).map((titleAndObject, index) => {

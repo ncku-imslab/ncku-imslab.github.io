@@ -17,12 +17,12 @@ const Honors = () => {
         }
     }
     // React Hooks for 2D array
-    const [open, openUp] = useState(array);
+    const [open, setOpen] = useState(array);
 
     function handleClick(xIndex, yIndex) {
         const list = { ...open };
         list[xIndex][yIndex] = !list[xIndex][yIndex];
-        openUp(list);
+        setOpen(list);
     }
 
     const section = Object.entries(Honor).map((titleAndObject, index) => {
