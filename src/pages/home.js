@@ -61,7 +61,7 @@ const Home = () => {
             top: props.border
         }}
         onClick={() => handleClickEng()}
-    > {eng ? "中文" : "EN"}
+    > {eng ? "中" : "EN"}
     </button>;
 
     // 1.(key, value) pairs are viewed as an array, thus: [key, value]
