@@ -59,36 +59,36 @@ const particlesParameter = {
 
 const routes = [
   {
-    path: '/',
+    path: process.env.PUBLIC_URL + '/',
     component: Home,
     exact: true
   },
   {
-    path: '/research',
+    path: process.env.PUBLIC_URL + '/research',
     component: Research
   },
   {
-    path: '/professor',
+    path: process.env.PUBLIC_URL + '/professor',
     component: Professor
   },
   {
-    path: '/students',
+    path: process.env.PUBLIC_URL + '/students',
     component: Students
   },
   {
-    path: '/alumni',
+    path: process.env.PUBLIC_URL + '/alumni',
     component: Alumni
   },
   {
-    path: '/honors',
+    path: process.env.PUBLIC_URL + '/honors',
     component: Honors
   },
   {
-    path: '/resources',
+    path: process.env.PUBLIC_URL + '/resources',
     component: Resources
   },
   {
-    path: '/contact',
+    path: process.env.PUBLIC_URL + '/contact',
     component: Contact
   }
 ]
