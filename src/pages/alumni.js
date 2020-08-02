@@ -91,7 +91,7 @@ const Alumni = () => {
                                         );
                                     })
                                     }
-                                    <button className="dim grow w-100 center f4 pb1 bn pv1"
+                                    <button className="dim grow w-100 center f4 pb1 bn pv1 b"
                                         onClick={() => handleClick(index, yearIndex)}
                                     > ↑ </button>
                                 </div>

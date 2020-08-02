@@ -46,12 +46,12 @@ const navbarObject = [
         key: "honors"
     },
     {
-        title: "相關資源 resources",
+        title: "相關資源 Resources",
         to: "/resources",
         key: "resources"
     },
     {
-        title: "聯絡我們 contact",
+        title: "聯絡我們 Contact",
         to: "/contact",
         key: "contact"
     }
@@ -87,7 +87,7 @@ const Navigation = () => {
                             style={props.title === "desktop" ? { cursor: "default" } : { letterSpacing: "0.05em" }}
                         > 成員 Members
                             <b> </b>
-                            <small className="dib fw7"
+                            <small className="dib"
                                 style={{ animation: "shiftDownAnimation 2s infinite" }}
                             > ▽ </small>
                         </span>
@@ -137,7 +137,7 @@ const Navigation = () => {
                     onClick={() => closeNav()}
                 ><small> ➢ </small>
                 </p>
-                <p className="link near-white db pt2 f5 f5-l tl mh4 mb0 mt2"> 智慧化行動服務實驗室 </p>
+                <p className="link near-white db pt2 f5 f5-l tl mh4 mb1 mt2"> 智慧化行動服務實驗室 </p>
                 <p className="link near-white db f5 f5-l tl mh4 mt0"> @ 國立成功大學 </p>
                 <p className="link near-white db pb2 f5 f5-l tl bb b-near-white mh4 mb4 mt0"> Intelligent Mobile Service Laboratory @ NCKU </p>
                 <Navbar title="mobile" />

@@ -64,7 +64,7 @@ const Research = () => {
                                 </div>
                             );
                         })}
-                        <button className="dim grow w-100 center f4 pb1 bn"
+                        <button className="dim grow w-100 center f4 pb1 bn b"
                             onClick={() => handleClick(index)}
                         > ↑ </button>
                     </div>

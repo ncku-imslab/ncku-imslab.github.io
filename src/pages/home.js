@@ -22,11 +22,11 @@ const NewsSection = (props) => {
             style={{ boxShadow: "2px 2px 4px 0px rgba( 0, 0, 0, 0.25 )" }}
         >
             <h1 className="f4 bg-near-white br3 br--top mid-gray mv0 pv2 ph3"> 最新消息 </h1>
-            <div className="db pv3 ph1 bt b--black-10 v-mid tc"
+            <div className="pv3 ph3 bt b--black-10 v-mid tc f5"
                 style={{ animation: "fadedAnimation 6s infinite" }}
             >
-                <span className="ph2 f5 dark-red b"> {news[arrayIndex].type} </span>
-                <span className="ph2 f5 near-black"> {news[arrayIndex].description} </span>
+                <span className="ph1 dark-red b"> {news[arrayIndex].type} </span>
+                <span className="ph2 near-black"> {news[arrayIndex].description} </span>
             </div>
         </article>
     );
@@ -85,7 +85,7 @@ const Home = () => {
     const section = Object.entries(mustRead).map((value, index) => {
         return (
             <div className="center mw6 mw7-ns hidden mv3 br1 bg-near-white" key={value[0]}>
-                <button className="dim w-100 f4 mv0 pv2 ph3 bn near-black"
+                <button className="dim w-100 f4 mv0 pv2 ph3 bn near-black self-fw440"
                     onClick={() => handleClickOpen(index)}
                 >
                     {value[0]} <b> </b>
@@ -102,7 +102,7 @@ const Home = () => {
                 {open[index] ?
                     <div className="tl pa3 bt b--dark-gray">
                         <div className="f5 f5-ns ph1 lh-copy center"> {value[1]} </div>
-                        <button className="dim grow w-100 f4 pt1 bn"
+                        <button className="dim grow w-100 f4 pt1 bn fw5"
                             onClick={() => handleClickOpen(index)}
                         > ↑ </button>
                     </div>

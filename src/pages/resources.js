@@ -38,7 +38,7 @@ const Resources = () => {
                     <div className="pt2 ph3 tl f5 f5-ns lh-copy">
                         <span className="f5"> {entries[1]} </span>
                         <button
-                            className="dim grow w-100 center f4 pb1 bn"
+                            className="dim grow w-100 center f4 pb1 bn b"
                             onClick={() => handleClick(index)}
                         > ↑ </button>
                     </div>

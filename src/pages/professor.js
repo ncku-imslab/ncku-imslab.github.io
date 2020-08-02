@@ -55,7 +55,7 @@ const Professor = () => {
                 {open[index] ?
                     <div className="pt2 ph3 tl f5 f5-ns lh-copy near-black">
                         <span className="f5"> {entries[1]} </span>
-                        <button className="dim grow w-100 center f4 pb1 bn"
+                        <button className="dim grow w-100 center f4 pb1 bn b"
                             onClick={() => handleClick(index)}
                         > ↑ </button>
                     </div>
