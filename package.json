@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://ncku-imslab.github.io/imslab-website",
+  "homepage": "https://IMSLab.github.io/",
   "browserslist": {
     "production": [
       ">0.2%",
