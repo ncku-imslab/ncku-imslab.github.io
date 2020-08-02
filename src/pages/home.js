@@ -14,6 +14,7 @@ const NewsSection = (props) => {
             setArrayIndex((arrayIndex + 1) % props.arrayLength);
         }, 6000);
         return () => { clearTimeout(timer) };
+        // eslint-disable-next-line
     }, [arrayIndex]);
 
     return (
