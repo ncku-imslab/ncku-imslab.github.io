@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://IMSLab.github.io/",
+  "homepage": "https://imslab.github.io/",
   "browserslist": {
     "production": [
       ">0.2%",
