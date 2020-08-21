@@ -27,7 +27,7 @@ const dropdownObject = [
 const navbarObject = [
     {
         title: "首頁 Home",
-        to: "/",
+        to: process.env.PUBLIC_URL + "/",
         key: "home"
     },
     {
@@ -37,22 +37,22 @@ const navbarObject = [
     },
     {
         title: "研究 Research",
-        to: "/research",
+        to: process.env.PUBLIC_URL + "/research",
         key: "research"
     },
     {
         title: "榮譽 Honors",
-        to: "/honors",
+        to: process.env.PUBLIC_URL + "/honors",
         key: "honors"
     },
     {
         title: "相關資源 Resources",
-        to: "/resources",
+        to: process.env.PUBLIC_URL + "/resources",
         key: "resources"
     },
     {
         title: "聯絡我們 Contact",
-        to: "/contact",
+        to: process.env.PUBLIC_URL + "/contact",
         key: "contact"
     }
 ]
@@ -143,7 +143,7 @@ const Navigation = () => {
                 <Navbar title="mobile" />
             </div>
 
-            <Link to="/" >
+            <Link to={process.env.PUBLIC_URL + "/"} >
                 <img src={month === 7 && date === 30 ? specialLogo : logo}
                     className="dib dtc-l w4 ph3"
                     style={{ minWidth: month === 7 && date === 30 ? "180px" : "200px" }}
