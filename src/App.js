@@ -1,5 +1,6 @@
 import React from 'react';
 import { renderRoutes } from 'react-router-config';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Particles from 'react-particles-js';
 import './App.css';
 
