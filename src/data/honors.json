@@ -1,9 +1,16 @@
 {
     "獲獎 Awards": {
-        "year 2020": [
+        "year 2020": 
+            {
+                "name": ["方鈞麒"],
+                "content": "台灣電機電子工程學會 最佳碩博士論文獎佳作",
+                "content_en": "Best Master Thesis Award, TIEEE"
+            },            
             {
                 "name": ["蔡昀展"],
-                "content": "Google PhD Fellowship"
+                "content": "Google PhD Fellowship",
+                "content_en": "Google PhD Fellowship"
+
             },
             {
                 "name": ["黃政瑋, 王聖中"],
