@@ -36,7 +36,7 @@ const Honors = () => {
                                 <button className="dim navy f4 b w-100 tl bn pl2"
                                     onClick={() => handleClick(index, yearIndex)}
                                 >
-                                    {yearAndObject[0].substr(5, 4)} {}
+                                    {yearAndObject[0].substr(5, 4)} { }
                                     {!open[index][yearIndex] ?
                                         <span className="navy dib link"
                                             style={{ animation: "shiftDownAnimation 2s infinite" }}
