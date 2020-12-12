@@ -59,8 +59,8 @@ const Alumni = () => {
                                                 style={{ width: "250px" }}
                                                 key={contentIndex}>
                                                 <img src={content.image.length === 0 ?
-                                                    require('../images/members/cat.jpg')
-                                                    : require('../images/members/' + content.image)
+                                                    require('../images/members/cat.jpg').default
+                                                    : require('../images/members/' + content.image).default
                                                 }
                                                     className="br-100 h4 w4 dib ba b--black-05 pa2 mv2"
                                                     style={{ objectFit: "cover" }}

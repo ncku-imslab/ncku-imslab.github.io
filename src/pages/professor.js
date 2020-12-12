@@ -41,7 +41,7 @@ const Professor = () => {
             >
                 <button className="navy dim f4 b w-100 tl bn pt1"
                     onClick={() => handleClick(index)}
-                > {entries[0]} {}
+                > {entries[0]} { }
                     {!open[index] ?
                         <span className="dib link"
                             style={{ animation: "shiftDownAnimation 2s infinite" }}
@@ -76,7 +76,7 @@ const Professor = () => {
                     style={{ maxWidth: "21rem" }}
                 >
                     <img alt="The nicest professor in NCKU CSIE is staring at you σ`∀´)σ"
-                        src={require('../images/tsaimh.jpg')}
+                        src={require('../images/tsaimh.jpg').default}
                         className="br-100 h4 w4 center db ba b--black-10 pa2 pointer"
                         onClick={month === 2 && date === 20 ? () => { window.alert("Today is Meng-Hsun's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡\nToday is Meng-Hsun's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡\nToday is Meng-Hsun's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡") }
                             : null}

@@ -26,8 +26,8 @@ const Students = () => {
                                             key={contentIndex}
                                         >
                                             <img src={content.image.length === 0 ?
-                                                require('../images/members/cat.jpg')
-                                                : require('../images/members/' + content.image)
+                                                require('../images/members/cat.jpg').default
+                                                : require('../images/members/' + content.image).default
                                             }
                                                 className="dib h4 w4 pa2 mv2 ba b--black-05 br-100"
                                                 style={{ objectFit: "cover" }}
