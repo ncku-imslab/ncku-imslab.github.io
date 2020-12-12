@@ -8,13 +8,16 @@ body {
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 button {
     cursor: pointer;
     background-color: transparent;
+}
+
+.z--1 {
+    z-index: -1;
 }
 
 *:focus {

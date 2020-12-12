@@ -1,18 +1,25 @@
 import React from 'react';
 
+const URL = "https://github.com/ncku-imslab/ncku-imslab.github.io/blob/master/package.json"
+
 const Footer = () => {
   return (
-    <footer className="pt4 mt2 pb3 mid-gray">
-      <small className="f6 db tc" style={{ letterSpacing: "0.01em" }}> © <b>IMS Lab</b> 2020 </small>
-      <small className="f6 db tc pt3" style={{ letterSpacing: "0.01em" }}>Powered by
-          <span className="b link dim mid-gray"> React</span>
+    <footer className={footerClass}>
+      <div>© <b>IMS Lab</b> 2020</div>
+      <div className={moreInfoClass}>
+        Powered by
+          <b> React</b>
           ,
-          <span className="b link dim mid-gray"> Tachyons </span>
-          and <b> </b>
-        <a className="dib b link dim mid-gray" key="more" href="https://github.com/ncku-imslab/ncku-imslab.github.io/blob/master/package.json"> More </a>
-      </small>
+          <b> Tachyons </b>
+          and {" "}
+        <a className={urlClass} href={URL} target="_blank" rel="noopener" key="more">More</a>
+      </div>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer
+
+const footerClass = "mid-gray f6"
+const moreInfoClass = "pt3"
+const urlClass = "b link dim mid-gray"

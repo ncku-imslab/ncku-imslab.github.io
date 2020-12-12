@@ -1,8 +1,6 @@
 import React from 'react';
 import { renderRoutes } from 'react-router-config';
-// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Particles from 'react-particles-js';
-import './App.css';
 
 import Navigation from './components/navigation';
 import Footer from './components/footer';
@@ -94,12 +92,11 @@ const routes = [
   }
 ]
 
-// wrap pages in empty div s.t. the length of each section remains consistent
 const App = () => {
   return (
-    <div className="App pa3">
-      <Particles className="particles" params={particlesParameter} />
-      <div>
+    <div className={containerClass}>
+      <Particles className={particleClass} params={particlesParameter} />
+      <div className={mainPartClass}>
         <Navigation />
         {renderRoutes(routes)}
       </div>
@@ -108,4 +105,8 @@ const App = () => {
   );
 }
 
-export default App;
+export default App
+
+const containerClass = "flex flex-column min-vh-100 tc pa3"
+const mainPartClass = "flex-auto pb4"
+const particleClass = "z--1 fixed absolute--fill"
