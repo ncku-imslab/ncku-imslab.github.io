@@ -1,6 +1,5 @@
 const researchesData = {
-'研究 Research': 
-`
+    "研究 Research": `
 **本實驗室的研究主軸為：行動網路設計與分析。**
 
 **Main research fields of the lab include wireless communications, cloud computing, mobile network design and analysis.**
@@ -36,4 +35,4 @@ const researchesData = {
 `,
 }
 
-export default researchesData;
+export default researchesData

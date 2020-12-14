@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react"
 
-const titleClassNames = "f4 f4-l fw6";
+const titleClassNames = "f4 f4-l fw6"
 const Contact = () => {
     return (
         <div className="mw8 center center ph2 center">
@@ -17,18 +17,30 @@ const Contact = () => {
                 </div>
                 <div className="mb2 w-100 center pb2 ph3">
                     <h4 className={titleClassNames}> 地址 Addr. </h4>
-                    <span className="dim f5 db mb3 black"> 701 台南市東區大學路 1 號 國立成功大學 成功校區 資訊系館 10 樓 65A04 室 </span>
-                    <span className="dim f5 db mb2 black"> Room 65A04, 10th Floor, CSIE Building, Cheng-Kung Campus, No. 1, Daxue Road, East District, Tainan City 701, Taiwan (R.O.C.) </span>
+                    <span className="dim f5 db mb3 black">
+                        {" "}
+                        701 台南市東區大學路 1 號 國立成功大學 成功校區 資訊系館 10 樓 65A04 室{" "}
+                    </span>
+                    <span className="dim f5 db mb2 black">
+                        {" "}
+                        Room 65A04, 10th Floor, CSIE Building, Cheng-Kung Campus, No. 1, Daxue Road, East District,
+                        Tainan City 701, Taiwan (R.O.C.){" "}
+                    </span>
                 </div>
             </div>
-            <iframe className="mt2 w-100 center"
+            <iframe
+                className="mt2 w-100 center"
                 title="map"
                 width="100%"
                 height="400px"
-                src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=zh-TW&amp;coord=22.997143,120.221371&amp;q=22.997143,120.221371&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"
+                src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=zh-TW&amp;coord=22.997143,120.221371&amp;q=22.997143,120.221371&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed"
+                frameBorder="0"
+                scrolling="no"
+                marginHeight="0"
+                marginWidth="0"
             />
         </div>
-    );
+    )
 }
 
-export default Contact;
+export default Contact

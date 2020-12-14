@@ -1,13 +1,11 @@
 const resourcesData = {
-'3GPP LTE/LTE-Adv':
-`
+    "3GPP LTE/LTE-Adv": `
 * [3G and 4G Wireless Blog](http://blog.3g4g.co.uk/)
 
 * [4G-Portal](http://4g-portal.com/)
 `,
 
-'開放式課程 OpenCourseWare':
-`
+    "開放式課程 OpenCourseWare": `
 * [台灣大學 (NTU)](http://ocw.aca.ntu.edu.tw/ntu-ocw/)
 
 * [交通大學 (NCTU)](http://ocw.nctu.edu.tw/)
@@ -15,8 +13,7 @@ const resourcesData = {
 * [清華大學 (NTHU)](http://ocw.nthu.edu.tw/ocw/)
 `,
 
-'相關期刊 Related Journals':
-`
+    "相關期刊 Related Journals": `
 * IEEE Network
 
 * IEEE Communications Letter
@@ -32,8 +29,7 @@ const resourcesData = {
 * IEEE Journal on Selected Areas in Communications
 `,
 
-'相關研討會 Related Conferences':
-`
+    "相關研討會 Related Conferences": `
 * ICC
 
 * ICDCS
@@ -45,8 +41,7 @@ const resourcesData = {
 * ACM SIGCOMM
 `,
 
-'可申請獎項 Scholarship Opportunities':
-`
+    "可申請獎項 Scholarship Opportunities": `
 ### 出國參加研討會補助
 * [研討會等級查詢](http://www.conferenceranks.com/)
 
@@ -92,8 +87,7 @@ const resourcesData = {
 * [救國團 青年節表揚大專優秀青年](http://associations.cyc.org.tw/) (Deadline: 3/15)
 `,
 
-'推薦部落格 Recommended Blogs':
-`
+    "推薦部落格 Recommended Blogs": `
 * [vgod's blog](http://blog.vgod.tw/)
 
 * [教書匠的夢想](http://blog.xuite.net/ycedu/blog)
@@ -102,4 +96,4 @@ const resourcesData = {
 `,
 }
 
-export default resourcesData;
+export default resourcesData

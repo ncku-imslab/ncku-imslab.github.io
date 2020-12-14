@@ -1,6 +1,5 @@
 const professorData = {
-'學經歷 Education':
-`
+    "學經歷 Education": `
 - **Ph.D.**  
 Computer Science, National Chiao Tung University  
 *2004 - 2009*
@@ -13,8 +12,7 @@ Computer Science & Information Engineering, National Chiao Tung University
 Computer Science & Information Engineering, National Chiao Tung University  
 *1998 - 2002*
 `,
-'工作經歷 Work Experience':
-`
+    "工作經歷 Work Experience": `
 - **Associate Professor**  
 Computer Science & Information Engineering, National Cheng Kung University, Tainan, Taiwan  
 *2017/2 - present*
@@ -35,8 +33,7 @@ IBM, Taipei
 Otto-von-Guericke-University, Magdeburg, Germany  
 *2006/7 - 2006/9*
 `,
-'研究興趣 Research Interests':
-`
+    "研究興趣 Research Interests": `
 - Internet of Things (IoT)
 
 - Software Defined Networking (SDN)
@@ -46,7 +43,7 @@ Otto-von-Guericke-University, Magdeburg, Germany
 - Performance Evaluation
 
 - Network Security
-`
+`,
 }
 
-export default professorData;
+export default professorData
