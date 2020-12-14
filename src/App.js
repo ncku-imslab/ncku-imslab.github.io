@@ -17,20 +17,20 @@ const particlesParameter = {
   particles: {
     color: {
       // gray, green, gold, pink, blue
-      value: ["#4a4e69", "#84a98c", "#ffca3d", "#f2a2e3", "#64a6bd"]
+      value: ["#4a4e69", "#84a98c", "#ffca3d", "#f2a2e3", "#64a6bd"],
     },
     number: {
       value: 100,
       density: {
         enable: true,
-        value_area: 1750
-      }
+        value_area: 1750,
+      },
     },
     line_linked: {
       enable_auto: true,
       color: "#8d99ae",
       enable: true,
-      opacity: 0.03
+      opacity: 0.03,
     },
     move: {
       direction: "right",
@@ -39,58 +39,65 @@ const particlesParameter = {
       straight: false,
       out_mode: "out",
       attract: {
-        enable: true
-      }
+        enable: true,
+      },
     },
     size: {
-      value: 1.6
+      value: 1.6,
     },
     opacity: {
       anim: {
         enable: true,
         speed: 0.5,
-        opacity_min: 0.1
-      }
-    }
+        opacity_min: 0.1,
+      },
+    },
   },
-  retina_detect: true
+  retina_detect: true,
 }
 
-const routes = [
+const routesArr = [
   {
-    path: process.env.PUBLIC_URL + "/",
+    title: "",
     component: Home,
-    exact: true
   },
   {
-    path: process.env.PUBLIC_URL + "/research",
-    component: Research
+    title: "research",
+    component: Research,
   },
   {
-    path: process.env.PUBLIC_URL + "/professor",
-    component: Professor
+    title: "professor",
+    component: Professor,
   },
   {
-    path: process.env.PUBLIC_URL + "/students",
-    component: Students
+    title: "students",
+    component: Students,
   },
   {
-    path: process.env.PUBLIC_URL + "/alumni",
-    component: Alumni
+    title: "alumni",
+    component: Alumni,
   },
   {
-    path: process.env.PUBLIC_URL + "/honors",
-    component: Honors
+    title: "honors",
+    component: Honors,
   },
   {
-    path: process.env.PUBLIC_URL + "/resources",
-    component: Resources
+    title: "resources",
+    component: Resources,
   },
   {
-    path: process.env.PUBLIC_URL + "/contact",
-    component: Contact
-  }
+    title: "contact",
+    component: Contact,
+  },
 ]
+
+const routes = routesArr.map(({ title, component }) => {
+  return {
+    path: process.env.PUBLIC_URL + "/" + title,
+    component: component,
+    exact: title === "" ? true : false,
+  }
+})
 
 const App = () => {
   return (
