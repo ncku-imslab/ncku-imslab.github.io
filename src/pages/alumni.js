@@ -1,15 +1,17 @@
 import React, { useState } from "react"
 import Data from "../data/members/members.json"
+import Photo from "../components/photo"
 
 const Alumni = () => {
     const alumni = Data.alumni
-    const outerLength = Object.keys(alumni).length
-    const array = new Array(outerLength)
-    for (let i = 0; i < outerLength; i++) {
-        const innerLength = Object.keys(alumni)[i].length
-        array[i] = new Array(innerLength)
 
-        for (let j = 0; j < innerLength; j++) {
+    const degreeLength = Object.keys(alumni).length
+    const array = new Array(degreeLength)
+    for (let i = 0; i < degreeLength; i++) {
+        const yearLength = Object.keys(alumni)[i].length
+        array[i] = new Array(yearLength)
+
+        for (let j = 0; j < yearLength; j++) {
             if (j === 0) {
                 array[i][j] = true
             } else {
@@ -18,110 +20,119 @@ const Alumni = () => {
         }
     }
     // React Hooks for 2D array
-    const [open, setOpen] = useState(array)
+    const [open2DArr, setOpen2DArr] = useState(array)
 
-    function handleClick(xIndex, yIndex) {
-        const list = { ...open }
-        list[xIndex][yIndex] = !list[xIndex][yIndex]
-        setOpen(list)
+    function handleClick(x, y) {
+        const list = { ...open2DArr }
+        list[x][y] = !list[x][y]
+        setOpen2DArr(list)
     }
 
-    const section = Object.entries(alumni).map((titleAndObject, index) => {
+    const descriptionSec = (year, paper, job, proj) => {
+        const workTitle = year[0] === "b" ? "專題題目 Project" : "論文題目 Thesis"
+        const workContent = year[0] === "b" ? proj : paper
+        const jobTitle = "出路 Destination"
+
         return (
-            <div className="mb4 pb2" key={titleAndObject[0]}>
-                <h1 className="self-gold pb2 "> {titleAndObject[0]} </h1>
-                {Object.entries(titleAndObject[1]).map((yearAndObject, yearIndex) => {
-                    return (
-                        <div className="black tl pa2 mb2 mt3 bg-near-white" key={yearAndObject[0]}>
-                            <button
-                                className="dim navy f4 b w-100 tl bn pl2 pt1 pb1 mb1"
-                                onClick={() => handleClick(index, yearIndex)}
-                            >
-                                {yearAndObject[0][0] === "b"
-                                    ? yearAndObject[0].substr(1, 3) +
-                                    " 級 Graduate in " +
-                                    (Number(yearAndObject[0].substr(1, 3)) + 1911).toString()
-                                    : yearAndObject[0].substr(1, 3) +
-                                    " 年畢 Graduate in " +
-                                    (Number(yearAndObject[0].substr(1, 3)) + 1911).toString()}
-                                <b> </b>
-                                {!open[index][yearIndex] ? (
-                                    <span className="dib link" style={{ animation: "shiftDownAnimation 2s infinite" }}>
-                                        {" "}
-                                        ↓{" "}
-                                    </span>
-                                ) : (
-                                        <span className="dib link" style={{ animation: "shiftUpAnimation 2s infinite" }}>
-                                            {" "}
-                                        ↑{" "}
-                                        </span>
-                                    )}
-                            </button>
-                            {open[index][yearIndex] ? (
-                                <div className="tc">
-                                    {yearAndObject[1].map((content, contentIndex) => {
-                                        return (
-                                            <div
-                                                className="dib bg-white br1 ph2 pv3 ma3 ba b--black-10"
-                                                style={{ width: "250px" }}
-                                                key={contentIndex}
-                                            >
-                                                <img
-                                                    src={
-                                                        content.image.length === 0
-                                                            ? require("../images/members/cat.jpg").default
-                                                            : require("../images/members/" + content.image).default
-                                                    }
-                                                    className="br-100 h4 w4 dib ba b--black-05 pa2 mv2"
-                                                    style={{ objectFit: "cover" }}
-                                                    title="Cat is the best. Image source: https://www.pickpik.com/black-cat-view-cat-eyes-cat-looking-cute-38005"
-                                                    alt=""
-                                                />
-                                                <span className="tc ttu tracked link db f4 f4-ns navy b pt2">
-                                                    {" "}
-                                                    {content.name_ch}{" "}
-                                                </span>
-                                                <hr className="mw3 bb bw1 b--black-10 mt2 mb3" />
-                                                <div className="pb2">
-                                                    <span className="lh-copy measure center f5 near-black db b pv1">
-                                                        {yearAndObject[0][0] === "b"
-                                                            ? "專題題目 Project"
-                                                            : "論文題目 Thesis"}
-                                                    </span>
-                                                    <span className="lh-copy measure center f6 near-black db pv1 ph3">
-                                                        {yearAndObject[0][0] === "b" ? content.proj : content.paper}
-                                                    </span>
-                                                    {content.job === undefined ? null : (
-                                                        <div>
-                                                            <span className="lh-copy measure center f5 near-black db b pv1">
-                                                                出路 Destination
-                                                            </span>
-                                                            <span className="lh-copy measure center f6 near-black db pv1 ph3">
-                                                                {content.job}
-                                                            </span>
-                                                        </div>
-                                                    )}
-                                                </div>
-                                            </div>
-                                        )
-                                    })}
-                                    <button
-                                        className="dim grow w-100 center f4 pb1 bn pv1 b"
-                                        onClick={() => handleClick(index, yearIndex)}
-                                    >
-                                        {" "}
-                                        ↑{" "}
-                                    </button>
-                                </div>
-                            ) : null}
-                        </div>
-                    )
+            <div className={descriptionSecClass}>
+                <span className={descriptionTitleClass}>{workTitle}</span>
+                <span className={descriptionClass}>{workContent}</span>
+                {job === undefined ? null : (
+                    <div>
+                        <span className={descriptionTitleClass}>{jobTitle}</span>
+                        <span className={descriptionClass}>{job}</span>
+                    </div>
+                )}
+            </div>
+        )
+    }
+    const personSec = (year, imageDir, name, paper, job, proj, index) => {
+        return (
+            <div className={personSecClass} style={{ width: personSecWidth }} key={index}>
+                {Photo(imageDir)}
+                <span className={nameClass}> {name} </span>
+                <hr className={breakClass} />
+                {descriptionSec(year, paper, job, proj)}
+            </div>
+        )
+    }
+    const yearTitleButton = (degreeIndex, year, yearIndex) => {
+        const title =
+            year.substr(1, 3) +
+            (year[0] === "b" ? " 級 Graduate in " : " 年畢 Graduate in ") +
+            (Number(year.substr(1, 3)) + 1911).toString()
+        const arrowAnimationClass = !open2DArr[degreeIndex][yearIndex] ? shiftDownAnimationClass : shiftUpAnimationClass
+        const arrow = !open2DArr[degreeIndex][yearIndex] ? "↓" : "↑"
+
+        return (
+            <button className={yearTitleClass} onClick={() => handleClick(degreeIndex, yearIndex)}>
+                {title}{" "}
+                <span
+                    className={animationArrowClass}
+                    style={{
+                        animation: arrowAnimationClass,
+                    }}
+                >
+                    {arrow}
+                </span>
+            </button>
+        )
+    }
+    const yearSec = (degreeIndex, year, studentArr, yearIndex) => {
+        const arrow = "↑"
+
+        return (
+            <div className={yearSecClass} key={year}>
+                {yearTitleButton(degreeIndex, year, yearIndex)}
+                {open2DArr[degreeIndex][yearIndex] ? (
+                    <div className={openYearSecClass}>
+                        {studentArr.map(({ image, name_ch, paper, job, proj }, index) => {
+                            return personSec(year, image, name_ch, paper, job, proj, index)
+                        })}
+                        <button className={bottomArrowClass} onClick={() => handleClick(degreeIndex, yearIndex)}>
+                            {arrow}
+                        </button>
+                    </div>
+                ) : null}
+            </div>
+        )
+    }
+    const degreeSec = (degree, memberArr, degreeIndex) => {
+        return (
+            <div className={degreeSecClass} key={degree}>
+                <h1 className={degreeTitleClass}> {degree} </h1>
+                {Object.entries(memberArr).map(([year, studentArr], yearIndex) => {
+                    return yearSec(degreeIndex, year, studentArr, yearIndex)
                 })}
             </div>
         )
-    })
+    }
 
-    return <div className="mw8 mw8-ns center bg-mid-gray pa2 ph5-ns shadow-5">{section}</div>
+    return (
+        <div className={alumniClass}>
+            {Object.entries(alumni).map(([degree, memberArr], degreeIndex) => {
+                return degreeSec(degree, memberArr, degreeIndex)
+            })}
+        </div>
+    )
 }
 
 export default Alumni
+
+const alumniClass = "bg-mid-gray pa2 ph5-ns center mw8 mw8-ns shadow-5"
+const degreeSecClass = "pb2 mb4"
+const degreeTitleClass = "pb2 self-gold"
+const yearSecClass = "bg-near-white pa2 mb2 mt3 tl black"
+const yearTitleClass = "w-100 pt1 pb1 pl2 mb1 tl navy b f4 dim bn"
+const animationArrowClass = "dib link"
+const shiftDownAnimationClass = "shiftDownAnimation 2s infinite"
+const shiftUpAnimationClass = "shiftUpAnimation 2s infinite"
+const openYearSecClass = "tc"
+const bottomArrowClass = "w-100 pv1 pb1 center b f4 bn dim grow"
+const personSecClass = "bg-white dib ph2 pt3 pb4 ma3 ba b--black-10 br1"
+const personSecWidth = "250px"
+const nameClass = "db pt2 tc ttu tracked navy b f4 f4-ns link"
+const breakClass = "mw3 mt2 mb3 bw1 bb b--black-10 "
+const descriptionSecClass = "pb2"
+const descriptionTitleClass = "db pv1 lh-copy measure center near-black b f5"
+const descriptionClass = "db pv1 ph3 lh-copy measure center near-black f6"
