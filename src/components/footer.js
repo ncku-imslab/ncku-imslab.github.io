@@ -2,6 +2,7 @@ import React from "react"
 
 const URL = "https://github.com/ncku-imslab/ncku-imslab.github.io/blob/master/package.json"
 
+// Don't do extraction as descriptions are tangled with HTML tags
 const Footer = () => {
     const logoSec = (
         <div>

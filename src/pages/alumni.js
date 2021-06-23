@@ -61,7 +61,7 @@ const Alumni = () => {
             year.substr(1, 3) +
             (year[0] === "b" ? " 級 Graduate in " : " 年畢 Graduate in ") +
             (Number(year.substr(1, 3)) + 1911).toString()
-        const arrowAnimationClass = !open2DArr[degreeIndex][yearIndex] ? shiftDownAnimationClass : shiftUpAnimationClass
+        const arrowAnimation = !open2DArr[degreeIndex][yearIndex] ? shiftDownAnimationClass : shiftUpAnimationClass
         const arrow = !open2DArr[degreeIndex][yearIndex] ? "↓" : "↑"
 
         return (
@@ -70,7 +70,7 @@ const Alumni = () => {
                 <span
                     className={animationArrowClass}
                     style={{
-                        animation: arrowAnimationClass,
+                        animation: arrowAnimation,
                     }}
                 >
                     {arrow}
