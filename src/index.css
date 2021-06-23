@@ -28,10 +28,6 @@ button {
     color: #ffca3d;
 }
 
-.self-fw440 {
-    font-weight: 440;
-}
-
 @keyframes shiftDownAnimation {
     0% {
         transform: translateY(-3%);

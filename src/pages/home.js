@@ -5,29 +5,28 @@ import Welcome from "../data/home/home.json"
 import MustReadData from "../data/home/mustRead"
 
 // Re-rendering is limited to this component only
-const NewsSection = (props) => {
-    const news = { ...News[props.yearIndex] }
+const newsSec = (yearIndex, arrayLength) => {
+    const news = { ...News[yearIndex] }
 
     const [arrayIndex, setArrayIndex] = useState(0)
     useEffect(() => {
+        // 6 seconds
         const timer = setTimeout(() => {
-            setArrayIndex((arrayIndex + 1) % props.arrayLength)
+            setArrayIndex((arrayIndex + 1) % arrayLength)
         }, 6000)
+
         return () => {
             clearTimeout(timer)
         }
-        // eslint-disable-next-line
     }, [arrayIndex])
 
+    const title = "最新消息"
     return (
-        <article
-            className="center mw6 mw6-ns br3 hidden ba b--black-10"
-            style={{ boxShadow: "2px 2px 4px 0px rgba( 0, 0, 0, 0.25 )" }}
-        >
-            <h1 className="f4 bg-near-white br3 br--top mid-gray mv0 pv2 ph3"> 最新消息 </h1>
-            <div className="pv3 ph3 bt b--black-10 v-mid tc f5" style={{ animation: "fadedAnimation 6s infinite" }}>
-                <span className="ph1 dark-red b"> {news[arrayIndex].type} </span>
-                <span className="ph2 near-black"> {news[arrayIndex].description} </span>
+        <article className={newsSecClass} style={{ boxShadow: newsSecBoxShadow }}>
+            <h1 className={newsTitleClass}> {title} </h1>
+            <div className={newsAnimationSecClass} style={{ animation: newsAnimation }}>
+                <span className={newsTypeClass}> {news[arrayIndex].type} </span>
+                <span className={newsContentClass}> {news[arrayIndex].description} </span>
             </div>
         </article>
     )
@@ -56,19 +55,50 @@ const Home = () => {
     function handleClickEng() {
         setEng(!eng)
     }
-    const EngButton = (props) => (
-        <button
-            className={props.attributes + " absolute b link dim grow pa1 bn"}
-            style={{
-                right: props.border,
-                top: props.border,
-            }}
-            onClick={() => handleClickEng()}
-        >
-            {" "}
-            {eng ? "中" : "EN"}
-        </button>
-    )
+
+    const engButton = (attributes, border) => {
+        const button = eng ? "中" : "EN"
+
+        return (
+            <button
+                className={attributes + engSecClassAppended}
+                style={{
+                    right: border,
+                    top: border,
+                }}
+                onClick={() => handleClickEng()}
+            >
+                {button}
+            </button>
+        )
+    }
+
+    const titleSec = (title, index) => {
+        const arrowAnimation = !open[index] ? shiftDownAnimationClass : shiftUpAnimationClass
+        const arrow = !open[index] ? "↓" : "↑"
+
+        return (
+            <button className={titleClass} onClick={() => handleClickOpen(index)}>
+                {title}{" "}
+                <span className={titleArrowClass} style={{ animation: arrowAnimation }}>
+                    {arrow}
+                </span>
+            </button>
+        )
+    }
+
+    const contentSec = (content, index) => {
+        const arrow = "↑"
+
+        return (
+            <div className={contentSecClass}>
+                <div className={contentClass}> {content} </div>
+                <button className={contentArrowClass} onClick={() => handleClickOpen(index)}>
+                    {arrow}
+                </button>
+            </div>
+        )
+    }
 
     // 1.(key, value) pairs are viewed as an array, thus: [key, value]
     // 2. The following codes convert the value of a kv - pair directly to the.md format
@@ -87,55 +117,56 @@ const Home = () => {
     Object.entries(mustRead).forEach(([key, value]) => {
         mustRead[key] = <Markdown source={value} />
     })
-    const section = Object.entries(mustRead).map((value, index) => {
+
+    const talkSec = Object.entries(mustRead).map(([title, content], index) => {
         return (
-            <div className="center mw6 mw7-ns hidden mv3 br1 bg-near-white" key={value[0]}>
-                <button
-                    className="dim w-100 f4 mv0 pv2 ph3 bn near-black self-fw440"
-                    onClick={() => handleClickOpen(index)}
-                >
-                    {value[0]} <b> </b>
-                    {!open[index] ? (
-                        <span className="dib link near-black" style={{ animation: "shiftDownAnimation 2s infinite" }}>
-                            {" "}
-                            ↓{" "}
-                        </span>
-                    ) : (
-                            <span className="dib link near-black" style={{ animation: "shiftUpAnimation 2s infinite" }}>
-                                {" "}
-                            ↑{" "}
-                            </span>
-                        )}
-                </button>
-                {open[index] ? (
-                    <div className="tl pa3 bt b--dark-gray">
-                        <div className="f5 f5-ns ph1 lh-copy center"> {value[1]} </div>
-                        <button className="dim grow w-100 f4 pt1 bn fw5" onClick={() => handleClickOpen(index)}>
-                            {" "}
-                            ↑{" "}
-                        </button>
-                    </div>
-                ) : null}
+            <div className={talkSecClass} key={title}>
+                {titleSec(title, index)}
+                {open[index] ? contentSec(content, index) : null}
             </div>
         )
     })
 
+    const welcomeSec = () => {
+        const title = eng ? Welcome["head-en"] : Welcome["head-ch"]
+        const content = eng ? Welcome["content-en"] : Welcome["content-ch"]
+
+        return (
+            <section className={welcomeSecClass} style={{ boxShadow: welcomeSecBoxShadow }}>
+                {engButton("near-white f5", "12px")}
+                <h1 className={welcomeTitleClass}>{title}</h1>
+                <div className={welcomeContentClass}>{content}</div>
+                {talkSec}
+            </section>
+        )
+    }
+
     return (
         <div>
-            <NewsSection yearIndex={yearIndex} arrayLength={arrayLength} />
-            <section
-                className="mt4 mw7 mw7-ns center bg-mid-gray pv3 ph5-ns relative"
-                style={{ boxShadow: "0px 10px 8px -2px rgba( 0, 0, 0, 0.6 )" }}
-            >
-                <EngButton border="12px" attributes="near-white f5" />
-                <h1 className="mb4 self-gold">{eng ? Welcome["head-en"] : Welcome["head-ch"]}</h1>
-                <div className="lh-copy center f5 ph4 pb3 white">
-                    {eng ? Welcome["content-en"] : Welcome["content-ch"]}
-                </div>
-                <div className="ph2"> {section} </div>
-            </section>
+            {newsSec(yearIndex, arrayLength)} {welcomeSec()}
         </div>
     )
 }
 
 export default Home
+
+const newsSecClass = "mw6 mw6-ns center ba br3 b--black-10"
+const newsSecBoxShadow = "2px 2px 4px 0px rgba(0, 0, 0, 0.25)"
+const newsTitleClass = "bg-near-white pv2 ph3 mv0 mid-gray f4 br3 br--top"
+const newsAnimationSecClass = "v-mid pv3 ph3 tc f5 bt b--black-10"
+const newsAnimation = "fadedAnimation 6s infinite"
+const newsTypeClass = "ph1 dark-red b"
+const newsContentClass = "ph2 near-black"
+const engSecClassAppended = " pa1 absolute b link dim grow bn"
+const talkSecClass = "bg-near-white mw6 mw7-ns center mv3 br1"
+const titleClass = "w-100 pv2 ph3 mv0 near-black f4 dim bn"
+const titleArrowClass = "dib near-black"
+const shiftDownAnimationClass = "shiftDownAnimation 2s infinite"
+const shiftUpAnimationClass = "shiftUpAnimation 2s infinite"
+const contentSecClass = "pa3 tl bt b--dark-gray"
+const contentClass = "ph1 lh-copy center f5 f5-ns"
+const contentArrowClass = "w-100 pt1 f4 fw5 dim grow bn"
+const welcomeSecClass = "relative bg-mid-gray mw7 mw7-ns pv3 ph5-ns mt4 center"
+const welcomeSecBoxShadow = "0px 10px 8px -2px rgba(0, 0, 0, 0.6)"
+const welcomeTitleClass = "mb4 self-gold"
+const welcomeContentClass = "ph4 pb3 lh-copy center white f5"
