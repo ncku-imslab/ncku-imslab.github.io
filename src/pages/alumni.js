@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Data from "../data/members/members.json"
 import Photo from "../components/photo"
+import { handleClickOpen2D } from "../utils/handleClick"
 
 const Alumni = () => {
     const alumni = Data.alumni
@@ -20,13 +21,7 @@ const Alumni = () => {
         }
     }
     // React Hooks for 2D array
-    const [open2DArr, setOpen2DArr] = useState(array)
-
-    function handleClick(x, y) {
-        const list = { ...open2DArr }
-        list[x][y] = !list[x][y]
-        setOpen2DArr(list)
-    }
+    const [open, setOpen] = useState(array)
 
     const descriptionSec = (year, paper, job, proj) => {
         const workTitle = year[0] === "b" ? "專題題目 Project" : "論文題目 Thesis"
@@ -61,11 +56,11 @@ const Alumni = () => {
             year.substr(1, 3) +
             (year[0] === "b" ? " 級 Graduate in " : " 年畢 Graduate in ") +
             (Number(year.substr(1, 3)) + 1911).toString()
-        const arrowAnimation = !open2DArr[degreeIndex][yearIndex] ? shiftDownAnimationClass : shiftUpAnimationClass
-        const arrow = !open2DArr[degreeIndex][yearIndex] ? "↓" : "↑"
+        const arrowAnimation = !open[degreeIndex][yearIndex] ? shiftDownAnimationClass : shiftUpAnimationClass
+        const arrow = !open[degreeIndex][yearIndex] ? "↓" : "↑"
 
         return (
-            <button className={yearTitleClass} onClick={() => handleClick(degreeIndex, yearIndex)}>
+            <button className={yearTitleClass} onClick={() => handleClickOpen2D(degreeIndex, yearIndex, open, setOpen)}>
                 {title}{" "}
                 <span
                     className={animationArrowClass}
@@ -84,12 +79,15 @@ const Alumni = () => {
         return (
             <div className={yearSecClass} key={year}>
                 {yearTitleButton(degreeIndex, year, yearIndex)}
-                {open2DArr[degreeIndex][yearIndex] ? (
+                {open[degreeIndex][yearIndex] ? (
                     <div className={openYearSecClass}>
                         {studentArr.map(({ image, name_ch, paper, job, proj }, index) => {
                             return personSec(year, image, name_ch, paper, job, proj, index)
                         })}
-                        <button className={bottomArrowClass} onClick={() => handleClick(degreeIndex, yearIndex)}>
+                        <button
+                            className={bottomArrowClass}
+                            onClick={() => handleClickOpen2D(degreeIndex, yearIndex, open, setOpen)}
+                        >
                             {arrow}
                         </button>
                     </div>

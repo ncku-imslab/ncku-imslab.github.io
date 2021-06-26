@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import Markdown from "react-markdown"
 import ResearchesData from "../data/researches/researches"
 import Projects from "../data/researches/projects.json"
+import { handleClickOpen1D } from "../utils/handleClick"
 
 const researches = { ...ResearchesData }
 
@@ -21,16 +22,13 @@ const researchSection = Object.entries(researches).map((entries) => {
 const Research = () => {
     const [open, setOpen] = useState([])
 
-    function handleClick(index) {
-        const list = { ...open }
-        list[index] = !list[index]
-        setOpen(list)
-    }
-
     const section = Object.entries(Projects).map((titleAndObject, index) => {
         return (
             <div className="black tl pa2 ba b--navy br1 mb2 mt3" key={titleAndObject[0]}>
-                <button className="dim navy f4 b w-100 tl bn pt1 pl2" onClick={() => handleClick(index)}>
+                <button
+                    className="dim navy f4 b w-100 tl bn pt1 pl2"
+                    onClick={() => handleClickOpen1D(index, open, setOpen)}
+                >
                     {titleAndObject[0]} {}
                     {!open[index] ? (
                         <span className="navy dib link" style={{ animation: "shiftDownAnimation 2s infinite" }}>
@@ -61,7 +59,10 @@ const Research = () => {
                                 </div>
                             )
                         })}
-                        <button className="dim grow w-100 center f4 pb1 bn b" onClick={() => handleClick(index)}>
+                        <button
+                            className="dim grow w-100 center f4 pb1 bn b"
+                            onClick={() => handleClickOpen1D(index, open, setOpen)}
+                        >
                             {" "}
                             ↑{" "}
                         </button>

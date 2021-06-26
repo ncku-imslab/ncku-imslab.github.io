@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import Markdown from "react-markdown"
 import resourcesData from "../data/resources"
+import { handleClickOpen1D } from "../utils/handleClick"
 
 const resources = { ...resourcesData }
-
 Object.entries(resources).forEach(([key, value]) => {
     resources[key] = <Markdown source={value} />
 })
@@ -11,16 +11,13 @@ Object.entries(resources).forEach(([key, value]) => {
 const Resources = () => {
     const [open, setOpen] = useState([true])
 
-    function handleClick(index) {
-        const list = { ...open }
-        list[index] = !list[index]
-        setOpen(list)
-    }
-
     const section = Object.entries(resources).map((entries, index) => {
         return (
             <div className="black tl pa2 ba b--navy br1 mb2 mt3" key={entries[0]}>
-                <button className="dim navy f4 b w-100 tl bn pt1 pl2" onClick={() => handleClick(index)}>
+                <button
+                    className="dim navy f4 b w-100 tl bn pt1 pl2"
+                    onClick={() => handleClickOpen1D(index, open, setOpen)}
+                >
                     {" "}
                     {entries[0]} {}
                     {!open[index] ? (
@@ -39,7 +36,10 @@ const Resources = () => {
                 {open[index] ? (
                     <div className="pt2 ph3 tl f5 f5-ns lh-copy">
                         <span className="f5"> {entries[1]} </span>
-                        <button className="dim grow w-100 center f4 pb1 bn b" onClick={() => handleClick(index)}>
+                        <button
+                            className="dim grow w-100 center f4 pb1 bn b"
+                            onClick={() => handleClickOpen1D(index, open, setOpen)}
+                        >
                             {" "}
                             ↑{" "}
                         </button>

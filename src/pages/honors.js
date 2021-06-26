@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Honor from "../data/honors.json"
+import { handleClickOpen2D } from "../utils/handleClick"
 
 const Honors = () => {
     const outerLength = Object.keys(Honor).length
@@ -19,12 +20,6 @@ const Honors = () => {
     // React Hooks for 2D array
     const [open, setOpen] = useState(array)
 
-    function handleClick(xIndex, yIndex) {
-        const list = { ...open }
-        list[xIndex][yIndex] = !list[xIndex][yIndex]
-        setOpen(list)
-    }
-
     const section = Object.entries(Honor).map((titleAndObject, index) => {
         return (
             <div className="mb4 pb2" key={titleAndObject[0]}>
@@ -34,7 +29,7 @@ const Honors = () => {
                         <div className="black tl pa2 ba b--navy br1 mb2 mt3" key={yearAndObject[0]}>
                             <button
                                 className="dim navy f4 b w-100 tl bn pl2"
-                                onClick={() => handleClick(index, yearIndex)}
+                                onClick={() => handleClickOpen2D(index, yearIndex, open, setOpen)}
                             >
                                 {yearAndObject[0].substr(5, 4)} {}
                                 {!open[index][yearIndex] ? (
@@ -67,7 +62,7 @@ const Honors = () => {
                                     })}
                                     <button
                                         className="dim grow w-100 center f4 pb1 bn b"
-                                        onClick={() => handleClick(index, yearIndex)}
+                                        onClick={() => handleClickOpen2D(index, yearIndex, open, setOpen)}
                                     >
                                         {" "}
                                         ↑{" "}

@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import Markdown from "react-markdown"
 import professorData from "../data/members/prof"
 import Prof from "../data/members/prof.json"
+import { handleClickOpen1D } from "../utils/handleClick"
 
 const professor = { ...professorData }
 
@@ -12,12 +13,6 @@ Object.entries(professor).forEach(([key, value]) => {
 // React Hooks for 1D array
 const Professor = () => {
     const [open, setOpen] = useState([true])
-
-    function handleClick(index) {
-        const list = { ...open }
-        list[index] = !list[index]
-        setOpen(list)
-    }
 
     const contactSection = Object.entries(Prof).map((titleAndObject, index) => {
         return (
@@ -40,7 +35,10 @@ const Professor = () => {
     const infoSection = Object.entries(professor).map((entries, index) => {
         return (
             <div className="black tl pa2 br1 mb2 mt3 bg-near-white" key={entries[0]}>
-                <button className="navy dim f4 b w-100 tl bn pt1" onClick={() => handleClick(index)}>
+                <button
+                    className="navy dim f4 b w-100 tl bn pt1"
+                    onClick={() => handleClickOpen1D(index, open, setOpen)}
+                >
                     {" "}
                     {entries[0]} {}
                     {!open[index] ? (
@@ -58,7 +56,10 @@ const Professor = () => {
                 {open[index] ? (
                     <div className="pt2 ph3 tl f5 f5-ns lh-copy near-black">
                         <span className="f5"> {entries[1]} </span>
-                        <button className="dim grow w-100 center f4 pb1 bn b" onClick={() => handleClick(index)}>
+                        <button
+                            className="dim grow w-100 center f4 pb1 bn b"
+                            onClick={() => handleClickOpen1D(index, open, setOpen)}
+                        >
                             {" "}
                             ↑{" "}
                         </button>

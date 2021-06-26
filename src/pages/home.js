@@ -3,6 +3,25 @@ import Markdown from "react-markdown"
 import News from "../data/home/news.json"
 import Welcome from "../data/home/home.json"
 import MustReadData from "../data/home/mustRead"
+import { handleClickOpen1D, handleClickBoolean } from "../utils/handleClick"
+
+// 1.(key, value) pairs are viewed as an array, thus: [key, value]
+// 2. The following codes convert the value of a kv - pair directly to the.md format
+// Extra:
+// If there is a tab in front of lines of.md file, ex:
+// `
+//         ## content here
+//     `
+// The tab is viewed as a "code block", thus changing the font of the content and preventing the h2 tag from behaving the way we expected.
+//     Therefore, do not format the data and start from the beginning of each line instead.
+// If the data is already formatted as the above, we can convert code blocks into individual Markdown components:
+//     > renderers={ { code: ({ value }) => <Markdown source={value} /> } }
+// source: https://github.com/rexxars/react-markdown/issues/134
+
+const mustRead = { ...MustReadData }
+Object.entries(mustRead).forEach(([key, value]) => {
+    mustRead[key] = <Markdown source={value} />
+})
 
 // Re-rendering is limited to this component only
 const newsSec = (yearIndex, arrayLength) => {
@@ -45,16 +64,7 @@ const Home = () => {
     }
 
     const [open, setOpen] = useState([])
-    function handleClickOpen(index) {
-        const list = { ...open }
-        list[index] = !list[index]
-        setOpen(list)
-    }
-
     const [eng, setEng] = useState(false)
-    function handleClickEng() {
-        setEng(!eng)
-    }
 
     const engButton = (attributes, border) => {
         const button = eng ? "中" : "EN"
@@ -66,7 +76,7 @@ const Home = () => {
                     right: border,
                     top: border,
                 }}
-                onClick={() => handleClickEng()}
+                onClick={() => handleClickBoolean(eng, setEng)}
             >
                 {button}
             </button>
@@ -78,7 +88,7 @@ const Home = () => {
         const arrow = !open[index] ? "↓" : "↑"
 
         return (
-            <button className={titleClass} onClick={() => handleClickOpen(index)}>
+            <button className={titleClass} onClick={() => handleClickOpen1D(index, open, setOpen)}>
                 {title}{" "}
                 <span className={titleArrowClass} style={{ animation: arrowAnimation }}>
                     {arrow}
@@ -93,30 +103,12 @@ const Home = () => {
         return (
             <div className={contentSecClass}>
                 <div className={contentClass}> {content} </div>
-                <button className={contentArrowClass} onClick={() => handleClickOpen(index)}>
+                <button className={contentArrowClass} onClick={() => handleClickOpen1D(index, open, setOpen)}>
                     {arrow}
                 </button>
             </div>
         )
     }
-
-    // 1.(key, value) pairs are viewed as an array, thus: [key, value]
-    // 2. The following codes convert the value of a kv - pair directly to the.md format
-    // Extra:
-    // If there is a tab in front of lines of.md file, ex:
-    // `
-    //         ## content here
-    //     `
-    // The tab is viewed as a "code block", thus changing the font of the content and preventing the h2 tag from behaving the way we expected.
-    //     Therefore, do not format the data and start from the beginning of each line instead.
-    // If the data is already formatted as the above, we can convert code blocks into individual Markdown components:
-    //     > renderers={ { code: ({ value }) => <Markdown source={value} /> } }
-    // source: https://github.com/rexxars/react-markdown/issues/134
-
-    const mustRead = { ...MustReadData }
-    Object.entries(mustRead).forEach(([key, value]) => {
-        mustRead[key] = <Markdown source={value} />
-    })
 
     const talkSec = Object.entries(mustRead).map(([title, content], index) => {
         return (
