@@ -11,52 +11,65 @@ Object.entries(resources).forEach(([key, value]) => {
 const Resources = () => {
     const [open, setOpen] = useState([true])
 
-    const section = Object.entries(resources).map((entries, index) => {
-        return (
-            <div className="black tl pa2 ba b--navy br1 mb2 mt3" key={entries[0]}>
-                <button
-                    className="dim navy f4 b w-100 tl bn pt1 pl2"
-                    onClick={() => handleClickOpen1D(index, open, setOpen)}
-                >
-                    {" "}
-                    {entries[0]} {}
-                    {!open[index] ? (
-                        <span className="navy dib link" style={{ animation: "shiftDownAnimation 2s infinite" }}>
-                            {" "}
-                            ↓{" "}
-                        </span>
-                    ) : (
-                        <span className="navy dib link" style={{ animation: "shiftUpAnimation 2s infinite" }}>
-                            {" "}
-                            ↑{" "}
-                        </span>
-                    )}
-                </button>
+    const titleSec = (title, index) => {
+        const arrow = !open[index] ? "↓" : "↑"
+        const arrowAnimation = !open[index] ? shiftDownAnimationClass : shiftUpAnimationClass
 
-                {open[index] ? (
-                    <div className="pt2 ph3 tl f5 f5-ns lh-copy">
-                        <span className="f5"> {entries[1]} </span>
-                        <button
-                            className="dim grow w-100 center f4 pb1 bn b"
-                            onClick={() => handleClickOpen1D(index, open, setOpen)}
-                        >
-                            {" "}
-                            ↑{" "}
-                        </button>
-                    </div>
-                ) : null}
+        return (
+            <button className={titleSecClass} onClick={() => handleClickOpen1D(index, open, setOpen)}>
+                {title} {}
+                <span className={titleArrowClass} style={{ animation: arrowAnimation }}>
+                    {arrow}
+                </span>
+            </button>
+        )
+    }
+
+    const contentSec = (content, index, open, setOpen) => {
+        const arrow = "↑"
+
+        return (
+            <div className={contentSecClass}>
+                {content}
+                <button className={contentArrowClass} onClick={() => handleClickOpen1D(index, open, setOpen)}>
+                    {arrow}
+                </button>
             </div>
         )
-    })
+    }
 
+    // forced to use single (v.s. plural of this whole section)
+    const singleResourceSec = (title, content, index) => {
+        return (
+            <div className={singleResourceSecClass} key={title}>
+                {titleSec(title, index)}
+                {open[index] ? contentSec(content, index, open, setOpen) : null}
+            </div>
+        )
+    }
+
+    const title = "相關資源 Resources"
     return (
-        <div className="mw8 mw8-ns center bg-near-white pa2 ph5-ns shadow-5">
-            <div className="mb4 pb2">
-                <h1 className="navy pb2 bb bw1"> 相關資源 Resources </h1>
-                {section}
+        <div className={resourcesClass}>
+            <div className={paddingBottomClass}>
+                <h1 className={titleClass}> {title} </h1>
+                {Object.entries(resources).map(([title, content], index) => {
+                    return singleResourceSec(title, content, index)
+                })}
             </div>
         </div>
     )
 }
 
 export default Resources
+
+const resourcesClass = "bg-near-white shadow-5 pa2 ph5-ns mw8 mw8-ns center"
+const paddingBottomClass = "pb2 mb4"
+const titleClass = "navy pb2 bb bw1"
+const singleResourceSecClass = "pa2 mb2 mt3 black tl ba b--navy br1"
+const titleSecClass = "w-100 pt1 pl2 navy tl b f4 dim bn"
+const titleArrowClass = "dib navy link"
+const shiftDownAnimationClass = "shiftDownAnimation 2s infinite"
+const shiftUpAnimationClass = "shiftUpAnimation 2s infinite"
+const contentSecClass = "pt2 ph3 lh-copy tl f5 f5-ns"
+const contentArrowClass = "w-100 pb1 center b f4 dim grow bn"
