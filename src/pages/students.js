@@ -42,7 +42,7 @@ const Students = () => {
 
     const students = Data.students
     return (
-        <div className={studentClass}>
+        <div className={studentsClass}>
             {Object.entries(students).map(([degree, memberArr]) => {
                 return degreeSec(degree, memberArr)
             })}
@@ -52,7 +52,7 @@ const Students = () => {
 
 export default Students
 
-const studentClass = "bg-mid-gray pa2 ph5-ns center mw8 mw8-ns shadow-5"
+const studentsClass = "bg-mid-gray pa2 ph5-ns center mw8 mw8-ns shadow-5"
 const degreeSecClass = "pb2 mb4"
 const degreeTitleClass = "pb2 self-gold"
 const yearSecClass = "bg-near-white pa2 mb2 mt3 black"
