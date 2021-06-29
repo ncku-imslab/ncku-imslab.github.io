@@ -37,7 +37,7 @@ const Alumni = () => {
             </div>
         )
     }
-    const yearTitleButton = (degreeIndex, year, yearIndex) => {
+    const yearTitleSec = (degreeIndex, year, yearIndex) => {
         const title =
             year.substr(1, 3) +
             (year[0] === "b" ? " 級 Graduate in " : " 年畢 Graduate in ") +
@@ -64,7 +64,7 @@ const Alumni = () => {
 
         return (
             <div className={yearSecClass} key={year}>
-                {yearTitleButton(degreeIndex, year, yearIndex)}
+                {yearTitleSec(degreeIndex, year, yearIndex)}
                 {open[degreeIndex][yearIndex] ? (
                     <div className={openYearSecClass}>
                         {studentArr.map(({ image, name_ch, paper, job, proj }, index) => {

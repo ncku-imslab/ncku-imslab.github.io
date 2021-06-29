@@ -6,7 +6,6 @@ export function handleClickOpen1D(x, open, setOpen) {
 
 export function handleClickOpen2D(x, y, open, setOpen) {
     const list = { ...open }
-    console.log(list)
     list[x][y] = !list[x][y]
     setOpen(list)
 }
