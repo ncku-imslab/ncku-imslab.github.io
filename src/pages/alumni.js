@@ -2,26 +2,12 @@ import React, { useState } from "react"
 import Data from "../data/members/members.json"
 import Photo from "../components/photo"
 import { handleClickOpen2D } from "../utils/handleClick"
+import { create2DArray } from "../utils/create2DArray"
 
 const Alumni = () => {
     const alumni = Data.alumni
-
-    const degreeLength = Object.keys(alumni).length
-    const array = new Array(degreeLength)
-    for (let i = 0; i < degreeLength; i++) {
-        const yearLength = Object.keys(alumni)[i].length
-        array[i] = new Array(yearLength)
-
-        for (let j = 0; j < yearLength; j++) {
-            if (j === 0) {
-                array[i][j] = true
-            } else {
-                array[i][j] = false
-            }
-        }
-    }
     // React Hooks for 2D array
-    const [open, setOpen] = useState(array)
+    const [open, setOpen] = useState(create2DArray(alumni))
 
     const descriptionSec = (year, paper, job, proj) => {
         const workTitle = year[0] === "b" ? "專題題目 Project" : "論文題目 Thesis"

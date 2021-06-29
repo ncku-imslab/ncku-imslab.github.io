@@ -1,24 +1,11 @@
 import React, { useState } from "react"
 import Honor from "../data/honors.json"
 import { handleClickOpen2D } from "../utils/handleClick"
+import { create2DArray } from "../utils/create2DArray"
 
 const Honors = () => {
-    const outerLength = Object.keys(Honor).length
-    const array = new Array(outerLength)
-    for (let i = 0; i < outerLength; i++) {
-        const innerLength = Object.keys(Honor)[i].length
-        array[i] = new Array(innerLength)
-
-        for (let j = 0; j < innerLength; j++) {
-            if (j === 0) {
-                array[i][j] = true
-            } else {
-                array[i][j] = false
-            }
-        }
-    }
     // React Hooks for 2D array
-    const [open, setOpen] = useState(array)
+    const [open, setOpen] = useState(create2DArray(Honor))
 
     const section = Object.entries(Honor).map((titleAndObject, index) => {
         return (
