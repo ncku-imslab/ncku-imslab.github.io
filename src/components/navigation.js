@@ -6,7 +6,7 @@ import menu_icon from "../images/menu_icon.png"
 import "./navigation.css"
 import { shiftDownAnimationClass } from "../utils/classes"
 
-// It's better to provide the key attribute such that rendering is more stable.
+// It's better to provide the key attribute s.t. rendering is more stable.
 const dropdownArr = [
     {
         title: "指導教授 Professor",
@@ -59,160 +59,189 @@ const navbarArr = [
 ]
 
 const Navigation = () => {
+    const labName = "智慧化行動服務實驗室"
+    const atUniversityName = "@ 國立成功大學"
+    const chineseName = labName + " " + atUniversityName
+    const englishName = "Intelligent Mobile Service Laboratory @ NCKU"
+
+    function isSpecialDay() {
+        const today = new Date()
+        return today.getMonth() === 7 && today.getDate() === 30
+    }
+    const handleClickOnSpecialDay = () => {
+        window.alert("Today is Ethereum's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡")
+    }
+
     const navRef = useRef(null)
-    function openNav() {
+    const openNav = () => {
         navRef.current.style.width = "245px"
     }
-    function closeNav() {
+    const closeNav = () => {
         navRef.current.style.width = "0"
     }
 
-    const Dropdown = (props) => {
-        return dropdownArr.map((object) => {
+    const dropdownSec = (layout) =>
+        dropdownArr.map(({ to, key, title }) => {
+            const dropdownLinkClass = layout === "desktop" ? desktopDropdownLinkClass : mobileDropdownLinkClass
+            const dropdownOnClick = layout === "desktop" ? null : closeNav
+
             return (
-                <Link
-                    className={
-                        props.title === "desktop"
-                            ? "dim link dark-gray pa2 db tc bb b-dark-gray"
-                            : "dim link near-white pv2 f5 f5-l tl fw5 pl5 db"
-                    }
-                    to={object.to}
-                    key={object.key}
-                    onClick={props.title === "desktop" ? null : () => closeNav()}
-                >
-                    {" "}
-                    {object.title}{" "}
+                <Link className={dropdownLinkClass} to={to} key={key} onClick={dropdownOnClick}>
+                    {title}
                 </Link>
             )
         })
+
+    const membersLinkSec = (layout, key, title) => {
+        const membersLinkSecClass = layout === "desktop" ? desktopMembersLinkSecClass : mobileMembersLinkSecClass
+        const keyAttr = layout + key
+        const membersLinkClass = layout === "desktop" ? desktopMembersLinkClass : mobileNonMembersLinkClass
+        const membersLinkStyle =
+            layout === "desktop" ? { cursor: membersLinkCursor } : { letterSpacing: membersLinkLetterSpacing }
+        const reverseTriangle = "▽"
+        const dropdownSecClass = layout === "desktop" ? desktopDropdownSecClass : mobileDropdownSecClass
+
+        return (
+            <div className={membersLinkSecClass} key={keyAttr}>
+                <span className={membersLinkClass} style={membersLinkStyle}>
+                    {title}{" "}
+                    <small className={reverseTriangleClass} style={{ animation: shiftDownAnimationClass }}>
+                        {reverseTriangle}
+                    </small>
+                </span>
+                <div className={dropdownSecClass} style={{ zIndex: dropdownSecZIndex }}>
+                    {dropdownSec(layout)}
+                </div>
+            </div>
+        )
     }
 
-    const mobileAttributes = "link dim near-white db pl4 pv2 f5 f5-l tl fw5"
-    const desktopAttributes = "link dim grow dark-gray f5 f5-l dib ph3 pb3"
-    const Navbar = (props) => {
-        return navbarArr.map((object) => {
-            if (object.key === "members") {
-                return (
-                    <div
-                        className={props.title === "desktop" ? "dib relative dropdown" : "db dropdown"}
-                        key={props.title + object.key}
-                    >
-                        <span
-                            className={
-                                props.title === "desktop" ? "link dark-gray f5 f5-l dib ph3 pb3" : mobileAttributes
-                            }
-                            style={props.title === "desktop" ? { cursor: "default" } : { letterSpacing: "0.05em" }}
-                        >
-                            {" "}
-                            成員 Members
-                            <b> </b>
-                            <small className="dib" style={{ animation: shiftDownAnimationClass }}>
-                                {" "}
-                                ▽{" "}
-                            </small>
-                        </span>
-                        <div
-                            className={
-                                props.title === "desktop"
-                                    ? "dn w-90 absolute dropdown-content tc br bl bt br1 b-dark-gray bg-white"
-                                    : "dn dropdown-content tc"
-                            }
-                            style={{ zIndex: "1" }}
-                        >
-                            <Dropdown title={props.title} />
-                        </div>
-                    </div>
-                )
+    const nonMembersLink = (layout, to, key, title) => {
+        const linkClass = layout === "desktop" ? desktopNonMembersLinkClass : mobileNonMembersLinkClass
+        const onClick = layout === "desktop" ? null : closeNav
+
+        return (
+            <Link className={linkClass} to={to} key={key} onClick={onClick}>
+                {title}
+            </Link>
+        )
+    }
+
+    const navbarSec = (layout) =>
+        navbarArr.map(({ to, key, title }) => {
+            if (key !== "members") {
+                return nonMembersLink(layout, to, key, title)
             } else {
-                return (
-                    <Link
-                        className={props.title === "desktop" ? desktopAttributes : mobileAttributes}
-                        to={object.to}
-                        key={object.key}
-                        onClick={props.title === "desktop" ? null : () => closeNav()}
-                    >
-                        {" "}
-                        {object.title}{" "}
-                    </Link>
-                )
+                return membersLinkSec(layout, key, title)
             }
         })
+
+    const menuButton = () => {
+        return (
+            <button className={menuButtonClass} style={{ animation: menuButtonAnimation }} onClick={openNav}>
+                <img className={menuIconClass} src={menu_icon} alt="" />
+            </button>
+        )
     }
-    const today = new Date()
-    const month = today.getMonth()
-    const date = today.getDate()
 
-    return (
-        <nav className="dt w-100 pb4 mb1 response960">
-            <div
-                ref={navRef}
-                className="h-100 fixed bg-near-black pt5"
-                style={{
-                    width: "0",
-                    zIndex: "10",
-                    top: "0",
-                    right: "0",
-                    overflowX: "hidden",
-                    transition: "0.5s",
-                }}
-            >
-                <p
-                    className="link dim near-white absolute db pv3 ph4 fw6 f3 pv0 mv0 pointer"
-                    style={{
-                        top: "0",
-                        left: "0px",
-                        animation: "shiftRightAnimation 2s infinite",
-                    }}
-                    onClick={() => closeNav()}
-                >
-                    <small> ➢ </small>
-                </p>
-                <p className="link near-white db pt2 f5 f5-l tl mh4 mb1 mt2"> 智慧化行動服務實驗室 </p>
-                <p className="link near-white db f5 f5-l tl mh4 mt0"> @ 國立成功大學 </p>
-                <p className="link near-white db pb2 f5 f5-l tl bb b-near-white mh4 mb4 mt0">
-                    {" "}
-                    Intelligent Mobile Service Laboratory @ NCKU{" "}
-                </p>
-                <Navbar title="mobile" />
-            </div>
-
-            <Link to={process.env.PUBLIC_URL + "/"}>
-                <img
-                    src={month === 7 && date === 30 ? specialLogo : logo}
-                    className="dib dtc-l w4 ph3"
-                    style={{ minWidth: month === 7 && date === 30 ? "180px" : "200px" }}
-                    onClick={
-                        month === 7 && date === 30
-                            ? () => {
-                                  window.alert(
-                                      "Today is Ethereum's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡\nToday is Ethereum's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡\nToday is Ethereum's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡"
-                                  )
-                              }
-                            : null
-                    }
-                    alt=""
-                />
-            </Link>
-
-            <div className="mw8 dib dtc-l v-mid w-100 w-75-l tr-l ph3">
-                <div className="ph2 justify-center disappear960 mr3">
-                    <span className="dark-gray db f5 f5-l fw5 mb2"> 智慧化行動服務實驗室 @ 國立成功大學 </span>
-                    <span className="dark-gray db f5 f5-l fw5 pb2"> Intelligent Mobile Service Laboratory @ NCKU </span>
+    const desktopIntroAndMenuButtonSec = () => {
+        return (
+            <div className={desktopIntroAndMenuButtonSecClass}>
+                <div className={labNameSecClass}>
+                    <span className={labNameClass}> {chineseName} </span>
+                    <span className={labNameClass}> {englishName} </span>
                     <p></p>
                 </div>
-                <button
-                    className="dim dn appear960 center pointer mv3 bn"
-                    style={{ animation: "pulseAnimation 3s infinite" }}
-                    onClick={() => openNav()}
-                >
-                    <img className="pa2" src={menu_icon} alt="" />
-                </button>
-                <div className="pr2 disappear960">
-                    <Navbar title="desktop" />
-                </div>
+                <div className={desktopNavbarSecClass}>{navbarSec("desktop")}</div>
+                {menuButton()}
             </div>
+        )
+    }
+
+    const logoLinkSec = () => {
+        const to = process.env.PUBLIC_URL + "/"
+        const src = isSpecialDay() ? specialLogo : logo
+        const minWidth = isSpecialDay() ? "180px" : "200px"
+        const onClick = isSpecialDay() ? handleClickOnSpecialDay : null
+
+        return (
+            <Link to={to}>
+                <img src={src} className={logoLinkClass} style={{ minWidth: minWidth }} onClick={onClick} alt="" />
+            </Link>
+        )
+    }
+
+    const mobileIntroSec = () => {
+        const secStyle = {
+            width: "0",
+            zIndex: "10",
+            top: "0",
+            right: "0",
+            overflowX: "hidden",
+            transition: "0.5s",
+        }
+        const arrowStyle = {
+            top: "0",
+            left: "0px",
+            animation: arrowAnimation,
+        }
+        const arrow = "➢"
+
+        return (
+            <div ref={navRef} className={mobileIntroSecClass} style={secStyle}>
+                <p className={animatedArrowClass} style={arrowStyle} onClick={closeNav}>
+                    <small> {arrow} </small>
+                </p>
+                <p className={mobileLabNameClass}> {labName} </p>
+                <p className={mobileAtUniversityNameClass}> {atUniversityName} </p>
+                <p className={mobileEnglishNameClass}>{englishName}</p>
+                {navbarSec("mobile")}
+            </div>
+        )
+    }
+
+    return (
+        <nav className={navigationClass}>
+            {mobileIntroSec()}
+            {logoLinkSec()}
+            {desktopIntroAndMenuButtonSec()}
         </nav>
     )
 }
 
 export default Navigation
+
+const navigationClass = "dt w-100 pb4 mb1 response960"
+
+const mobileIntroSecClass = "h-100 fixed bg-near-black pt5"
+const animatedArrowClass = "db absolute pv3 ph4 pv0 mv0 near-white fw6 f3 link dim pointer"
+const arrowAnimation = "shiftRightAnimation 2s infinite"
+const mobileLabNameClass = "db pt2 mh4 mb1 mt2 tl near-white f5 f5-l link"
+const mobileAtUniversityNameClass = "db mh4 mt0 tl near-white f5 f5-l link"
+const mobileEnglishNameClass = "db pb2 mh4 mb4 mt0 tl near-white f5 f5-l link bb b-near-white"
+
+const logoLinkClass = "dib dtc-l w4 ph3"
+
+const desktopIntroAndMenuButtonSecClass = "dib dtc-l v-mid w-100 w-75-l ph3 mw8 tr-l"
+const labNameSecClass = "justify-center ph2 mr3 disappear960"
+const labNameClass = "db mb2 dark-gray f5 f5-l fw5"
+const desktopNavbarSecClass = "pr2 disappear960"
+const menuButtonClass = "dn dim center mv3 pointer bn appear960"
+const menuButtonAnimation = "pulseAnimation 3s infinite"
+const menuIconClass = "pa2"
+
+const desktopNonMembersLinkClass = "dib ph3 pb3 dark-gray f5 f5-l link dim grow"
+const mobileNonMembersLinkClass = "db pl4 pv2 tl near-white f5 f5-l fw5 link dim"
+
+const desktopMembersLinkSecClass = "dib relative dropdown"
+const mobileMembersLinkSecClass = "db dropdown"
+const desktopMembersLinkClass = "dib ph3 pb3 dark-gray f5 f5-l link"
+const membersLinkCursor = "default"
+const membersLinkLetterSpacing = "0.05em"
+const reverseTriangleClass = "dib"
+const desktopDropdownSecClass = "dn absolute bg-white w-90 tc br bl bt br1 b--dark-gray dropdown-content"
+const mobileDropdownSecClass = "dn tc dropdown-content"
+const dropdownSecZIndex = "1"
+
+const desktopDropdownLinkClass = "db pa2 tc dark-gray dim link bb b-dark-gray"
+const mobileDropdownLinkClass = "db pv2 pl5 tl near-white dim link f5 f5-l fw5"
