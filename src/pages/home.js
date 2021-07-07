@@ -4,6 +4,7 @@ import News from "../data/home/news.json"
 import Welcome from "../data/home/home.json"
 import MustReadData from "../data/home/mustRead"
 import { handleClickOpen1D, handleClickBoolean } from "../utils/handleClick"
+import { shiftDownAnimationClass, shiftUpAnimationClass } from "../utils/classes"
 
 // 1.(key, value) pairs are viewed as an array, thus: [key, value]
 // 2. The following codes convert the value of a kv - pair directly to the.md format
@@ -158,8 +159,6 @@ const engSecClassAppended = " pa1 absolute b link dim grow bn"
 const talkSecClass = "bg-near-white mw6 mw7-ns center mv3 br1"
 const titleClass = "w-100 pv2 ph3 mv0 near-black f4 dim bn"
 const titleArrowClass = "dib near-black"
-const shiftDownAnimationClass = "shiftDownAnimation 2s infinite"
-const shiftUpAnimationClass = "shiftUpAnimation 2s infinite"
 const contentSecClass = "pa3 tl bt b--dark-gray"
 const contentClass = "ph1 lh-copy center f5 f5-ns"
 const contentArrowClass = "w-100 pt1 f4 fw5 dim grow bn"

@@ -31,6 +31,6 @@ const Footer = () => {
 
 export default Footer
 
-const footerClass = "f6 mid-gray"
+const footerClass = "mid-gray f6"
 const moreInfoSecClass = "pt3"
 const urlSecClass = "mid-gray b link dim"

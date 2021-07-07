@@ -3,10 +3,19 @@ import Data from "../data/members/members.json"
 import Photo from "../components/photo"
 import { handleClickOpen2D } from "../utils/handleClick"
 import { create2DArray } from "../utils/create2DArray"
+import {
+    paddingBottomClass,
+    studentsAndAlumniClass,
+    personSecClass,
+    animatedArrowClass,
+    shiftUpAnimationClass,
+    shiftDownAnimationClass,
+    pb2,
+} from "../utils/classes"
+import { GoldenTitle } from "../components/title"
 
 const Alumni = () => {
     const alumni = Data.alumni
-    // React Hooks for 2D array
     const [open, setOpen] = useState(create2DArray(alumni))
 
     const descriptionSec = (year, paper, job, proj) => {
@@ -15,7 +24,7 @@ const Alumni = () => {
         const jobTitle = "出路 Destination"
 
         return (
-            <div className={descriptionSecClass}>
+            <div className={pb2}>
                 <span className={descriptionTitleClass}>{workTitle}</span>
                 <span className={descriptionClass}>{workContent}</span>
                 {job === undefined ? null : (
@@ -49,7 +58,7 @@ const Alumni = () => {
             <button className={yearTitleClass} onClick={() => handleClickOpen2D(degreeIndex, yearIndex, open, setOpen)}>
                 {title}{" "}
                 <span
-                    className={animationArrowClass}
+                    className={animatedArrowClass}
                     style={{
                         animation: arrowAnimation,
                     }}
@@ -83,8 +92,8 @@ const Alumni = () => {
     }
     const degreeSec = (degree, memberArr, degreeIndex) => {
         return (
-            <div className={degreeSecClass} key={degree}>
-                <h1 className={degreeTitleClass}> {degree} </h1>
+            <div className={paddingBottomClass} key={degree}>
+                {GoldenTitle(degree)}
                 {Object.entries(memberArr).map(([year, studentArr], yearIndex) => {
                     return yearSec(degreeIndex, year, studentArr, yearIndex)
                 })}
@@ -93,7 +102,7 @@ const Alumni = () => {
     }
 
     return (
-        <div className={alumniClass}>
+        <div className={studentsAndAlumniClass}>
             {Object.entries(alumni).map(([degree, memberArr], degreeIndex) => {
                 return degreeSec(degree, memberArr, degreeIndex)
             })}
@@ -103,20 +112,12 @@ const Alumni = () => {
 
 export default Alumni
 
-const alumniClass = "bg-mid-gray pa2 ph5-ns center mw8 mw8-ns shadow-5"
-const degreeSecClass = "pb2 mb4"
-const degreeTitleClass = "pb2 self-gold"
 const yearSecClass = "bg-near-white pa2 mb2 mt3 tl black"
 const yearTitleClass = "w-100 pt1 pb1 pl2 mb1 tl navy b f4 dim bn"
-const animationArrowClass = "dib link"
-const shiftDownAnimationClass = "shiftDownAnimation 2s infinite"
-const shiftUpAnimationClass = "shiftUpAnimation 2s infinite"
 const openYearSecClass = "tc"
 const bottomArrowClass = "w-100 pv1 pb1 center b f4 bn dim grow"
-const personSecClass = "bg-white dib ph2 pt3 pb4 ma3 ba b--black-10 br1"
 const personSecWidth = "250px"
 const nameClass = "db pt2 tc ttu tracked navy b f4 f4-ns link"
 const breakClass = "mw3 mt2 mb3 bw1 bb b--black-10 "
-const descriptionSecClass = "pb2"
 const descriptionTitleClass = "db pv1 lh-copy measure center near-black b f5"
 const descriptionClass = "db pv1 ph3 lh-copy measure center near-black f6"

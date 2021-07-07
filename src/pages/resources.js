@@ -2,6 +2,16 @@ import React, { useState } from "react"
 import Markdown from "react-markdown"
 import resourcesData from "../data/resources"
 import { handleClickOpen1D } from "../utils/handleClick"
+import {
+    paddingBottomClass,
+    shiftDownAnimationClass,
+    shiftUpAnimationClass,
+    navyBorderSecClass,
+    titleArrowClass,
+    foldArrowClass,
+    entryTitleSecClass,
+} from "../utils/classes"
+import { NavyTitle } from "../components/title"
 
 const resources = { ...resourcesData }
 Object.entries(resources).forEach(([key, value]) => {
@@ -16,7 +26,7 @@ const Resources = () => {
         const arrowAnimation = !open[index] ? shiftDownAnimationClass : shiftUpAnimationClass
 
         return (
-            <button className={titleSecClass} onClick={() => handleClickOpen1D(index, open, setOpen)}>
+            <button className={entryTitleSecClass} onClick={() => handleClickOpen1D(index, open, setOpen)}>
                 {title} {}
                 <span className={titleArrowClass} style={{ animation: arrowAnimation }}>
                     {arrow}
@@ -31,7 +41,7 @@ const Resources = () => {
         return (
             <div className={contentSecClass}>
                 {content}
-                <button className={contentArrowClass} onClick={() => handleClickOpen1D(index, open, setOpen)}>
+                <button className={foldArrowClass} onClick={() => handleClickOpen1D(index, open, setOpen)}>
                     {arrow}
                 </button>
             </div>
@@ -41,7 +51,7 @@ const Resources = () => {
     // forced to use single (v.s. plural of this whole section)
     const singleResourceSec = (title, content, index) => {
         return (
-            <div className={singleResourceSecClass} key={title}>
+            <div className={navyBorderSecClass} key={title}>
                 {titleSec(title, index)}
                 {open[index] ? contentSec(content, index, open, setOpen) : null}
             </div>
@@ -52,7 +62,7 @@ const Resources = () => {
     return (
         <div className={resourcesClass}>
             <div className={paddingBottomClass}>
-                <h1 className={titleClass}> {title} </h1>
+                {NavyTitle(title)}
                 {Object.entries(resources).map(([title, content], index) => {
                     return singleResourceSec(title, content, index)
                 })}
@@ -64,12 +74,4 @@ const Resources = () => {
 export default Resources
 
 const resourcesClass = "bg-near-white shadow-5 pa2 ph5-ns mw8 mw8-ns center"
-const paddingBottomClass = "pb2 mb4"
-const titleClass = "navy pb2 bb bw1"
-const singleResourceSecClass = "pa2 mb2 mt3 black tl ba b--navy br1"
-const titleSecClass = "w-100 pt1 pl2 navy tl b f4 dim bn"
-const titleArrowClass = "dib navy link"
-const shiftDownAnimationClass = "shiftDownAnimation 2s infinite"
-const shiftUpAnimationClass = "shiftUpAnimation 2s infinite"
 const contentSecClass = "pt2 ph3 lh-copy tl f5 f5-ns"
-const contentArrowClass = "w-100 pb1 center b f4 dim grow bn"

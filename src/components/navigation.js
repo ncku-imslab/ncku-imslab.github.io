@@ -4,9 +4,10 @@ import logo from "../images/imslab_logo.jpg"
 import specialLogo from "../images/imslab_eth.jpg"
 import menu_icon from "../images/menu_icon.png"
 import "./navigation.css"
+import { shiftDownAnimationClass } from "../utils/classes"
 
 // It's better to provide the key attribute such that rendering is more stable.
-const dropdownObject = [
+const dropdownArr = [
     {
         title: "指導教授 Professor",
         to: "/professor",
@@ -24,7 +25,7 @@ const dropdownObject = [
     },
 ]
 
-const navbarObject = [
+const navbarArr = [
     {
         title: "首頁 Home",
         to: process.env.PUBLIC_URL + "/",
@@ -67,7 +68,7 @@ const Navigation = () => {
     }
 
     const Dropdown = (props) => {
-        return dropdownObject.map((object) => {
+        return dropdownArr.map((object) => {
             return (
                 <Link
                     className={
@@ -89,7 +90,7 @@ const Navigation = () => {
     const mobileAttributes = "link dim near-white db pl4 pv2 f5 f5-l tl fw5"
     const desktopAttributes = "link dim grow dark-gray f5 f5-l dib ph3 pb3"
     const Navbar = (props) => {
-        return navbarObject.map((object) => {
+        return navbarArr.map((object) => {
             if (object.key === "members") {
                 return (
                     <div
@@ -105,7 +106,7 @@ const Navigation = () => {
                             {" "}
                             成員 Members
                             <b> </b>
-                            <small className="dib" style={{ animation: "shiftDownAnimation 2s infinite" }}>
+                            <small className="dib" style={{ animation: shiftDownAnimationClass }}>
                                 {" "}
                                 ▽{" "}
                             </small>

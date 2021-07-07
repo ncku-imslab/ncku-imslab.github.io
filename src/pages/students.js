@@ -1,6 +1,8 @@
 import React from "react"
 import Data from "../data/members/members.json"
 import Photo from "../components/photo"
+import { paddingBottomClass, studentsAndAlumniClass, personSecClass } from "../utils/classes"
+import { GoldenTitle } from "../components/title"
 
 const Students = () => {
     function getUndergraduateTitle(year) {
@@ -31,8 +33,8 @@ const Students = () => {
     }
     const degreeSec = (degree, memberArr) => {
         return (
-            <div className={degreeSecClass} key={degree}>
-                <h1 className={degreeTitleClass}> {degree} </h1>
+            <div className={paddingBottomClass} key={degree}>
+                {GoldenTitle(degree)}
                 {Object.entries(memberArr).map(([year, studentArr]) => {
                     return yearSec(year, studentArr)
                 })}
@@ -42,7 +44,7 @@ const Students = () => {
 
     const students = Data.students
     return (
-        <div className={studentsClass}>
+        <div className={studentsAndAlumniClass}>
             {Object.entries(students).map(([degree, memberArr]) => {
                 return degreeSec(degree, memberArr)
             })}
@@ -52,11 +54,7 @@ const Students = () => {
 
 export default Students
 
-const studentsClass = "bg-mid-gray pa2 ph5-ns center mw8 mw8-ns shadow-5"
-const degreeSecClass = "pb2 mb4"
-const degreeTitleClass = "pb2 self-gold"
 const yearSecClass = "bg-near-white pa2 mb2 mt3 black"
 const yearTitleClass = "w-100 pt1 pb1 pl2 mb1 tl navy b f4 bn"
-const personSecClass = "bg-white dib ph2 pt3 pb4 ma3 ba b--black-10 br1"
 const personSecWidth = "225px"
 const nameClass = "db pt2 navy b tc ttu tracked f4 f4-ns link"
