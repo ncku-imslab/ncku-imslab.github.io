@@ -1,112 +1,134 @@
 import React, { useState } from "react"
 import Markdown from "react-markdown"
 import professorData from "../data/members/prof"
-import Prof from "../data/members/prof.json"
+import professorContact from "../data/members/prof.json"
 import { handleClickOpen1D } from "../utils/handleClick"
 
 const professor = { ...professorData }
-
 Object.entries(professor).forEach(([key, value]) => {
     professor[key] = <Markdown source={value} />
 })
 
-// React Hooks for 1D array
 const Professor = () => {
     const [open, setOpen] = useState([true])
 
-    const contactSection = Object.entries(Prof).map((titleAndObject, index) => {
+    const handleClickOnBDay = () => {
+        window.alert("Today is Meng-Hsun's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡")
+    }
+
+    const contactSec = Object.entries(professorContact).map(([title, content]) => {
+        const contentClass = title === "信箱 Email" ? emailClass : faxAndTelephoneClass
+
         return (
-            <div className="pb2" key={titleAndObject[0]}>
-                <span className="lh-copy measure center f5 near-black db b pv1">{titleAndObject[0]}</span>
-                <span
-                    className={
-                        titleAndObject[0] === "信箱 Email"
-                            ? "dim lh-copy measure center f5 near-black db pv1"
-                            : "lh-copy measure center f5 near-black db pv1"
-                    }
-                >
-                    {" "}
-                    {titleAndObject[1]}
-                </span>
+            <div className={contactSecClass} key={title}>
+                <span className={contactSecTitleClass}>{title}</span>
+                <span className={contentClass}>{content}</span>
             </div>
         )
     })
 
-    const infoSection = Object.entries(professor).map((entries, index) => {
+    const personalInfoSec = () => {
+        const today = new Date()
+        const month = today.getMonth()
+        const day = today.getDate()
+        const imageAlt = "The nicest professor in NCKU CSIE is staring at you σ`∀´)σ"
+        const chineseName = "蔡 孟 勳"
+        const englishName = "Meng-Hsun Tsai ↗"
+        const url = "http://imslab.org/~tsaimh/"
+
         return (
-            <div className="black tl pa2 br1 mb2 mt3 bg-near-white" key={entries[0]}>
+            <div className={personalInfoSecClass} style={{ maxWidth: personalInfoSecMaxWidth }}>
+                <img
+                    alt={imageAlt}
+                    src={require("../images/tsaimh.jpg").default}
+                    className={imageClass}
+                    onClick={month === 2 && day === 20 ? handleClickOnBDay : null}
+                    title=""
+                />
+                <a className={chineseNameClass} href={url}>
+                    {chineseName}
+                </a>
+                <a className={englishNameClass} href={url}>
+                    {englishName}
+                </a>
+                <hr className={dividerClass} />
+                {contactSec}
+            </div>
+        )
+    }
+
+    const generalInfoTitleSec = (title, index) => {
+        const arrowAnimation = !open[index] ? shiftDownAnimationClass : shiftUpAnimationClass
+        const arrow = !open[index] ? "↓" : "↑"
+
+        return (
+            <button className={generalInfoTitleSecClass} onClick={() => handleClickOpen1D(index, open, setOpen)}>
+                {title} {}
+                <span className={animatedArrowClass} style={{ animation: arrowAnimation }}>
+                    {arrow}
+                </span>
+            </button>
+        )
+    }
+
+    const generalInfoContentSec = (content, index) => {
+        const arrow = "↑"
+
+        return (
+            <div className={generalInfoContentSecClass}>
+                <span className={generalInfoContentTitleClass}> {content} </span>
                 <button
-                    className="navy dim f4 b w-100 tl bn pt1"
+                    className={generalInfoContentArrowClass}
                     onClick={() => handleClickOpen1D(index, open, setOpen)}
                 >
-                    {" "}
-                    {entries[0]} {}
-                    {!open[index] ? (
-                        <span className="dib link" style={{ animation: "shiftDownAnimation 2s infinite" }}>
-                            {" "}
-                            ↓{" "}
-                        </span>
-                    ) : (
-                        <span className="dib link" style={{ animation: "shiftUpAnimation 2s infinite" }}>
-                            {" "}
-                            ↑{" "}
-                        </span>
-                    )}
+                    {arrow}
                 </button>
-                {open[index] ? (
-                    <div className="pt2 ph3 tl f5 f5-ns lh-copy near-black">
-                        <span className="f5"> {entries[1]} </span>
-                        <button
-                            className="dim grow w-100 center f4 pb1 bn b"
-                            onClick={() => handleClickOpen1D(index, open, setOpen)}
-                        >
-                            {" "}
-                            ↑{" "}
-                        </button>
-                    </div>
-                ) : null}
+            </div>
+        )
+    }
+
+    const generalInfoSec = Object.entries(professor).map(([title, content], index) => {
+        return (
+            <div className={generalInfoSecClass} key={title}>
+                {generalInfoTitleSec(title, index)}
+                {open[index] ? generalInfoContentSec(content, index) : null}
             </div>
         )
     })
-    const today = new Date()
-    const month = today.getMonth()
-    const date = today.getDate()
 
+    const title = "指導教授 Professor"
     return (
-        <div className="mw8 mw8-ns center bg-mid-gray pa2 ph5-ns shadow-5">
-            <div className="mb4 pb2">
-                <h1 className="pb2 self-gold"> 指導教授 Professor </h1>
-                <div className="bg-white center pv3 br1" style={{ maxWidth: "21rem" }}>
-                    <img
-                        alt="The nicest professor in NCKU CSIE is staring at you σ`∀´)σ"
-                        src={require("../images/tsaimh.jpg").default}
-                        className="br-100 h4 w4 center db ba b--black-10 pa2 pointer"
-                        onClick={
-                            month === 2 && date === 20
-                                ? () => {
-                                      window.alert(
-                                          "Today is Meng-Hsun's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡\nToday is Meng-Hsun's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡\nToday is Meng-Hsun's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡"
-                                      )
-                                  }
-                                : null
-                        }
-                        title=""
-                    />
-                    <a className="ttu dim link db f4 f4-ns navy b pt2 pb1 mv1" href="http://imslab.org/~tsaimh/">
-                        {" "}
-                        蔡 孟 勳{" "}
-                    </a>
-                    <a className="ttu tracked dim link db f5 f5-ns navy b pv1 mv1" href="http://imslab.org/~tsaimh/">
-                        {" "}
-                        Meng-Hsun Tsai ↗{" "}
-                    </a>
-                    <hr className="mw3 bb bw1 b--black-10 mt2 mb3" />
-                    {contactSection}
-                </div>
-                {infoSection}
+        <div className={professorClass}>
+            <div className={paddingBottomClass}>
+                <h1 className={titleClass}> {title} </h1>
+                {personalInfoSec()}
+                {generalInfoSec}
             </div>
         </div>
     )
 }
 
 export default Professor
+
+const professorClass = "bg-mid-gray shadow-5 pa2 ph5-ns center mw8 mw8-ns"
+const paddingBottomClass = "pb2 mb4"
+const titleClass = "pb2 self-gold"
+const personalInfoSecClass = "bg-white center pv3 br1"
+const personalInfoSecMaxWidth = "21rem"
+const imageClass = "db h4 w4 pa2 center pointer ba b--black-10 br-100"
+const chineseNameClass = "db pt2 pb1 mv1 navy b f4 f4-ns ttu dim link"
+const englishNameClass = "db pv1 mv1 navy b f5 f5-ns ttu tracked dim link"
+const dividerClass = "mw3 mt2 mb3 bb bw1 b--black-10"
+const contactSecClass = "pb2"
+const contactSecTitleClass = "db measure lh-copy pv1 center near-black f5 b"
+// add "!" to cancel out bold effect
+const faxAndTelephoneClass = contactSecTitleClass + "!"
+const emailClass = faxAndTelephoneClass + "! dim"
+const generalInfoSecClass = "bg-near-white pa2 mb2 mt3 black tl br1"
+const generalInfoTitleSecClass = "w-100 pt1 navy b tl f4 dim bn"
+const animatedArrowClass = "dib link"
+const shiftDownAnimationClass = "shiftDownAnimation 2s infinite"
+const shiftUpAnimationClass = "shiftUpAnimation 2s infinite"
+const generalInfoContentSecClass = "pt2 ph3 lh-copy near-black tl f5 f5-ns"
+const generalInfoContentTitleClass = "f5"
+const generalInfoContentArrowClass = "w-100 pb1 center f4 dim grow bn b"
