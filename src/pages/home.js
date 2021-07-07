@@ -129,7 +129,7 @@ const Home = () => {
                 {engButton("near-white f5", "12px")}
                 <h1 className={welcomeTitleClass}>{title}</h1>
                 <div className={welcomeContentClass}>{content}</div>
-                {talkSec}
+                <div className={paddingHorizontal}>{talkSec}</div>
             </section>
         )
     }
@@ -155,6 +155,7 @@ const welcomeSecClass = "relative bg-mid-gray mw7 mw7-ns pv3 ph5-ns mt4 center"
 const welcomeSecBoxShadow = "0px 10px 8px -2px rgba(0, 0, 0, 0.6)"
 const welcomeTitleClass = "mb4 self-gold"
 const welcomeContentClass = "ph4 pb3 lh-copy center white f5"
+const paddingHorizontal = "ph2"
 const engSecClassAppended = " pa1 absolute b link dim grow bn"
 const talkSecClass = "bg-near-white mw6 mw7-ns center mv3 br1"
 const titleClass = "w-100 pv2 ph3 mv0 near-black f4 dim bn"
