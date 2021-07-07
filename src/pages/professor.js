@@ -21,7 +21,11 @@ Object.entries(professor).forEach(([key, value]) => {
 const Professor = () => {
     const [open, setOpen] = useState([true])
 
-    const handleClickOnBDay = () => {
+    function isSpecialDay() {
+        const today = new Date()
+        return today.getMonth() === 2 && today.getDate() === 20
+    }
+    const handleClickOnSpecialDay = () => {
         window.alert("Today is Meng-Hsun's birthday ｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡")
     }
 
@@ -37,13 +41,11 @@ const Professor = () => {
     })
 
     const personalInfoSec = () => {
-        const today = new Date()
-        const month = today.getMonth()
-        const day = today.getDate()
         const imageAlt = "The nicest professor in NCKU CSIE is staring at you σ`∀´)σ"
         const chineseName = "蔡 孟 勳"
         const englishName = "Meng-Hsun Tsai ↗"
         const url = "http://imslab.org/~tsaimh/"
+        const onClick = isSpecialDay() ? handleClickOnSpecialDay : null
 
         return (
             <div className={personalInfoSecClass} style={{ maxWidth: personalInfoSecMaxWidth }}>
@@ -51,7 +53,7 @@ const Professor = () => {
                     alt={imageAlt}
                     src={require("../images/tsaimh.jpg").default}
                     className={imageClass}
-                    onClick={month === 2 && day === 20 ? handleClickOnBDay : null}
+                    onClick={onClick}
                     title=""
                 />
                 <a className={chineseNameClass} href={url}>
