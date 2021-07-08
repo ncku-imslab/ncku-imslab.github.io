@@ -80,6 +80,14 @@ const Navigation = () => {
         navRef.current.style.width = "0"
     }
 
+    const menuIconSec = () => {
+        return (
+            <button className={menuIconSecClass} style={{ animation: menuIconAnimation }} onClick={openNav}>
+                <img className={menuIconClass} src={menu_icon} alt="" />
+            </button>
+        )
+    }
+
     const dropdownSec = (layout) =>
         dropdownArr.map(({ to, key, title }) => {
             const dropdownLinkClass = layout === "desktop" ? desktopDropdownLinkClass : mobileDropdownLinkClass
@@ -136,24 +144,15 @@ const Navigation = () => {
             }
         })
 
-    const menuButton = () => {
+    const desktopSec = () => {
         return (
-            <button className={menuButtonClass} style={{ animation: menuButtonAnimation }} onClick={openNav}>
-                <img className={menuIconClass} src={menu_icon} alt="" />
-            </button>
-        )
-    }
-
-    const desktopIntroAndMenuButtonSec = () => {
-        return (
-            <div className={desktopIntroAndMenuButtonSecClass}>
+            <div className={desktopSecClass}>
                 <div className={labNameSecClass}>
                     <span className={labNameClass}> {chineseName} </span>
                     <span className={labNameClass}> {englishName} </span>
                     <p></p>
                 </div>
                 <div className={desktopNavbarSecClass}>{navbarSec("desktop")}</div>
-                {menuButton()}
             </div>
         )
     }
@@ -171,7 +170,7 @@ const Navigation = () => {
         )
     }
 
-    const mobileIntroSec = () => {
+    const mobileSec = () => {
         const secStyle = {
             width: "0",
             zIndex: "10",
@@ -188,7 +187,7 @@ const Navigation = () => {
         const arrow = "➢"
 
         return (
-            <div ref={navRef} className={mobileIntroSecClass} style={secStyle}>
+            <div ref={navRef} className={mobileSecClass} style={secStyle}>
                 <p className={animatedArrowClass} style={arrowStyle} onClick={closeNav}>
                     <small> {arrow} </small>
                 </p>
@@ -202,9 +201,13 @@ const Navigation = () => {
 
     return (
         <nav className={navigationClass}>
-            {mobileIntroSec()}
-            {logoLinkSec()}
-            {desktopIntroAndMenuButtonSec()}
+            <div className={responsiveSecClass}>
+                {/* mobileSec is placed in front s.t. won't hinder with the layout */}
+                {mobileSec()}
+                {logoLinkSec()}
+                {desktopSec()}
+            </div>
+            {menuIconSec()}
         </nav>
     )
 }
@@ -212,27 +215,25 @@ const Navigation = () => {
 export default Navigation
 
 const navigationClass = "dt w-100 pb4 mb1 response960"
-
-const mobileIntroSecClass = "h-100 fixed bg-near-black pt5"
+const responsiveSecClass = "dt w-100"
+// mobileSec
+const mobileSecClass = "h-100 fixed bg-near-black pt5"
 const animatedArrowClass = "db absolute pv3 ph4 pv0 mv0 near-white fw6 f3 link dim pointer"
 const arrowAnimation = "shiftRightAnimation 2s infinite"
 const mobileLabNameClass = "db pt2 mh4 mb1 mt2 tl near-white f5 f5-l link"
 const mobileAtUniversityNameClass = "db mh4 mt0 tl near-white f5 f5-l link"
 const mobileEnglishNameClass = "db pb2 mh4 mb4 mt0 tl near-white f5 f5-l link bb b-near-white"
-
+// logoLinkSec
 const logoLinkClass = "dib dtc-l w4 ph3"
-
-const desktopIntroAndMenuButtonSecClass = "dib dtc-l v-mid w-100 w-75-l ph3 mw8 tr-l"
+// desktopSec
+const desktopSecClass = "dib dtc-l v-mid w-100 w-75-l ph3 mw8 tr-l"
 const labNameSecClass = "justify-center ph2 mr3 disappear960"
 const labNameClass = "db mb2 dark-gray f5 f5-l fw5"
 const desktopNavbarSecClass = "pr2 disappear960"
-const menuButtonClass = "dn dim center mv3 pointer bn appear960"
-const menuButtonAnimation = "pulseAnimation 3s infinite"
-const menuIconClass = "pa2"
-
+// nonMembersLink
 const desktopNonMembersLinkClass = "dib ph3 pb3 dark-gray f5 f5-l link dim grow"
 const mobileNonMembersLinkClass = "db pl4 pv2 tl near-white f5 f5-l fw5 link dim"
-
+// membersLink
 const desktopMembersLinkSecClass = "dib relative dropdown"
 const mobileMembersLinkSecClass = "db dropdown"
 const desktopMembersLinkClass = "dib ph3 pb3 dark-gray f5 f5-l link"
@@ -242,6 +243,10 @@ const reverseTriangleClass = "dib"
 const desktopDropdownSecClass = "dn absolute bg-white w-90 tc br bl bt br1 b--dark-gray dropdown-content"
 const mobileDropdownSecClass = "dn tc dropdown-content"
 const dropdownSecZIndex = "1"
-
+// dropdownSec
 const desktopDropdownLinkClass = "db pa2 tc dark-gray dim link bb b-dark-gray"
 const mobileDropdownLinkClass = "db pv2 pl5 tl near-white dim link f5 f5-l fw5"
+// menuIconSec
+const menuIconSecClass = "dn dim center mb3 pointer bn appear960"
+const menuIconAnimation = "pulseAnimation 3s infinite"
+const menuIconClass = "pa2"
