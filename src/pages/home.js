@@ -54,15 +54,17 @@ const newsSec = (yearIndex, arrayLength) => {
 
 const Home = () => {
     const today = new Date()
-    const year = today.getFullYear()
-    let yearIndex, arrayLength
-    try {
+    let year = today.getFullYear()
+    let yearIndex
+    while (true) {
         yearIndex = "year " + year.toString()
-        arrayLength = News[yearIndex].length
-    } catch (err) {
-        yearIndex = "year " + (year - 1).toString()
-        arrayLength = News[yearIndex].length
+        if (News[yearIndex]) {
+            break
+        } else {
+            year--
+        }
     }
+    let arrayLength = News[yearIndex].length
 
     const [open, setOpen] = useState([])
     const [eng, setEng] = useState(false)
