@@ -1,6 +1,63 @@
 {
     "獲獎 Awards": {
+        "year 2022": [
+            {
+                "name": [
+                    "陳昭穎"
+                ],
+                "content": "科技部大專生計畫"
+            },
+            {
+                "name": [
+                    "蔡昀展"
+                ],
+                "name_en": [
+                    "Yun-Zhan Cai"
+                ],
+                "content": "賴溪松教授論文獎 博士組優等"
+            }
+	],
         "year 2021": [
+            {
+                "name": [
+                    "蔡昀展"
+                ],
+                "name_en": [
+                    "Yun-Zhan Cai"
+                ],
+                "content": "IEEE 台南分會 最佳博士論文獎",
+                "content_en": "Best Ph.D. Thesis Award, IEEE Tainan Section"
+            },
+            {
+                "name": [
+                    "張祐誠, 蔡昀展"
+                ],
+                "content": "第二十五屆行動計算研討會 優良論文獎"
+            },
+            {
+                "name": [
+                    "蔡昀展, 鄭皓中, 王靖元"
+                ],
+                "content": "斐陶斐榮譽學會榮譽會員"
+            },
+            {
+                "name": [
+                    "張祐誠"
+                ],
+                "content": "國立成功大學電機資訊學院研究日決賽 大學部組 第二名"
+            },
+            {
+                "name": [
+                    "鄭皓中"
+                ],
+                "content": "國立成功大學電機資訊學院研究日決賽  研究所組 佳作"
+            },
+            {
+                "name": [
+                    "黃睿澤, 張祐誠, 蘇名偉"
+                ],
+                "content": "科技部大專生計畫"
+            },
             {
                 "name": [
                     "張祐誠"
@@ -356,7 +413,71 @@
         ]
     },
     "實習 Internships": {
+        "year 2022": [
+            {
+                "name": [
+                    "林亭伃, 黃盈慈, 馮希敏, 沈子揚"
+                ],
+                "content": "智邦科技",
+                "content_en": "Accton"
+            },
+            {
+                "name": [
+                    "林信宇"
+                ],
+                "content": "戴夫寇爾 (Devcore)",
+                "content_en": "Devcore"
+            },
+            {
+                "name": [
+                    "王聖中"
+                ],
+                "content": "戴爾 (Dell)",
+                "content_en": "Dell"
+            },
+            {
+                "name": [
+                    "林謙慈"
+                ],
+                "content": "工業技術研究院 (ITRI)",
+                "content_en": "Industrial Technology Research Institute (ITRI)"
+            },
+            {
+                "name": [
+                    "陳玗謙"
+                ],
+                "content": "永豐銀行 資安處"
+            }
+	],
+        "year 2021": [
+            {
+                "name": [
+                    "林亭伃, 吳偵平"
+                ],
+                "content": "四零四科技"
+            },
+            {
+                "name": [
+                    "邵鏡軒, 賴大立"
+                ],
+                "content": "Google"
+            },
+            {
+                "name": [
+                    "林信宇"
+                ],
+                "content": "工業技術研究院 (ITRI)",
+                "content_en": "Industrial Technology Research Institute (ITRI)"
+            }
+	],
         "year 2020": [
+            {
+                "name": [
+                    "梁祐承"
+                ],
+                "content": "聯發科技 (MTK)",
+                "content_en": "MediaTek"
+            },
             {
                 "name": [
                     "林亭伃"
@@ -428,7 +549,7 @@
                 "name_en": [
                     "Yun-Zhan Cai, Chun-Chi Fang"
                 ],
-                "content": "工研院 (ITRI)",
+                "content": "工業技術研究院 (ITRI)",
                 "content_en": "Industrial Technology Research Institute (ITRI)"
             }
         ],
@@ -440,7 +561,7 @@
                 "name_en": [
                     "Chung-Ying Hsieh, Pei-Pei Chen"
                 ],
-                "content": "工研院 (ITRI)",
+                "content": "工業技術研究院 (ITRI)",
                 "content_en": "Industrial Technology Research Institute (ITRI)"
             },
             {
@@ -517,7 +638,8 @@
                 "name": [
                     "吳孟庭, 林賢哲, 黃筱涵"
                 ],
-                "content": "工研院 (ITRI)"
+                "content": "工業技術研究院 (ITRI)",
+                "content_en": "Industrial Technology Research Institute (ITRI)"
             },
             {
                 "name": [
