@@ -1,5 +1,27 @@
 {
     "獲獎 Awards": {
+        "year 2021": [
+            {
+                "name": [
+                    "張祐誠"
+                ],
+                "name_en": [
+                    "You-Cheng Chang"
+                ],
+                "content": "成大資工系 111 級專題展 第四名",
+                "content_en": "The 4th Place in 2021 NCKU CSIE Undergraduate Project Exhibition"
+            },
+            {
+                "name": [
+                    "黃睿澤"
+                ],
+                "name_en": [
+                    "Jui-Tse Huang"
+                ],
+                "content": "成大資工系 111 級專題展 佳作",
+                "content_en": "Honorable Poster Award in 2021 NCKU CSIE Undergraduate Project Exhibition"
+            }
+	],
         "year 2020": [
             {
                 "name": [
