@@ -3,73 +3,195 @@
         "博士生 Ph.D. Students": {
             "": [
                 {
-                    "name_ch": "莊琮暉",
-                    "name_en": "Tsung-Hui Chuang",
-                    "image": "thchuang.jpg"
-                },
-                {
-                    "name_ch": "蔡昀展",
-                    "name_en": "Yun-Zhan Cai",
-                    "image": "yzcai.jpg"
-                },
-                {
                     "name_ch": "王俞婷",
                     "name_en": "Yu-Ting Wang",
                     "image": "ytwang.jpg"
                 },
+                {
+                    "name_ch": "張軍斌",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "段雅培",
+                    "name_en": "Ya-Pei Tuan",
+                    "image": ""
+                },
+                {
+                    "name_ch": "林亭伃",
+                    "name_en": "Ting-Yu Lin",
+                    "image": ""
+                }
+            ]
+        },
+        "碩士生 Master Students": {
+            "碩三以上 Third Year or more": [
                 {
                     "name_ch": "陳珞安",
                     "name_en": "Lo-An Chen",
                     "image": "lachen.jpg"
                 },
                 {
-                    "name_ch": "張軍斌",
+                    "name_ch": "詹之鋐",
+                    "name_en": "Chih-Hung Chan",
+                    "image": "chchan.jpg"
+                }
+            ],
+            "碩二 Second Year": [
+                {
+                    "name_ch": "吳偵平",
+                    "name_en": "",
+                    "image": "jpwu.jpg"
+                },
+                {
+                    "name_ch": "孫名柔",
+                    "name_en": "",
+                    "image": "mzsun.jpg"
+                },
+                {
+                    "name_ch": "邵鏡軒",
+                    "name_en": "",
+                    "image": "jhchao.jpg"
+                },
+                {
+                    "name_ch": "林沛雯",
+                    "name_en": "",
+                    "image": ""
+                }
+            ],
+            "碩一 First Year": [
+                {
+                    "name_ch": "王聖中",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "黃盈慈",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "林信宇",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "林謙慈",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "陳玗謙",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "馮希敏",
+                    "name_en": "",
+                    "image": ""
+                }
+            ],
+            "碩零 Zero Year": [
+		{
+                    "name_ch": "黃睿澤",
+                    "name_en": "",
+                    "image": ""
+                },
+		{
+                    "name_ch": "沈子揚",
+                    "name_en": "",
+                    "image": ""
+                },
+		{
+                    "name_ch": "黃妤婷",
+                    "name_en": "",
+                    "image": ""
+                },
+		{
+                    "name_ch": "黃家綺",
                     "name_en": "",
                     "image": ""
                 }
             ]
         },
-        "碩士生 Master Students": {
-            "碩二 Second Year": [
+        "專題生 Bachelor Students": {
+            "b112": [
                 {
-                    "name_ch": "方鈞麒",
-                    "name_en": "Chun-Chi Fang",
-                    "image": "ccfang.jpg"
-                },
-                {
-                    "name_ch": "陳俊佑",
+                    "name_ch": "李泓均",
                     "name_en": "",
-                    "image": "cychen.jpg"
+                    "image": ""
                 },
                 {
-                    "name_ch": "田少谷",
-                    "name_en": "Shao-Ku Tien",
-                    "image": "sktien.jpg"
+                    "name_ch": "黃鴻鈞",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "程郁翔",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "高造擎 (工資管雙主修)",
+                    "name_en": "",
+                    "image": ""
                 }
             ],
-            "碩一 First Year": [
+            "b111": [
                 {
-                    "name_ch": "梁祐承",
-                    "name_en": "You-Cheng Liang",
-                    "image": "ycliang.jpg"
+                    "name_ch": "陳昭穎",
+                    "name_en": "",
+                    "image": ""
                 },
                 {
-                    "name_ch": "王靖元",
-                    "image": "jywang.jpg"
+                    "name_ch": "陳冠霖",
+                    "name_en": "",
+                    "image": ""
                 },
                 {
-                    "name_ch": "鄭皓中",
-                    "name_en": "Hao-Zhong Zheng",
-                    "image": "hzzheng.jpg"
+                    "name_ch": "李廷偉",
+                    "name_en": "",
+                    "image": ""
                 },
                 {
-                    "name_ch": "詹之鋐",
-                    "name_en": "Chih-Hung Chan",
-                    "image": "chchan.jpg"
+                    "name_ch": "尹子維 (統計系雙主修)",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "林鴻逸",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "洪緯宸 (共同指導)",
+                    "name_en": "",
+                    "image": ""
                 }
-            ]
-        },
-        "專題生 Bachelor Students": {
+	    ],
+            "b110": [
+                {
+                    "name_ch": "黃睿澤",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "沈子揚",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "蘇名偉",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "張祐誠",
+                    "name_en": "",
+                    "image": ""
+                }
+
+            ],
             "b109": [
                 {
                     "name_ch": "黃政瑋",
@@ -106,24 +228,72 @@
     },
     "alumni": {
         "博士 學成下山 Ph.D.": {
+            "g109": [
+                {
+                    "name_ch": "蔡昀展",
+                    "name_en": "Yun-Zhan Cai",
+                    "image": "yzcai.jpg",
+                    "paper": "強化物聯網於軟體定義網路之安全性",
+                    "job": "群暉科技 (Synology)"
+                }
+	    ],
             "g108": [
                 {
                     "name_ch": "張蕙玲",
                     "name_en": "Hui-Ling Chang",
                     "image": "hlchang.jpg",
                     "paper": "物聯網裝置之省電機制研究",
-                    "job": "Microsoft Research (Redmond)"
+                    "job": "Microsoft Research (Redmond) -> MediaTek"
                 },
                 {
                     "name_ch": "林佳瑩",
                     "name_en": "Chia-Ying Lin",
                     "image": "cylin.jpg",
                     "paper": "雲端無線存取網路架構於第五代行動通訊系統之聯結控制",
-                    "job": "LINE Taiwan"
+                    "job": "LINE Taiwan -> Google"
                 }
             ]
         },
         "碩士 學成下山 Master": {
+            "g110": [
+                {
+                    "name_ch": "梁祐承",
+                    "name_en": "You-Cheng Liang",
+                    "image": "ycliang.jpg",
+		    "paper": "P4 軟體定義網路中新流飽和攻擊之緩解"
+                },
+                {
+                    "name_ch": "王靖元",
+                    "image": "jywang.jpg",
+		    "paper": "在P4為基礎的SDN中可用於偵測DDoS攻擊之流量非對稱性研究"
+                },
+                {
+                    "name_ch": "鄭皓中",
+                    "name_en": "Hao-Zhong Zheng",
+                    "image": "hzzheng.jpg",
+		    "paper": "異質性網路中節能睡眠模式方案之垂直交遞研究"
+                }
+            ],
+            "g109": [
+                {
+                    "name_ch": "方鈞麒",
+                    "name_en": "Chun-Chi Fang",
+                    "image": "ccfang.jpg",
+		    "paper": "於軟體定義網路中利用時戳權重之深度學習偵測來自物聯網裝置之分散式阻斷服務攻擊"
+                },
+                {
+                    "name_ch": "陳俊佑",
+                    "name_en": "",
+                    "image": "cychen.jpg",
+		    "paper": "通過機器學習檢測物聯網的分散式阻絕服務攻擊"
+                },
+                {
+                    "name_ch": "田少谷",
+                    "name_en": "Shao-Ku Tien",
+                    "image": "sktien.jpg",
+		    "paper": "利用去中心化金融系統最大化智能合約中虛擬貨幣之時間價值"
+                }
+            ],
             "g108": [
                 {
                     "name_ch": "卓景昭",
@@ -271,6 +441,44 @@
             ]
         },
         "專題生 學成下山 Bachelor": {
+            "b110": [
+                {
+                    "name_ch": "黃政瑋",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "基於機器學習之網路監視器辨識系統"
+                },
+                {
+                    "name_ch": "吳添毅",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "基於機器學習之網路監視器辨識系統"
+                },
+                {
+                    "name_ch": "戴源",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "基於機器學習之網路監視器辨識系統"
+                },
+                {
+                    "name_ch": "黃盈慈",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "基於Docker之線上遊戲評量系統"
+                },
+                {
+                    "name_ch": "王聖中 (共同指導)",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "基於程式教學之線上解題與遊戲整合系統"
+                },
+                {
+                    "name_ch": "林信宇 (測量系)",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "基於程式教學之線上解題與遊戲整合系統"
+                }
+            ],
             "b109": [
                 {
                     "name_ch": "孫名柔",
