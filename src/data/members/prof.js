@@ -13,9 +13,12 @@ Computer Science & Information Engineering, National Chiao Tung University
 *1998 - 2002*
 `,
     "工作經歷 Work Experience": `
+- **Professor**  
+Computer Science & Information Engineering, National Cheng Kung University, Tainan, Taiwan  
+*2021/8 - present*
 - **Associate Professor**  
 Computer Science & Information Engineering, National Cheng Kung University, Tainan, Taiwan  
-*2017/2 - present*
+*2017/2 - 2021/7*
 
 - **Assistant Professor**  
 Computer Science & Information Engineering, National Cheng Kung University, Tainan, Taiwan  
