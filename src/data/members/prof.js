@@ -16,6 +16,18 @@ Computer Science & Information Engineering, National Chiao Tung University
 - **Professor**  
 Computer Science & Information Engineering, National Cheng Kung University, Tainan, Taiwan  
 *2021/8 - present*
+- **Adjunct Professor**  
+Computer Science, National Yang Ming Chiao Tung University, Hsinchu, Taiwan  
+*2022/8 - present*
+- **Adjunct Associate Professor**  
+Computer Science, National Yang Ming Chiao Tung University, Hsinchu, Taiwan  
+*2021/9 - 2022/7*
+- **Deputy Director**  
+Computer and Network Center, NCKU
+*2020/10 - present*
+- **Director**  
+Project Office for Academic Affairs Research, NCKU
+*2020/8 - present*
 - **Associate Professor**  
 Computer Science & Information Engineering, National Cheng Kung University, Tainan, Taiwan  
 *2017/2 - 2021/7*
