@@ -136,99 +136,12 @@
                     "name_en": "",
                     "image": ""
                 }
-            ],
-            "b111": [
-                {
-                    "name_ch": "陳昭穎",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "陳冠霖",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "李廷偉",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "尹子維 (統計系雙主修)",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "林鴻逸",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "洪緯宸 (共同指導)",
-                    "name_en": "",
-                    "image": ""
-                }
-	    ],
-            "b110": [
-                {
-                    "name_ch": "黃睿澤",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "沈子揚",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "蘇名偉",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "張祐誠",
-                    "name_en": "",
-                    "image": ""
-                }
-
-            ],
-            "b109": [
-                {
-                    "name_ch": "黃政瑋",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "吳添毅",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "黃盈慈",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "戴源",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "王聖中 (共同指導)",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "林信宇 (測量系)",
-                    "name_en": "",
-                    "image": ""
-                }
             ]
         }
     },
     "alumni": {
         "博士 學成下山 Ph.D.": {
-            "g109": [
+            "g110: [
                 {
                     "name_ch": "蔡昀展",
                     "name_en": "Yun-Zhan Cai",
@@ -261,6 +174,7 @@
                     "name_en": "You-Cheng Liang",
                     "image": "ycliang.jpg",
 		    "paper": "P4 軟體定義網路中新流飽和攻擊之緩解"
+		    "job": "台積電 (TSMC)"
                 },
                 {
                     "name_ch": "王靖元",
@@ -271,7 +185,8 @@
                     "name_ch": "鄭皓中",
                     "name_en": "Hao-Zhong Zheng",
                     "image": "hzzheng.jpg",
-		    "paper": "異質性網路中節能睡眠模式方案之垂直交遞研究"
+		    "paper": "異質性網路中節能睡眠模式方案之垂直交遞研究",
+		    "job": "台積電 (TSMC)"
                 }
             ],
             "g109": [
@@ -285,7 +200,8 @@
                     "name_ch": "陳俊佑",
                     "name_en": "",
                     "image": "cychen.jpg",
-		    "paper": "通過機器學習檢測物聯網的分散式阻絕服務攻擊"
+		    "paper": "通過機器學習檢測物聯網的分散式阻絕服務攻擊",
+		    "job": "台積電 (TSMC)"
                 },
                 {
                     "name_ch": "田少谷",
@@ -305,7 +221,8 @@
                     "name_ch": "謝忠穎",
                     "name_en": "Chung-Ying Hsieh",
                     "image": "cyhsieh.jpg",
-                    "paper": "在蜂巢式物聯網中藉由提前釋放RRC連線以強化節電之方法"
+                    "paper": "在蜂巢式物聯網中藉由提前釋放RRC連線以強化節電之方法",
+                    "job": "中華電信研究院"
                 },
                 {
                     "name_ch": "瞿旭民",
@@ -441,6 +358,76 @@
             ]
         },
         "專題生 學成下山 Bachelor": {
+            "b112": [
+                {
+                    "name_ch": "陳昭穎",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "校園網路現況視覺化"
+                },
+                {
+                    "name_ch": "陳冠霖",
+                    "name_en": "",
+                    "image": ""
+		    "proj": "校園網路現況視覺化"
+                },
+                {
+                    "name_ch": "李廷偉",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "SDN 網路下基於 AutoEncoder 的 DDoS 偵測方法"
+                },
+                {
+                    "name_ch": "尹子維 (統計系雙主修)",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "基於 SDN 的資料中心大象流負載平衡"
+                },
+                {
+                    "name_ch": "林鴻逸",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "釣魚網站整合並實踐於社群軟體"
+                },
+                {
+                    "name_ch": "洪緯宸 (共同指導)",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "智慧路燈與AI加速器研究"
+                }
+	    ],
+            "b111": [
+                {
+                    "name_ch": "黃睿澤",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "基於BitTorrent的數位貨幣系統" 
+                },
+                {
+                    "name_ch": "沈子揚",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "應用於SDN可程式化資料平面的TCP SYN Flood與UDP Flood之偵測與防禦"
+                },
+                {
+                    "name_ch": "蘇名偉",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "應用於SDN可程式化資料平面的TCP SYN Flood與UDP Flood之偵測與防禦"
+                },
+                {
+                    "name_ch": "張祐誠",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "在基於 P4 之軟體定義網路中改良 NAT 穿越機制"
+                },
+                {
+                    "name_ch": "賴大立 (共同指導)",
+                    "name_en": "",
+                    "image": "",
+		    "proj": "針對地理位置優化的 DNS 伺服器設計與實作"
+                }
+            ],
             "b110": [
                 {
                     "name_ch": "黃政瑋",
