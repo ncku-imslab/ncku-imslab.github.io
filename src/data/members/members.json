@@ -141,7 +141,7 @@
     },
     "alumni": {
         "博士 學成下山 Ph.D.": {
-            "g110: [
+            "g110": [
                 {
                     "name_ch": "蔡昀展",
                     "name_en": "Yun-Zhan Cai",
@@ -173,7 +173,7 @@
                     "name_ch": "梁祐承",
                     "name_en": "You-Cheng Liang",
                     "image": "ycliang.jpg",
-		    "paper": "P4 軟體定義網路中新流飽和攻擊之緩解"
+		    "paper": "P4 軟體定義網路中新流飽和攻擊之緩解",
 		    "job": "台積電 (TSMC)"
                 },
                 {
@@ -368,7 +368,7 @@
                 {
                     "name_ch": "陳冠霖",
                     "name_en": "",
-                    "image": ""
+                    "image": "",
 		    "proj": "校園網路現況視覺化"
                 },
                 {
