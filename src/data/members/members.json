@@ -174,7 +174,7 @@
                     "name_en": "You-Cheng Liang",
                     "image": "ycliang.jpg",
 		    "paper": "P4 軟體定義網路中新流飽和攻擊之緩解",
-		    "job": "台積電 (TSMC)"
+		    "job": "國立陽明交通大學前瞻火箭研究中心"
                 },
                 {
                     "name_ch": "王靖元",
@@ -229,7 +229,7 @@
                     "name_en": "Shu-Min Cyu",
                     "image": "hmchiu.jpg",
                     "paper": "資料平面上基於洪氾攻擊之偵測系統",
-                    "job": "A10 Networks"
+                    "job": "A10 Networks -> 瑞昱科技"
                 }
             ],
             "g107": [
@@ -293,7 +293,7 @@
                     "name_en": "Chih-Hao Lai",
                     "image": "chlai.jpg",
                     "paper": "於基地台與支援LIPA之家用基地台間基於計時器之通話保留機制",
-                    "job": "聯發科 (研發替代役) / 台積電"
+                    "job": "聯發科 (研發替代役) -> 台積電 -> 瑞昱科技"
                 },
                 {
                     "name_ch": "蔡婉萍",
@@ -337,7 +337,7 @@
                     "name_en": "Chih-Hsuan Kuo",
                     "image": "chkuo.jpg",
                     "paper": "慣性測量單元之雜訊抑制方法與其在手寫軌跡重建之應用",
-                    "job": "Mozilla Taiwan 美商謀智 (研發替代役) / Google"
+                    "job": "Mozilla Taiwan 美商謀智 (研發替代役) -> Google"
                 }
             ],
             "g102": [
