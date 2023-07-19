@@ -21,7 +21,7 @@ import { shiftDownAnimationClass, shiftUpAnimationClass } from "../utils/classes
 
 const mustRead = { ...MustReadData }
 Object.entries(mustRead).forEach(([key, value]) => {
-    mustRead[key] = <Markdown source={value} />
+    mustRead[key] = <Markdown children={value} />
 })
 
 // Re-rendering is limited to this component only

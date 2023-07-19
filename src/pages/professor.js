@@ -15,7 +15,7 @@ import { GoldenTitle } from "../components/title"
 
 const professor = { ...professorData }
 Object.entries(professor).forEach(([key, value]) => {
-    professor[key] = <Markdown source={value} />
+    professor[key] = <Markdown children={value} />
 })
 
 const Professor = () => {
@@ -51,7 +51,7 @@ const Professor = () => {
             <div className={personalInfoSecClass} style={{ maxWidth: personalInfoSecMaxWidth }}>
                 <img
                     alt={imageAlt}
-                    src={require("../images/tsaimh.jpg").default}
+                    src={require("../images/tsaimh.jpg")}
                     className={imageClass}
                     onClick={onClick}
                     title=""

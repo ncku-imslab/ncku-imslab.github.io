@@ -5,10 +5,9 @@ const Photo = (dir) => (
     <img
         className={photoClass}
         src={
-            // the .default property is to fix Webpack issue, afaik
             dir.length === 0
-                ? require("../images/members/cat.jpg").default
-                : require("../images/members/" + dir).default
+                ? require("../images/members/cat.jpg")
+                : require("../images/members/" + dir)
         }
         style={{ objectFit: photoObjectFit }}
         alt=""

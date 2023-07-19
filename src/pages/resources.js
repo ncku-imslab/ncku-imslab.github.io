@@ -15,7 +15,7 @@ import { NavyTitle } from "../components/title"
 
 const resources = { ...resourcesData }
 Object.entries(resources).forEach(([key, value]) => {
-    resources[key] = <Markdown source={value} />
+    resources[key] = <Markdown children={value} />
 })
 
 const Resources = () => {

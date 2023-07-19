@@ -19,7 +19,7 @@ import { NavyTitle } from "../components/title"
 
 const researches = { ...ResearchesData }
 Object.entries(researches).forEach(([key, value]) => {
-    researches[key] = <Markdown source={value} />
+    researches[key] = <Markdown children={value} />
 })
 // make this a function component s.t. it's rendered in/after Research
 const researchTopicSec = () =>
