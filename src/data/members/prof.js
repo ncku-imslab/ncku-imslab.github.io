@@ -14,17 +14,20 @@ Computer Science & Information Engineering, National Chiao Tung University
 `,
     "工作經歷 Work Experience": `
 - **Professor**  
+Computer Science, National Yang Ming Chiao Tung University, Hsinchu, Taiwan  
+*2023/8 - Present*
+- **Professor**  
 Computer Science & Information Engineering, National Cheng Kung University, Tainan, Taiwan  
-*2021/8 - present*
+*2021/8 - 2023/7*
 - **Adjunct Professor**  
 Computer Science, National Yang Ming Chiao Tung University, Hsinchu, Taiwan  
-*2021/9 - present*
+*2021/9 - 2023/7*
 - **Deputy Director**  
 Computer and Network Center, NCKU
-*2020/10 - present*
+*2020/10 - 2023/7*
 - **Director**  
 Project Office for Academic Affairs Research, NCKU
-*2020/8 - present*
+*2020/8 - 2023/7*
 - **Associate Professor**  
 Computer Science & Information Engineering, National Cheng Kung University, Tainan, Taiwan  
 *2017/2 - 2021/7*

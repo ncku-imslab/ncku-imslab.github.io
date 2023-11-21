@@ -59,10 +59,10 @@ const navbarArr = [
 ]
 
 const Navigation = () => {
-    const labName = "智慧化行動服務實驗室"
-    const atUniversityName = "@ 國立成功大學"
+    const labName = "網際網路與行動服務實驗室"
+    const atUniversityName = "@ 國立陽明交通大學"
     const chineseName = labName + " " + atUniversityName
-    const englishName = "Intelligent Mobile Service Laboratory @ NCKU"
+    const englishName = "Internet and Mobile Service Laboratory @ NYCU"
 
     function isSpecialDay() {
         const today = new Date()

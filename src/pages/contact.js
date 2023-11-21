@@ -9,28 +9,25 @@ const Contact = () => {
             <div className={emailAndTelephoneSecClass}>
                 <h4 className={titleClass}> {title} </h4>
                 <span className={emailClass}> {email} </span>
-                <br />
             </div>
         )
     }
     const telephoneSec = () => {
         const title = "電話 Tel."
-        const telephone = "+886-6-275-7575"
-        const extension = "Ext.62520-1004"
+        const extension = "(03) 571-2121 Ext.59275"
 
         return (
             <div className={emailAndTelephoneSecClass}>
                 <h4 className={titleClass}>{title} </h4>
-                <span className={telephoneClass}> {telephone} </span>
                 <span className={extensionClass}> {extension}</span>
             </div>
         )
     }
     const addressSec = () => {
         const title = "地址 Addr."
-        const chineseAddress = "701 台南市東區大學路 1 號 國立成功大學 成功校區 資訊系館 10 樓 65A04 室"
+        const chineseAddress = "300093 新竹市東區大學路1001號 電資大樓 708室"
         const englishAddress =
-            "Room 65A04, 10th Floor, CSIE Building, Cheng-Kung Campus, No. 1, Daxue Road, East District, Tainan City"
+            "Room 708, Microelectronics and Information System Research Building, No. 1001, Daxue Rd. East Dist., Hsinchu City 300093, Taiwan"
 
         return (
             <div className={addressSecClass}>
@@ -53,11 +50,8 @@ const Contact = () => {
             title="map"
             width="100%"
             height="400px"
-            src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=zh-TW&amp;coord=22.997143,120.221371&amp;q=22.997143,120.221371&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed"
             frameBorder="0"
-            scrolling="no"
-            marginHeight="0"
-            marginWidth="0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.2566341419392!2d120.99911677612114!3d24.786664348205175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346836105901e76f%3A0x2e57134e8cc18575!2sMicroelectronics%20and%20Information%20System%20Research%20(MIRC-NCTU)!5e0!3m2!1sen!2stw!4v1700553943821!5m2!1sen!2stw"
         />
     )
 
