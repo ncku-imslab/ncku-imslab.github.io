@@ -3,16 +3,6 @@
         "博士生 Ph.D. Students": {
             "": [
                 {
-                    "name_ch": "王俞婷",
-                    "name_en": "Yu-Ting Wang",
-                    "image": "ytwang.jpg"
-                },
-                {
-                    "name_ch": "張軍斌",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
                     "name_ch": "段雅培",
                     "name_en": "Ya-Pei Tuan",
                     "image": ""
@@ -21,16 +11,31 @@
                     "name_ch": "林亭伃",
                     "name_en": "Ting-Yu Lin",
                     "image": ""
+                },
+                {
+                    "name_ch": "楊淳皓",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "李芳儀",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "林竣賢",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "林哲偉",
+                    "name_en": "",
+                    "image": ""
                 }
             ]
         },
         "碩士生 Master Students": {
-            "碩三以上 Third Year or more": [
-                {
-                    "name_ch": "陳珞安",
-                    "name_en": "Lo-An Chen",
-                    "image": "lachen.jpg"
-                },
+            "碩三以上 Third Year or above": [
                 {
                     "name_ch": "詹之鋐",
                     "name_en": "Chih-Hung Chan",
@@ -39,100 +44,49 @@
             ],
             "碩二 Second Year": [
                 {
-                    "name_ch": "吳偵平",
-                    "name_en": "",
-                    "image": "jpwu.jpg"
+                    "name_ch": "黃睿澤",
+                    "name_en": "Jui-Tse Huang",
+                    "image": ""
                 },
                 {
-                    "name_ch": "孫名柔",
-                    "name_en": "",
-                    "image": "mzsun.jpg"
+                    "name_ch": "沈子揚",
+                    "name_en": "ZiYang Shen",
+                    "image": ""
                 },
                 {
-                    "name_ch": "邵鏡軒",
+                    "name_ch": "黃妤婷",
                     "name_en": "",
-                    "image": "jhchao.jpg"
+                    "image": ""
                 },
                 {
-                    "name_ch": "林沛雯",
+                    "name_ch": "黃家綺",
                     "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "鄭皓文",
+                    "name_en": "Zheng Haowen",
                     "image": ""
                 }
             ],
             "碩一 First Year": [
                 {
-                    "name_ch": "王聖中",
+                    "name_ch": "林彥廷",
                     "name_en": "",
                     "image": ""
                 },
                 {
-                    "name_ch": "黃盈慈",
+                    "name_ch": "余彥亨",
                     "name_en": "",
                     "image": ""
                 },
                 {
-                    "name_ch": "林信宇",
+                    "name_ch": "廖信詠",
                     "name_en": "",
                     "image": ""
                 },
                 {
-                    "name_ch": "林謙慈",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "陳玗謙",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "馮希敏",
-                    "name_en": "",
-                    "image": ""
-                }
-            ],
-            "碩零 Zero Year": [
-		{
-                    "name_ch": "黃睿澤",
-                    "name_en": "",
-                    "image": ""
-                },
-		{
-                    "name_ch": "沈子揚",
-                    "name_en": "",
-                    "image": ""
-                },
-		{
-                    "name_ch": "黃妤婷",
-                    "name_en": "",
-                    "image": ""
-                },
-		{
-                    "name_ch": "黃家綺",
-                    "name_en": "",
-                    "image": ""
-                }
-            ]
-        },
-        "專題生 Bachelor Students": {
-            "b112": [
-                {
-                    "name_ch": "李泓均",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "黃鴻鈞",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "程郁翔",
-                    "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "高造擎 (工資管雙主修)",
+                    "name_ch": "蔡怡葶",
                     "name_en": "",
                     "image": ""
                 }
@@ -141,6 +95,23 @@
     },
     "alumni": {
         "博士 學成下山 Ph.D.": {
+            "g112": [
+                {
+                    "name_ch": "張軍斌",
+                    "name_en": "",
+                    "image": "",
+                    "paper": "基於圖的視頻動作分割",
+                    "job": "北京大学深圳研究生院 博士後研究員"
+                }
+            ],
+            "g111": [
+                {
+                    "name_ch": "王俞婷",
+                    "name_en": "Yu-Ting Wang",
+                    "image": "ytwang.jpg",
+                    "paper": "第五代行動通訊中資料傳輸之效能改善"
+                }
+            ],
             "g110": [
                 {
                     "name_ch": "蔡昀展",
@@ -168,25 +139,96 @@
             ]
         },
         "碩士 學成下山 Master": {
+            "g112": [
+                {
+                    "name_ch": "陳珞安",
+                    "name_en": "Lo-An Chen",
+                    "image": "lachen.jpg",
+                    "paper": "基於馬可夫聚類具截止時間限制的路側單元快取內容配置"
+                },
+                {
+                    "name_ch": "王聖中",
+                    "name_en": "Sheng-Zhong Wang",
+                    "image": "",
+                    "paper": "個資類型與 AI 生成文本對於自動化魚叉式釣魚攻擊應用在社群媒體平台之研究"
+                },
+                {
+                    "name_ch": "黃盈慈",
+                    "name_en": "Ying-Tzu Huang",
+                    "image": "",
+                    "paper": "基於物件偵測之智慧圍籬系統設計與實作"
+                },
+                {
+                    "name_ch": "林信宇",
+                    "name_en": "Xin-Yu Lin",
+                    "image": "",
+                    "paper": "LMHound: 透過登入配對強化橫向移動偵測",
+                    "job": "戴夫寇爾 (Devcore)"
+                },
+                {
+                    "name_ch": "林謙慈",
+                    "name_en": "Chien-Tzu Lin",
+                    "image": "",
+                    "paper": "透過廣度優先搜尋搭配隨機選擇與相似架構分組機制加速網頁快取欺騙弱點偵測",
+                    "job": "戴夫寇爾 (Devcore)"
+                },
+                {
+                    "name_ch": "陳玗謙",
+                    "name_en": "Yu-Chien Chen",
+                    "image": "",
+                    "paper": "HoneyUAV: 利用賽局理論策略探討無人航空載具上的蜜罐漏洞配置",
+                    "job": "四零四科技"
+                },
+                {
+                    "name_ch": "馮希敏",
+                    "name_en": "Fung Hei Man",
+                    "image": "",
+                    "paper": "以 Kubernetes 設計與實作之微服務架構敏捷校園監控平台",
+                    "job": "友達光電"
+                }
+            ],
+            "g111": [
+                {
+                    "name_ch": "吳偵平",
+                    "name_en": "Jhen-Ping Wu",
+                    "image": "jpwu.jpg",
+                    "paper": "在 SDN 資料平面上藉由 SYN/ACK 封包偵測並以黑白名單防禦 SYN Flooding 攻擊",
+                    "job": "四零四科技"
+                },
+                {
+                    "name_ch": "邵鏡軒",
+                    "name_en": "Ching-Hsuan Shao",
+                    "image": "jhchao.jpg",
+                    "paper": "OVS-DPDK-I: 一個高效使用 CPU 的高速開放虛擬交換機",
+                    "job": "Google"
+                },
+                {
+                    "name_ch": "林沛雯",
+                    "name_en": "Pei-Wen Lin",
+                    "image": "",
+                    "paper": "在軟體定義網路中利用流量的非對稱性和規模改善偵測分散式阻斷服務攻擊的準確率",
+                    "job": "聯陽半導體 (ITE Tech. Inc.)"
+                }
+            ],
             "g110": [
                 {
                     "name_ch": "梁祐承",
                     "name_en": "You-Cheng Liang",
                     "image": "ycliang.jpg",
-		    "paper": "P4 軟體定義網路中新流飽和攻擊之緩解",
-		    "job": "國立陽明交通大學前瞻火箭研究中心"
+		            "paper": "P4 軟體定義網路中新流飽和攻擊之緩解",
+		            "job": "國立陽明交通大學前瞻火箭研究中心"
                 },
                 {
                     "name_ch": "王靖元",
                     "image": "jywang.jpg",
-		    "paper": "在P4為基礎的SDN中可用於偵測DDoS攻擊之流量非對稱性研究"
+		            "paper": "在P4為基礎的SDN中可用於偵測DDoS攻擊之流量非對稱性研究"
                 },
                 {
                     "name_ch": "鄭皓中",
                     "name_en": "Hao-Zhong Zheng",
                     "image": "hzzheng.jpg",
-		    "paper": "異質性網路中節能睡眠模式方案之垂直交遞研究",
-		    "job": "台積電 (TSMC)"
+                    "paper": "異質性網路中節能睡眠模式方案之垂直交遞研究",
+                    "job": "台積電 (TSMC)"
                 }
             ],
             "g109": [
@@ -194,20 +236,20 @@
                     "name_ch": "方鈞麒",
                     "name_en": "Chun-Chi Fang",
                     "image": "ccfang.jpg",
-		    "paper": "於軟體定義網路中利用時戳權重之深度學習偵測來自物聯網裝置之分散式阻斷服務攻擊"
+		             "paper": "於軟體定義網路中利用時戳權重之深度學習偵測來自物聯網裝置之分散式阻斷服務攻擊"
                 },
                 {
                     "name_ch": "陳俊佑",
                     "name_en": "",
                     "image": "cychen.jpg",
-		    "paper": "通過機器學習檢測物聯網的分散式阻絕服務攻擊",
-		    "job": "台積電 (TSMC)"
+                    "paper": "通過機器學習檢測物聯網的分散式阻絕服務攻擊",
+                    "job": "台積電 (TSMC)"
                 },
                 {
                     "name_ch": "田少谷",
                     "name_en": "Shao-Ku Tien",
                     "image": "sktien.jpg",
-		    "paper": "利用去中心化金融系統最大化智能合約中虛擬貨幣之時間價值"
+                    "paper": "利用去中心化金融系統最大化智能合約中虛擬貨幣之時間價值"
                 }
             ],
             "g108": [
@@ -401,7 +443,7 @@
                     "name_ch": "黃睿澤",
                     "name_en": "",
                     "image": "",
-		    "proj": "基於BitTorrent的數位貨幣系統" 
+		    "proj": "基於BitTorrent的數位貨幣系統"
                 },
                 {
                     "name_ch": "沈子揚",

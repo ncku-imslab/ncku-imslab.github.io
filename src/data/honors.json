@@ -413,6 +413,28 @@
         ]
     },
     "實習 Internships": {
+        "year 2023": [
+            {
+                "name": ["沈子揚"],
+                "content": "Edge-core",
+                "content_en": "Edge-core"
+            },
+            {
+                "name": ["黃睿澤"],
+                "content": "四零四科技",
+                "content_en": "Moxa"
+            },
+            {
+                "name": ["黃家綺"],
+                "content": "趨勢科技",
+                "content_en": "Trend Micro"
+            },
+            {
+                "name": ["黃妤婷"],
+                "content": "微智安聯",
+                "content_en": "Shield eXtreme"
+            }
+        ],
         "year 2022": [
             {
                 "name": [
