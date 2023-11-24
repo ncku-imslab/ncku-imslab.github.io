@@ -16,6 +16,9 @@ Computer Science & Information Engineering, National Chiao Tung University
 - **Professor**  
 Computer Science, National Yang Ming Chiao Tung University, Hsinchu, Taiwan  
 *2023/8 - Present*
+- **Deputy Director**  
+Information Technology Service Center, NYCU
+*2023/12 - Present*
 - **Professor**  
 Computer Science & Information Engineering, National Cheng Kung University, Tainan, Taiwan  
 *2021/8 - 2023/7*
