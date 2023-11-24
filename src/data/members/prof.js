@@ -56,9 +56,7 @@ Otto-von-Guericke-University, Magdeburg, Germany
 
 - Software Defined Networking (SDN)
 
-- Design and Analysis of Mobile Network (GSM/UMTS/LTE/LTE-A/5G/6G)
-
-- Performance Evaluation
+- Mobile Network (5G/6G)
 
 - Network Security
 `,
