@@ -1,6 +1,35 @@
 {
     "獲獎 Awards": {
+        "year 2023": [
+            {
+                "name": [
+                    "張軍斌"
+                ],
+                "name_en": [
+                    "Junbin Zhang"
+                ],
+                "content": "IEEE ICCE-TW 最佳會議論文",
+                "content_en": "IEEE ICCE-TW Best Paper Award"
+            },
+            {
+                "name": [
+                    "張軍斌"
+                ],
+                "name_en": [
+                    "Junbin Zhang"
+                ],
+                "content": "IEEE IS3C 最佳會議論文",
+                "content_en": "IEEE IS3C Best Paper Award"
+            }
+	],
         "year 2022": [
+            {
+                "name": [
+                    "尹子維 / 林鴻逸"
+                ],
+                "content": "成大資工系 112 級專題展 第三名 / 佳作",
+                "content_en": "The 3rd Place / Honorable Poster Award in 2022 NCKU CSIE Undergraduate Project Exhibition"
+            },
             {
                 "name": [
                     "陳昭穎"
