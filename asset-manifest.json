@@ -1,11 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.d1c50977.css",
-    "main.js": "/static/js/main.16553ec9.js",
+    "main.js": "/static/js/main.988dd1fa.js",
     "static/media/cchuang.png": "/static/media/cchuang.bf537c5785d162fcf01f.png",
     "static/media/rchuang.png": "/static/media/rchuang.33cd33628befdb3167a0.png",
     "static/media/yclin.png": "/static/media/yclin.36edad87cc863db3226e.png",
     "static/media/fylee.jpg": "/static/media/fylee.1dba50dbecdd7b5f7a12.jpg",
+    "static/media/yttsai.png": "/static/media/yttsai.63e70ec96a3dc1d59189.png",
+    "static/media/yhyu.png": "/static/media/yhyu.3ef245befc65baff7d2e.png",
     "static/media/ythuang.png": "/static/media/ythuang.ccf3a7275a98c401e969.png",
     "static/media/hmfung.jpeg": "/static/media/hmfung.be5601d9e1733929d569.jpeg",
     "static/media/cysheng.png": "/static/media/cysheng.8c9e4fca34f8c98beb5e.png",
@@ -14,6 +16,7 @@
     "static/media/yzcai.jpg": "/static/media/yzcai.a400dc92db465ca5e710.jpg",
     "static/media/chyang.jpeg": "/static/media/chyang.789a8421b0b4d966357b.jpeg",
     "static/media/jwlin.jpg": "/static/media/jwlin.56b478a7dca8927a9a49.jpg",
+    "static/media/syliao.jpeg": "/static/media/syliao.6f39960f4301105cdc1c.jpeg",
     "static/media/cliow.jpg": "/static/media/cliow.658216b14fb7b5af8caf.jpg",
     "static/media/phsu.jpg": "/static/media/phsu.b3a2d2a93fd81a2ea5ad.jpg",
     "static/media/sylin.jpeg": "/static/media/sylin.761a756962037ba7ad83.jpeg",
@@ -64,6 +67,7 @@
     "static/media/mtwu.jpg": "/static/media/mtwu.c8e5b5e3e07add254aa4.jpg",
     "static/media/jpwu.jpg": "/static/media/jpwu.e5f1910efadac312ba6e.jpg",
     "static/media/hmchiu.jpg": "/static/media/hmchiu.27800777e2113bbd4777.jpg",
+    "static/media/ytlin.jpeg": "/static/media/ytlin.5a29469a63845c3998cc.jpeg",
     "static/media/cblin.jpg": "/static/media/cblin.f3a208aeff707e41becb.jpg",
     "static/media/ssliu.jpg": "/static/media/ssliu.16de52e671321d246d22.jpg",
     "static/media/imslab_eth.jpg": "/static/media/imslab_eth.0e4c12f3bcd9da9c78f2.jpg",
@@ -77,10 +81,10 @@
     "static/media/cgwang.jpg": "/static/media/cgwang.39fafcc3e82469d99af9.jpg",
     "index.html": "/index.html",
     "main.d1c50977.css.map": "/static/css/main.d1c50977.css.map",
-    "main.16553ec9.js.map": "/static/js/main.16553ec9.js.map"
+    "main.988dd1fa.js.map": "/static/js/main.988dd1fa.js.map"
   },
   "entrypoints": [
     "static/css/main.d1c50977.css",
-    "static/js/main.16553ec9.js"
+    "static/js/main.988dd1fa.js"
   ]
 }
