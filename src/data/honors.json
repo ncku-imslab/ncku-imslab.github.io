@@ -769,12 +769,34 @@
         ]
     },
     "國外短期研究 Short-term Overseas Exchanges": {
+        "year 2024": [
+            {
+                "name": [
+                    "林亭伃"
+                ],
+                "content": "iCAIR Center, 美國西北大學 Northwestern University"
+            }
+        ],
         "year 2019": [
             {
                 "name": [
                     "王俞婷"
                 ],
                 "content": "日本金澤大學 Kanazawa University (KU)"
+            }
+        ],
+        "year 2018": [
+            {
+                "name": [
+                    "張蕙玲"
+                ],
+                "content": "美國 University of Florida (UF)"
+            },
+            {
+                "name": [
+                    "林佳瑩"
+                ],
+                "content": "美國 University of California, Los Angeles (UCLAF)"
             }
         ],
         "year 2017": [
