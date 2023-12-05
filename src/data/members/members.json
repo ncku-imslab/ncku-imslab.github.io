@@ -15,7 +15,7 @@
                 {
                     "name_ch": "楊淳皓",
                     "name_en": "",
-                    "image": "chyang.jpeg"
+                    "image": "chyang.jpg"
                 },
                 {
                     "name_ch": "李芳儀",
@@ -51,7 +51,7 @@
                 {
                     "name_ch": "沈子揚",
                     "name_en": "ZiYang Shen",
-                    "image": "cysheng.png"
+                    "image": "cysheng.jpg"
                 },
                 {
                     "name_ch": "黃妤婷",
@@ -182,7 +182,7 @@
                 {
                     "name_ch": "馮希敏",
                     "name_en": "Fung Hei Man",
-                    "image": "",
+                    "image": "hmfung.jpeg",
                     "paper": "以 Kubernetes 設計與實作之微服務架構敏捷校園監控平台",
                     "job": "友達光電"
                 }
