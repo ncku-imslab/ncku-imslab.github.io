@@ -44,7 +44,7 @@ const Professor = () => {
         const imageAlt = "The nicest professor in NCKU CSIE is staring at you σ`∀´)σ"
         const chineseName = "蔡 孟 勳"
         const englishName = "Meng-Hsun Tsai ↗"
-        const url = "http://imslab.org/~tsaimh/"
+        const url = "https://www.cs.nycu.edu.tw/~tsaimh/"
         const onClick = isSpecialDay() ? handleClickOnSpecialDay : null
 
         return (
