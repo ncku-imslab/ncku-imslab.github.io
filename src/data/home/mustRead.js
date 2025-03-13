@@ -21,8 +21,8 @@ const mustReadData = {
     施主, 這個問題就要問你自己了。興趣別人無法幫你決定。如果真的完全無法找到興趣，那就選個比較不討厭的！
  
   - **我知道我興趣在哪, 但我應該找哪位老師呢？**  
-    首先你應該瀏覽系上網頁 "[學術研究 -> 研究群](http://www.csie.ncku.edu.tw/ncku_csie/research/groups)" 看看你有興趣的研究群中有哪些老師。   
-    然後到 "[系所成員 -> 師資陣容](http://www.csie.ncku.edu.tw/ncku_csie/depmember/teacher)" 去找這幾位老師的個人網頁及實驗室網頁, 裡面會有更細盡的資訊。
+    首先你應該瀏覽系上網頁 "[學術研究 -> 研究群](https://www.cs.nycu.edu.tw/research)" 看看你有興趣的研究群中有哪些老師。   
+    然後到 "[系所成員 -> 師資陣容](https://www.cs.nycu.edu.tw/members/prof)" 去找這幾位老師的個人網頁及實驗室網頁, 裡面會有更細盡的資訊。
  
   - **老師跟實驗室的網頁我都看不懂怎麼辦？**  
     一開始看不懂是正常的, 你需要做功課!! Google 是你的好朋友! 另外, 應該去查一下有興趣的老師指導研究生的畢業論文, 還有近幾年指導的專題題目。 (碩博士論文可至[臺灣博碩士論文知識加值系統](http://ndltd.ncl.edu.tw/)查, 系上近幾年專題題目可以到[這裡](http://www.csie.ncku.edu.tw/ncku_csie/student/bachelor#tab2)查詢)
