@@ -1,5 +1,26 @@
 {
     "獲獎 Awards": {
+        "year 2025": [
+            {
+                "name": ["林峻賢"],
+                "name_en": ["Chun-Hsien Lin"],
+                "content": "潘文淵獎學金",
+                "content_en": "Pan Wen Yuan Scholarship"
+            },
+            {
+                "name": ["黃哲宇"],
+                "content": "國科會大專生計畫",
+                "content_en": "College Student Participation in Research Projects, National Science and Technology Council, Taiwan"
+            }
+        ],
+        "year 2024": [
+            {
+                "name": ["林峻賢"],
+                "name_en": ["Chun-Hsien Lin"],
+                "content": "潘文淵獎學金",
+                "content_en": "Pan Wen Yuan Scholarship"
+            }
+        ],
         "year 2023": [
             {
                 "name": [
@@ -448,6 +469,28 @@
         ]
     },
     "實習 Internships": {
+        "year 2025": [
+            {
+                "name": ["王瑞辰"],
+                "content": "台積電",
+                "content_en": "TSMC"
+            },
+            {
+                "name": ["林煒倫"],
+                "content": "四零四科技",
+                "content_en": "Moxa"
+            },
+            {
+                "name": ["黃柏竣"],
+                "content": "中研院資訊所",
+                "content_en": "Institute of Information Science, Academia Sinica"
+            },
+            {
+                "name": ["黃紘諺"],
+                "content": "群暉科技",
+                "content_en": "Synology Inc."
+            }
+        ],
         "year 2023": [
             {
                 "name": ["沈子揚"],
