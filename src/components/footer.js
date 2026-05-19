@@ -6,7 +6,7 @@ const URL = "https://github.com/ncku-imslab/ncku-imslab.github.io/blob/master/pa
 const Footer = () => {
     const logoSec = (
         <div>
-            © <b>IMS Lab</b> 2020
+            © <b>IMS Lab</b> {new Date().getFullYear()}
         </div>
     )
     const urlSec = (

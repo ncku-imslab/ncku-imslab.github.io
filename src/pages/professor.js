@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Markdown from "react-markdown"
+import professorPhoto from "../images/tsaimh.jpg"
 import professorData from "../data/members/prof"
 import professorContact from "../data/members/prof.json"
 import { handleClickOpen1D } from "../utils/handleClick"
@@ -51,7 +52,7 @@ const Professor = () => {
             <div className={personalInfoSecClass} style={{ maxWidth: personalInfoSecMaxWidth }}>
                 <img
                     alt={imageAlt}
-                    src={require("../images/tsaimh.jpg")}
+                    src={professorPhoto}
                     className={imageClass}
                     onClick={onClick}
                     title=""

@@ -1,13 +1,15 @@
 import React from "react"
 
+const memberImages = import.meta.glob('../images/members/*', { eager: true, import: 'default' })
+
 // cat's image source: "https://www.pickpik.com/black-cat-view-cat-eyes-cat-looking-cute-38005"
 const Photo = (dir) => (
     <img
         className={photoClass}
         src={
             dir.length === 0
-                ? require("../images/members/cat.jpg")
-                : require("../images/members/" + dir)
+                ? memberImages['../images/members/cat.jpg']
+                : memberImages[`../images/members/${dir}`]
         }
         style={{ objectFit: photoObjectFit }}
         alt=""

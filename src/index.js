@@ -18,28 +18,28 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: process.env.PUBLIC_URL + "/",
+        path: "/",
         element: <Home />,
       }, {
-        path: process.env.PUBLIC_URL + "/research",
+        path: "/research",
         element: <Research />,
       }, {
-        path: process.env.PUBLIC_URL + "/professor",
+        path: "/professor",
         element: <Professor />,
       }, {
-        path: process.env.PUBLIC_URL + "/students",
+        path: "/students",
         element: <Students />,
       }, {
-        path: process.env.PUBLIC_URL + "/alumni",
+        path: "/alumni",
         element: <Alumni />,
       }, {
-        path: process.env.PUBLIC_URL + "/honors",
+        path: "/honors",
         element: <Honors />,
       }, {
-        path: process.env.PUBLIC_URL + "/resources",
+        path: "/resources",
         element: <Resources />,
       }, {
-        path: process.env.PUBLIC_URL + "/contact",
+        path: "/contact",
         element: <Contact />,
       },
     ],

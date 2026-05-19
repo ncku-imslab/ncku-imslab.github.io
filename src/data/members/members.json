@@ -8,11 +8,6 @@
                     "image": ""
                 },
                 {
-                    "name_ch": "林亭伃",
-                    "name_en": "Ting-Yu Lin",
-                    "image": "tylin.jpg"
-                },
-                {
                     "name_ch": "楊淳皓",
                     "name_en": "Chun-Hao Yang",
                     "image": "chyang.jpg"
@@ -31,6 +26,11 @@
                     "name_ch": "林哲偉",
                     "name_en": "",
                     "image": ""
+                },
+                {
+                    "name_ch": "鄭皓文",
+                    "name_en": "Zheng Haowen",
+                    "image": "hwzheng.jpeg"
                 }
             ]
         },
@@ -40,45 +40,6 @@
                     "name_ch": "詹之鋐",
                     "name_en": "Chih-Hung Chan",
                     "image": "chchan.jpg"
-                }
-            ],
-            "碩二 Second Year": [
-                {
-                    "name_ch": "黃睿澤",
-                    "name_en": "Jui-Tse Huang",
-                    "image": "rchuang.png"
-                },
-                {
-                    "name_ch": "沈子揚",
-                    "name_en": "ZiYang Shen",
-                    "image": "cysheng.jpg"
-                },
-                {
-                    "name_ch": "黃妤婷",
-                    "name_en": "",
-                    "image": "ythuang.png"
-                },
-                {
-                    "name_ch": "黃家綺",
-                    "name_en": "",
-                    "image": "cchuang.png"
-                },
-                {
-                    "name_ch": "鄭皓文",
-                    "name_en": "Zheng Haowen",
-                    "image": "hwzheng.jpeg"
-                }
-            ],
-            "碩一 First Year": [
-                {
-                    "name_ch": "林彥廷",
-                    "name_en": "",
-                    "image": "ytlin.jpeg"
-                },
-                {
-                    "name_ch": "余彥亨",
-                    "name_en": "",
-                    "image": "yhyu.png"
                 },
                 {
                     "name_ch": "廖信詠",
@@ -89,12 +50,108 @@
                     "name_ch": "蔡怡葶",
                     "name_en": "",
                     "image": "yttsai.png"
+                },
+                {
+                    "name_ch": "黃家綺",
+                    "name_en": "",
+                    "image": "cchuang.png"
+                }
+            ],
+            "碩二 Second Year": [
+                {
+                    "name_ch": "簡成瑑",
+                    "name_en": "",
+                    "image": "czjian.png"
+                },
+                {
+                    "name_ch": "洪祥銘",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "林家賢",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "張若薇",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "王瑞辰",
+                    "name_en": "",
+                    "image": "rcwang.jpg"
+                },
+                {
+                    "name_ch": "林煒倫",
+                    "name_en": "",
+                    "image": "wllin.jpeg"
+                }
+            ],
+            "碩一 First Year": [
+                {
+                    "name_ch": "管培勛",
+                    "name_en": "",
+                    "image": "phkoan.jpg"
+                },
+                {
+                    "name_ch": "黃柏竣",
+                    "name_en": "",
+                    "image": "bjhuang.png"
+                },
+                {
+                    "name_ch": "陳宏彰",
+                    "name_en": "",
+                    "image": "hzchen.jpg"
+                }
+            ]
+        },
+        "專題生 Bachelor Students": {
+            "": [
+                {
+                    "name_ch": "江宸安",
+                    "name_en": "",
+                    "image": "cajiang.jpg"
+                },
+                {
+                    "name_ch": "施羿廷",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "陳靖昀",
+                    "name_en": "",
+                    "image": "jychen.jpeg"
+                },
+                {
+                    "name_ch": "李知恆",
+                    "name_en": "",
+                    "image": "zhli.jpg"
+                },
+                {
+                    "name_ch": "張慕天",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "林翰璿",
+                    "name_en": "",
+                    "image": ""
                 }
             ]
         }
     },
     "alumni": {
         "博士 學成下山 Ph.D.": {
+            "g114": [
+                {
+                    "name_ch": "林亭伃",
+                    "name_en": "Ting-Yu Lin",
+                    "image": "tylin.jpg",
+                    "paper": ""
+                }
+            ],
             "g112": [
                 {
                     "name_ch": "張軍斌",
@@ -120,7 +177,7 @@
                     "paper": "強化物聯網於軟體定義網路之安全性",
                     "job": "群暉科技 (Synology)"
                 }
-	    ],
+            ],
             "g108": [
                 {
                     "name_ch": "張蕙玲",
@@ -139,6 +196,46 @@
             ]
         },
         "碩士 學成下山 Master": {
+            "g114": [
+                {
+                    "name_ch": "黃睿澤",
+                    "name_en": "Jui-Tse Huang",
+                    "image": "rchuang.png",
+                    "paper": "利用 Kademlia DHT 提升加密貨幣系統之吞吐量及對惡意節點的容忍度"
+                },
+                {
+                    "name_ch": "沈子揚",
+                    "name_en": "ZiYang Shen",
+                    "image": "cysheng.jpg",
+                    "paper": ""
+                },
+                {
+                    "name_ch": "黃妤婷",
+                    "name_en": "",
+                    "image": "ythuang.png",
+                    "paper": "降低具 CAI 和 CMAI 威脅之物聯網互動中的使用者操作負擔"
+                },
+                {
+                    "name_ch": "黃弘諺",
+                    "name_en": "",
+                    "image": "",
+                    "paper": ""
+                }
+            ],
+            "g113": [
+                {
+                    "name_ch": "林彥廷",
+                    "name_en": "Yen-Ting Lin",
+                    "image": "ytlin.jpeg",
+                    "paper": "具韌性的無線可充電感測網路分區排程"
+                },
+                {
+                    "name_ch": "余彥亨",
+                    "name_en": "",
+                    "image": "yhyu.png",
+                    "paper": "可充電無線傳感器網路中應用叢集與角度充電於部分充電排程"
+                }
+            ],
             "g112": [
                 {
                     "name_ch": "陳珞安",
@@ -215,13 +312,13 @@
                     "name_ch": "梁祐承",
                     "name_en": "You-Cheng Liang",
                     "image": "ycliang.jpg",
-		            "paper": "P4 軟體定義網路中新流飽和攻擊之緩解",
-		            "job": "國立陽明交通大學前瞻火箭研究中心"
+                    "paper": "P4 軟體定義網路中新流飽和攻擊之緩解",
+                    "job": "國立陽明交通大學前瞻火箭研究中心"
                 },
                 {
                     "name_ch": "王靖元",
                     "image": "jywang.jpg",
-		            "paper": "在P4為基礎的SDN中可用於偵測DDoS攻擊之流量非對稱性研究"
+                    "paper": "在 P4 為基礎的 SDN 中可用於偵測 DDoS 攻擊之流量非對稱性研究"
                 },
                 {
                     "name_ch": "鄭皓中",
@@ -236,7 +333,7 @@
                     "name_ch": "方鈞麒",
                     "name_en": "Chun-Chi Fang",
                     "image": "ccfang.jpg",
-		             "paper": "於軟體定義網路中利用時戳權重之深度學習偵測來自物聯網裝置之分散式阻斷服務攻擊"
+                    "paper": "於軟體定義網路中利用時戳權重之深度學習偵測來自物聯網裝置之分散式阻斷服務攻擊"
                 },
                 {
                     "name_ch": "陳俊佑",
@@ -263,7 +360,7 @@
                     "name_ch": "謝忠穎",
                     "name_en": "Chung-Ying Hsieh",
                     "image": "cyhsieh.jpg",
-                    "paper": "在蜂巢式物聯網中藉由提前釋放RRC連線以強化節電之方法",
+                    "paper": "在蜂巢式物聯網中藉由提前釋放 RRC 連線以強化節電之方法",
                     "job": "中華電信研究院"
                 },
                 {
@@ -286,7 +383,7 @@
                     "name_ch": "林賢哲",
                     "name_en": "Sian-Jhe Lin",
                     "image": "sjlin.jpg",
-                    "paper": "基於回程網路之5G協作式小型基地台快取研究",
+                    "paper": "基於回程網路之 5G 協作式小型基地台快取研究",
                     "job": "群暉科技 (Synology) (研發替代役)"
                 }
             ],
@@ -334,7 +431,7 @@
                     "name_ch": "賴志豪",
                     "name_en": "Chih-Hao Lai",
                     "image": "chlai.jpg",
-                    "paper": "於基地台與支援LIPA之家用基地台間基於計時器之通話保留機制",
+                    "paper": "於基地台與支援 LIPA 之家用基地台間基於計時器之通話保留機制",
                     "job": "聯發科 (研發替代役) -> 台積電 -> 瑞昱科技"
                 },
                 {
@@ -348,7 +445,7 @@
                     "name_ch": "李思穎",
                     "name_en": "Ssu-Yin Li",
                     "image": "syli.jpg",
-                    "paper": "無線軟體定義網路中可用於不同SSID之Openflow AP間的單一金鑰認證機制",
+                    "paper": "無線軟體定義網路中可用於不同 SSID 之 Openflow AP 間的單一金鑰認證機制",
                     "job": "Trend Micro"
                 }
             ],
@@ -400,74 +497,88 @@
             ]
         },
         "專題生 學成下山 Bachelor": {
+            "b114": [
+                {
+                    "name_ch": "黃哲宇",
+                    "name_en": "",
+                    "image": "cyhuang.jpg",
+                    "proj": "基於 Scitags 的機構內部資料外流之防護機制"
+                },
+                {
+                    "name_ch": "葉峻誠",
+                    "name_en": "",
+                    "image": "jcyeh.jpeg",
+                    "proj": "Revolutionizing PC Classroom with FreeBSD"
+                }
+            ],
             "b112": [
                 {
                     "name_ch": "陳昭穎",
                     "name_en": "",
                     "image": "",
-		    "proj": "校園網路現況視覺化"
+                    "proj": "校園網路現況視覺化"
                 },
                 {
                     "name_ch": "陳冠霖",
                     "name_en": "",
                     "image": "",
-		    "proj": "校園網路現況視覺化"
+                    "proj": "校園網路現況視覺化"
                 },
                 {
                     "name_ch": "李廷偉",
                     "name_en": "",
                     "image": "",
-		    "proj": "SDN 網路下基於 AutoEncoder 的 DDoS 偵測方法"
+                    "proj": "SDN 網路下基於 AutoEncoder 的 DDoS 偵測方法"
                 },
                 {
                     "name_ch": "尹子維 (統計系雙主修)",
                     "name_en": "",
                     "image": "",
-		    "proj": "基於 SDN 的資料中心大象流負載平衡"
+                    "proj": "基於 SDN 的資料中心大象流負載平衡"
                 },
                 {
                     "name_ch": "林鴻逸",
                     "name_en": "",
                     "image": "",
-		    "proj": "釣魚網站整合並實踐於社群軟體"
+                    "proj": "釣魚網站整合並實踐於社群軟體"
                 },
                 {
                     "name_ch": "洪緯宸 (共同指導)",
                     "name_en": "",
                     "image": "",
-		    "proj": "智慧路燈與AI加速器研究"
+                    "proj": "智慧路燈與 AI 加速器研究"
                 }
-	    ],
+            ],
             "b111": [
                 {
                     "name_ch": "黃睿澤",
                     "name_en": "",
                     "image": "",
-		    "proj": "基於BitTorrent的數位貨幣系統"
+                    "proj": "基於 BitTorrent 的數位貨幣系統"
                 },
                 {
                     "name_ch": "沈子揚",
                     "name_en": "",
                     "image": "",
-		    "proj": "應用於SDN可程式化資料平面的TCP SYN Flood與UDP Flood之偵測與防禦"
+                    "proj": "應用於 SDN 可程式化資料平面的 TCP SYN Flood 與 UDP Flood 之偵測與防禦"
                 },
                 {
                     "name_ch": "蘇名偉",
                     "name_en": "",
                     "image": "",
-		    "proj": "應用於SDN可程式化資料平面的TCP SYN Flood與UDP Flood之偵測與防禦"
+                    "proj": "應用於 SDN 可程式化資料平面的 TCP SYN Flood 與 UDP Flood 之偵測與防禦"
                 },
                 {
                     "name_ch": "張祐誠",
                     "name_en": "",
                     "image": "",
-		    "proj": "在基於 P4 之軟體定義網路中改良 NAT 穿越機制"
+                    "proj": "在基於 P4 之軟體定義網路中改良 NAT 穿越機制"
                 },
                 {
                     "name_ch": "賴大立 (共同指導)",
                     "name_en": "",
                     "image": "",
-		    "proj": "針對地理位置優化的 DNS 伺服器設計與實作"
+                    "proj": "針對地理位置優化的 DNS 伺服器設計與實作"
                 }
             ],
             "b110": [
@@ -475,37 +586,37 @@
                     "name_ch": "黃政瑋",
                     "name_en": "",
                     "image": "",
-		    "proj": "基於機器學習之網路監視器辨識系統"
+                    "proj": "基於機器學習之網路監視器辨識系統"
                 },
                 {
                     "name_ch": "吳添毅",
                     "name_en": "",
                     "image": "",
-		    "proj": "基於機器學習之網路監視器辨識系統"
+                    "proj": "基於機器學習之網路監視器辨識系統"
                 },
                 {
                     "name_ch": "戴源",
                     "name_en": "",
                     "image": "",
-		    "proj": "基於機器學習之網路監視器辨識系統"
+                    "proj": "基於機器學習之網路監視器辨識系統"
                 },
                 {
                     "name_ch": "黃盈慈",
                     "name_en": "",
                     "image": "",
-		    "proj": "基於Docker之線上遊戲評量系統"
+                    "proj": "基於 Docker 之線上遊戲評量系統"
                 },
                 {
                     "name_ch": "王聖中 (共同指導)",
                     "name_en": "",
                     "image": "",
-		    "proj": "基於程式教學之線上解題與遊戲整合系統"
+                    "proj": "基於程式教學之線上解題與遊戲整合系統"
                 },
                 {
                     "name_ch": "林信宇 (測量系)",
                     "name_en": "",
                     "image": "",
-		    "proj": "基於程式教學之線上解題與遊戲整合系統"
+                    "proj": "基於程式教學之線上解題與遊戲整合系統"
                 }
             ],
             "b109": [
@@ -519,19 +630,19 @@
                     "name_ch": "林亭伃",
                     "name_en": "",
                     "image": "tylin.jpg",
-                    "proj": "SDN資料平面中SYN Flooding及ARP Spoofing 之偵測"
+                    "proj": "SDN 資料平面中 SYN Flooding 及 ARP Spoofing 之偵測"
                 },
                 {
                     "name_ch": "洪培軒",
                     "name_en": "",
                     "image": "phhung.jpg",
-                    "proj": "SDN資料平面中SYN Flooding及ARP Spoofing 之偵測"
+                    "proj": "SDN 資料平面中 SYN Flooding 及 ARP Spoofing 之偵測"
                 },
                 {
                     "name_ch": "吳偵平",
                     "name_en": "",
                     "image": "jpwu.jpg",
-                    "proj": "SDN資料平面中SYN Flooding及ARP Spoofing 之偵測"
+                    "proj": "SDN 資料平面中 SYN Flooding 及 ARP Spoofing 之偵測"
                 },
                 {
                     "name_ch": "黃俊豪 (共同指導)",
@@ -543,7 +654,7 @@
                     "name_ch": "邵鏡軒(共同指導)",
                     "name_en": "",
                     "image": "jhchao.jpg",
-                    "proj": "SDN資料平面中SYN Flooding及ARP Spoofing 之偵測"
+                    "proj": "SDN 資料平面中 SYN Flooding 及 ARP Spoofing 之偵測"
                 }
             ],
             "b108": [
@@ -557,7 +668,7 @@
                     "name_ch": "廖其忻",
                     "name_en": "Cayon Liow",
                     "image": "cliow.jpg",
-                    "proj": "SDN中ARP形態之DoS攻擊應對效能改進"
+                    "proj": "SDN 中 ARP 形態之 DoS 攻擊應對效能改進"
                 },
                 {
                     "name_ch": "梁祐承",
@@ -720,14 +831,14 @@
                     "name_ch": "廖啟翔",
                     "name_en": "Chi-Hsiang Liao",
                     "image": "chliao.jpg",
-                    "proj": "D2D通訊模式可確保品質之高效能資源機制",
+                    "proj": "D2D 通訊模式可確保品質之高效能資源機制",
                     "job": "IC 測試工程師 @ Cypress Semiconductor 美商賽普拉斯半導體"
                 },
                 {
                     "name_ch": "賴志豪",
                     "name_en": "Chih-Hao Lai",
                     "image": "chlai.jpg",
-                    "proj": "D2D通訊模式可確保品質之高效能資源機制",
+                    "proj": "D2D 通訊模式可確保品質之高效能資源機制",
                     "job": "成大資工所碩士生"
                 }
             ],

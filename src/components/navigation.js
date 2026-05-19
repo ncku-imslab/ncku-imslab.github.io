@@ -28,7 +28,7 @@ const dropdownArr = [
 const navbarArr = [
     {
         title: "首頁 Home",
-        to: process.env.PUBLIC_URL + "/",
+        to: "/",
         key: "home",
     },
     {
@@ -38,22 +38,22 @@ const navbarArr = [
     },
     {
         title: "研究 Research",
-        to: process.env.PUBLIC_URL + "/research",
+        to: "/research",
         key: "research",
     },
     {
         title: "榮譽 Honors",
-        to: process.env.PUBLIC_URL + "/honors",
+        to: "/honors",
         key: "honors",
     },
     {
         title: "相關資源 Resources",
-        to: process.env.PUBLIC_URL + "/resources",
+        to: "/resources",
         key: "resources",
     },
     {
         title: "聯絡我們 Contact",
-        to: process.env.PUBLIC_URL + "/contact",
+        to: "/contact",
         key: "contact",
     },
 ]
@@ -158,7 +158,7 @@ const Navigation = () => {
     }
 
     const logoLinkSec = () => {
-        const to = process.env.PUBLIC_URL + "/"
+        const to = "/"
         const src = isSpecialDay() ? specialLogo : logo
         const minWidth = isSpecialDay() ? "180px" : "200px"
         const onClick = isSpecialDay() ? handleClickOnSpecialDay : null
