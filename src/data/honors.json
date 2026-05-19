@@ -2,21 +2,31 @@
     "獲獎 Awards": {
         "year 2025": [
             {
-                "name": ["林峻賢"],
-                "name_en": ["Chun-Hsien Lin"],
+                "name": [
+                    "林峻賢"
+                ],
+                "name_en": [
+                    "Chun-Hsien Lin"
+                ],
                 "content": "潘文淵獎學金",
                 "content_en": "Pan Wen Yuan Scholarship"
             },
             {
-                "name": ["黃哲宇"],
-                "content": "國科會大專生計畫",
-                "content_en": "College Student Participation in Research Projects, National Science and Technology Council, Taiwan"
+                "name": [
+                    "黃哲宇"
+                ],
+                "content": "國科會大專生計畫: 基於 Scitags 的機構內部資料外流之防護機制",
+                "content_en": "College Student Participation in Research Projects, National Science and Technology Council, Taiwan: Protection Mechanism Against Internal Data Leakage Based on Scitags"
             }
         ],
         "year 2024": [
             {
-                "name": ["林峻賢"],
-                "name_en": ["Chun-Hsien Lin"],
+                "name": [
+                    "林峻賢"
+                ],
+                "name_en": [
+                    "Chun-Hsien Lin"
+                ],
                 "content": "潘文淵獎學金",
                 "content_en": "Pan Wen Yuan Scholarship"
             }
@@ -48,7 +58,7 @@
                 "content": "IEEE IS3C 最佳會議論文",
                 "content_en": "IEEE IS3C Best Paper Award"
             }
-	],
+        ],
         "year 2022": [
             {
                 "name": [
@@ -72,7 +82,7 @@
                 ],
                 "content": "賴溪松教授論文獎 博士組優等"
             }
-	],
+        ],
         "year 2021": [
             {
                 "name": [
@@ -134,7 +144,7 @@
                 "content": "成大資工系 111 級專題展 佳作",
                 "content_en": "Honorable Poster Award in 2021 NCKU CSIE Undergraduate Project Exhibition"
             }
-	],
+        ],
         "year 2020": [
             {
                 "name": [
@@ -255,7 +265,7 @@
                 "name": [
                     "林佳瑩"
                 ],
-                "content": "Google Code Jam for Women 全球第 118名, 受邀前往 Mountain View 參加 Google I/O 2018"
+                "content": "Google Code Jam for Women 全球第 118 名, 受邀前往 Mountain View 參加 Google I/O 2018"
             },
             {
                 "name": [
@@ -338,7 +348,7 @@
                 "name": [
                     "張鶴騰"
                 ],
-                "content": "國際積體電路電腦輔助設計(CAD)軟體製作競賽 定題組B題 國內賽 優等"
+                "content": "國際積體電路電腦輔助設計(CAD)軟體製作競賽 定題組 B 題 國內賽 優等"
             },
             {
                 "name": [
@@ -368,7 +378,7 @@
                 "name": [
                     "楊靜妃, 吳孟庭"
                 ],
-                "content": "Google Code Jam for Women 全球第 58名/127名, 受邀前往 Mountain View 參加 Google I/O 2016"
+                "content": "Google Code Jam for Women 全球第 58 名/127 名, 受邀前往 Mountain View 參加 Google I/O 2016"
             },
             {
                 "name": [
@@ -394,7 +404,7 @@
                 "name": [
                     "張鶴騰, 呂宜龍"
                 ],
-                "content": "國際積體電路電腦輔助設計(CAD)軟體製作競賽 定題組B題佳作"
+                "content": "國際積體電路電腦輔助設計(CAD)軟體製作競賽 定題組 B 題佳作"
             },
             {
                 "name": [
@@ -471,44 +481,60 @@
     "實習 Internships": {
         "year 2025": [
             {
-                "name": ["王瑞辰"],
+                "name": [
+                    "王瑞辰"
+                ],
                 "content": "台積電",
                 "content_en": "TSMC"
             },
             {
-                "name": ["林煒倫"],
+                "name": [
+                    "林煒倫"
+                ],
                 "content": "四零四科技",
                 "content_en": "Moxa"
             },
             {
-                "name": ["黃柏竣"],
+                "name": [
+                    "黃柏竣"
+                ],
                 "content": "中研院資訊所",
                 "content_en": "Institute of Information Science, Academia Sinica"
             },
             {
-                "name": ["黃紘諺"],
+                "name": [
+                    "黃紘諺"
+                ],
                 "content": "群暉科技",
                 "content_en": "Synology Inc."
             }
         ],
         "year 2023": [
             {
-                "name": ["沈子揚"],
+                "name": [
+                    "沈子揚"
+                ],
                 "content": "Edge-core",
                 "content_en": "Edge-core"
             },
             {
-                "name": ["黃睿澤"],
+                "name": [
+                    "黃睿澤"
+                ],
                 "content": "四零四科技",
                 "content_en": "Moxa"
             },
             {
-                "name": ["黃家綺"],
+                "name": [
+                    "黃家綺"
+                ],
                 "content": "趨勢科技",
                 "content_en": "Trend Micro"
             },
             {
-                "name": ["黃妤婷"],
+                "name": [
+                    "黃妤婷"
+                ],
                 "content": "微智安聯",
                 "content_en": "Shield eXtreme"
             }
@@ -548,7 +574,7 @@
                 ],
                 "content": "永豐銀行 資安處"
             }
-	],
+        ],
         "year 2021": [
             {
                 "name": [
@@ -569,7 +595,7 @@
                 "content": "工業技術研究院 (ITRI)",
                 "content_en": "Industrial Technology Research Institute (ITRI)"
             }
-	],
+        ],
         "year 2020": [
             {
                 "name": [
