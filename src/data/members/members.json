@@ -8,11 +8,6 @@
                     "image": ""
                 },
                 {
-                    "name_ch": "林亭伃",
-                    "name_en": "Ting-Yu Lin",
-                    "image": "tylin.jpg"
-                },
-                {
                     "name_ch": "楊淳皓",
                     "name_en": "Chun-Hao Yang",
                     "image": "chyang.jpg"
@@ -31,6 +26,11 @@
                     "name_ch": "林哲偉",
                     "name_en": "",
                     "image": ""
+                },
+                {
+                    "name_ch": "鄭皓文",
+                    "name_en": "Zheng Haowen",
+                    "image": ""
                 }
             ]
         },
@@ -40,45 +40,6 @@
                     "name_ch": "詹之鋐",
                     "name_en": "Chih-Hung Chan",
                     "image": "chchan.jpg"
-                }
-            ],
-            "碩二 Second Year": [
-                {
-                    "name_ch": "黃睿澤",
-                    "name_en": "Jui-Tse Huang",
-                    "image": "rchuang.png"
-                },
-                {
-                    "name_ch": "沈子揚",
-                    "name_en": "ZiYang Shen",
-                    "image": "cysheng.jpg"
-                },
-                {
-                    "name_ch": "黃妤婷",
-                    "name_en": "",
-                    "image": "ythuang.png"
-                },
-                {
-                    "name_ch": "黃家綺",
-                    "name_en": "",
-                    "image": "cchuang.png"
-                },
-                {
-                    "name_ch": "鄭皓文",
-                    "name_en": "Zheng Haowen",
-                    "image": "hwzheng.jpeg"
-                }
-            ],
-            "碩一 First Year": [
-                {
-                    "name_ch": "林彥廷",
-                    "name_en": "",
-                    "image": "ytlin.jpeg"
-                },
-                {
-                    "name_ch": "余彥亨",
-                    "name_en": "",
-                    "image": "yhyu.png"
                 },
                 {
                     "name_ch": "廖信詠",
@@ -89,12 +50,108 @@
                     "name_ch": "蔡怡葶",
                     "name_en": "",
                     "image": "yttsai.png"
+                },
+                {
+                    "name_ch": "黃家綺",
+                    "name_en": "",
+                    "image": "cchuang.png"
+                }
+            ],
+            "碩二 Second Year": [
+                {
+                    "name_ch": "簡成瑑",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "洪祥銘",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "林家賢",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "張若薇",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "王瑞辰",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "林煒倫",
+                    "name_en": "",
+                    "image": ""
+                }
+            ],
+            "碩一 First Year": [
+                {
+                    "name_ch": "管培勛",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "黃柏竣",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "陳宏彰",
+                    "name_en": "",
+                    "image": ""
+                }
+            ]
+        },
+        "專題生 Bachelor Students": {
+            "": [
+                {
+                    "name_ch": "江宸安",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "施羿廷",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "陳靖昀",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "李知恆",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "張慕天",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "林翰璿",
+                    "name_en": "",
+                    "image": ""
                 }
             ]
         }
     },
     "alumni": {
         "博士 學成下山 Ph.D.": {
+            "g114": [
+                {
+                    "name_ch": "林亭伃",
+                    "name_en": "Ting-Yu Lin",
+                    "image": "tylin.jpg",
+                    "paper": ""
+                }
+            ],
             "g112": [
                 {
                     "name_ch": "張軍斌",
@@ -139,6 +196,32 @@
             ]
         },
         "碩士 學成下山 Master": {
+            "g114": [
+                {
+                    "name_ch": "黃睿澤",
+                    "name_en": "Jui-Tse Huang",
+                    "image": "rchuang.png",
+                    "paper": ""
+                },
+                {
+                    "name_ch": "沈子揚",
+                    "name_en": "ZiYang Shen",
+                    "image": "cysheng.jpg",
+                    "paper": ""
+                },
+                {
+                    "name_ch": "黃妤婷",
+                    "name_en": "",
+                    "image": "ythuang.png",
+                    "paper": ""
+                },
+                {
+                    "name_ch": "黃弘諺",
+                    "name_en": "",
+                    "image": "",
+                    "paper": ""
+                }
+            ],
             "g112": [
                 {
                     "name_ch": "陳珞安",
@@ -400,6 +483,20 @@
             ]
         },
         "專題生 學成下山 Bachelor": {
+            "b114": [
+                {
+                    "name_ch": "黃哲宇",
+                    "name_en": "",
+                    "image": "",
+                    "proj": ""
+                },
+                {
+                    "name_ch": "葉峻誠",
+                    "name_en": "",
+                    "image": "",
+                    "proj": ""
+                }
+            ],
             "b112": [
                 {
                     "name_ch": "陳昭穎",
