@@ -18,11 +18,6 @@
                     "image": "fylee.jpg"
                 },
                 {
-                    "name_ch": "林峻賢",
-                    "name_en": "Chun-Hsien Lin",
-                    "image": ""
-                },
-                {
                     "name_ch": "林哲偉",
                     "name_en": "",
                     "image": ""
@@ -30,7 +25,7 @@
                 {
                     "name_ch": "鄭皓文",
                     "name_en": "Zheng Haowen",
-                    "image": "hwzheng.jpeg"
+                    "image": "zhw.jpg"
                 }
             ]
         },
@@ -47,18 +42,6 @@
                     "image": "syliao.jpeg"
                 },
                 {
-                    "name_ch": "蔡怡葶",
-                    "name_en": "",
-                    "image": "yttsai.png"
-                },
-                {
-                    "name_ch": "黃家綺",
-                    "name_en": "",
-                    "image": "cchuang.png"
-                }
-            ],
-            "碩二 Second Year": [
-                {
                     "name_ch": "簡成瑑",
                     "name_en": "",
                     "image": "czjian.png"
@@ -66,22 +49,17 @@
                 {
                     "name_ch": "洪祥銘",
                     "name_en": "",
-                    "image": ""
+                    "image": "hmhung.jpg"
                 },
                 {
                     "name_ch": "林家賢",
                     "name_en": "",
-                    "image": ""
+                    "image": "ljs.jpg"
                 },
                 {
                     "name_ch": "張若薇",
                     "name_en": "",
-                    "image": ""
-                },
-                {
-                    "name_ch": "王瑞辰",
-                    "name_en": "",
-                    "image": "rcwang.jpg"
+                    "image": "crw.jpg"
                 },
                 {
                     "name_ch": "林煒倫",
@@ -89,7 +67,7 @@
                     "image": "wllin.jpeg"
                 }
             ],
-            "碩一 First Year": [
+            "碩二 Second Year": [
                 {
                     "name_ch": "管培勛",
                     "name_en": "",
@@ -104,6 +82,33 @@
                     "name_ch": "陳宏彰",
                     "name_en": "",
                     "image": "hzchen.jpg"
+                }
+            ],
+            "碩一 First Year": [
+                {
+                    "name_ch": "廖偉辰",
+                    "name_en": "",
+                    "image": "lwc.jpg"
+                },
+                {
+                    "name_ch": "陳俊安",
+                    "name_en": "",
+                    "image": "cca.jpg"
+                },
+                {
+                    "name_ch": "洪慎廷",
+                    "name_en": "",
+                    "image": "hst.jpg"
+                },
+                {
+                    "name_ch": "黃哲宇",
+                    "name_en": "",
+                    "image": "cyhuang.jpg"
+                },
+                {
+                    "name_ch": "羅珮芹",
+                    "name_en": "",
+                    "image": "lpc.jpg"
                 }
             ]
         },
@@ -138,6 +143,16 @@
                     "name_ch": "林翰璿",
                     "name_en": "",
                     "image": ""
+                },
+                {
+                    "name_ch": "葉修安",
+                    "name_en": "",
+                    "image": ""
+                },
+                {
+                    "name_ch": "鍾秉均",
+                    "name_en": "",
+                    "image": ""
                 }
             ]
         }
@@ -150,6 +165,12 @@
                     "name_en": "Ting-Yu Lin",
                     "image": "tylin.jpg",
                     "paper": ""
+                },
+                {
+                    "name_ch": "林峻賢",
+                    "name_en": "Chun-Hsien Lin",
+                    "image": "",
+                    "paper": "無線可充電感測器網路之智慧協調與規劃：從韌性與雙目標最佳化到異質與自適應部署"
                 }
             ],
             "g112": [
@@ -198,28 +219,34 @@
         "碩士 學成下山 Master": {
             "g114": [
                 {
-                    "name_ch": "黃睿澤",
-                    "name_en": "Jui-Tse Huang",
-                    "image": "rchuang.png",
-                    "paper": "利用 Kademlia DHT 提升加密貨幣系統之吞吐量及對惡意節點的容忍度"
-                },
-                {
-                    "name_ch": "沈子揚",
-                    "name_en": "ZiYang Shen",
-                    "image": "cysheng.jpg",
-                    "paper": ""
-                },
-                {
-                    "name_ch": "黃妤婷",
+                    "name_ch": "楊逸婷",
                     "name_en": "",
-                    "image": "ythuang.png",
-                    "paper": "降低具 CAI 和 CMAI 威脅之物聯網互動中的使用者操作負擔"
+                    "image": "",
+                    "paper": "以結構化梯度光照增強改善自動化水果貼標之資料不平衡問題"
                 },
                 {
                     "name_ch": "黃弘諺",
                     "name_en": "",
                     "image": "",
                     "paper": ""
+                },
+                {
+                    "name_ch": "蔡怡葶",
+                    "name_en": "",
+                    "image": "yttsai.png",
+                    "paper": "基於 ns-3 模擬之具建築物 5G 異質網路下叢集式小基地台睡眠策略之效能評估"
+                },
+                {
+                    "name_ch": "黃家綺",
+                    "name_en": "",
+                    "image": "cchuang.png",
+                    "paper": ""
+                },
+                {
+                    "name_ch": "王瑞辰",
+                    "name_en": "",
+                    "image": "rcwang.jpg",
+                    "paper": "結合布局感知光學字元辨識與小型語言模型之邊緣端智慧處方調劑整合系統"
                 }
             ],
             "g113": [
@@ -234,20 +261,38 @@
                     "name_en": "",
                     "image": "yhyu.png",
                     "paper": "可充電無線傳感器網路中應用叢集與角度充電於部分充電排程"
+                },
+                {
+                    "name_ch": "沈子揚",
+                    "name_en": "ZiYang Shen",
+                    "image": "cysheng.jpg",
+                    "paper": ""
                 }
             ],
             "g112": [
+                {
+                    "name_ch": "黃妤婷",
+                    "name_en": "",
+                    "image": "ythuang.png",
+                    "paper": "降低具CAI和CMAI威脅之物聯網互動中的使用者操作負擔"
+                },
+                {
+                    "name_ch": "鄭皓文",
+                    "name_en": "Zheng Haowen",
+                    "image": "zhw.jpg",
+                    "paper": "監控模型竊取者: 基於CPU Usage的物聯網設備旁通道攻擊與防禦實作"
+                },
+                {
+                    "name_ch": "黃睿澤",
+                    "name_en": "Jui-Tse Huang",
+                    "image": "rchuang.png",
+                    "paper": "利用 Kademlia DHT 提升加密貨幣系統之吞吐量及對惡意節點的容忍度"
+                },
                 {
                     "name_ch": "陳珞安",
                     "name_en": "Lo-An Chen",
                     "image": "lachen.jpg",
                     "paper": "基於馬可夫聚類具截止時間限制的路側單元快取內容配置"
-                },
-                {
-                    "name_ch": "王聖中",
-                    "name_en": "Sheng-Zhong Wang",
-                    "image": "",
-                    "paper": "個資類型與 AI 生成文本對於自動化魚叉式釣魚攻擊應用在社群媒體平台之研究"
                 },
                 {
                     "name_ch": "黃盈慈",
@@ -285,6 +330,12 @@
                 }
             ],
             "g111": [
+                {
+                    "name_ch": "王聖中",
+                    "name_en": "Sheng-Zhong Wang",
+                    "image": "",
+                    "paper": "個資類型與 AI 生成文本對於自動化魚叉式釣魚攻擊應用在社群媒體平台之研究"
+                },
                 {
                     "name_ch": "吳偵平",
                     "name_en": "Jhen-Ping Wu",
