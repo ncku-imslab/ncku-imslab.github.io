@@ -25,9 +25,9 @@ const Contact = () => {
     }
     const addressSec = () => {
         const title = "地址 Addr."
-        const chineseAddress = "300093 新竹市東區大學路1001號 電資大樓 708室"
+        const chineseAddress = "300093 新竹市東區大學路 1001 號 工程三館 117 室"
         const englishAddress =
-            "Room 708, Microelectronics and Information System Research Building, No. 1001, Daxue Rd. East Dist., Hsinchu City 300093, Taiwan"
+            "Room 117, Engineering Building 3, National Yang Ming Chiao Tung University, No. 1001, Daxue Rd., East Dist., Hsinchu City 300093, Taiwan"
 
         return (
             <div className={addressSecClass}>
@@ -51,7 +51,7 @@ const Contact = () => {
             width="100%"
             height="400px"
             frameBorder="0"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.2566341419392!2d120.99911677612114!3d24.786664348205175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346836105901e76f%3A0x2e57134e8cc18575!2sMicroelectronics%20and%20Information%20System%20Research%20(MIRC-NCTU)!5e0!3m2!1sen!2stw!4v1700553943821!5m2!1sen!2stw"
+            src="https://www.google.com/maps?q=NYCU+Engineering+Building+3&output=embed"
         />
     )
 
