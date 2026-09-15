@@ -47,6 +47,11 @@ const navbarArr = [
         key: "honors",
     },
     {
+        title: "活動照片 Gallery",
+        to: "/gallery",
+        key: "gallery",
+    },
+    {
         title: "相關資源 Resources",
         to: "/resources",
         key: "resources",
@@ -231,12 +236,12 @@ const labNameSecClass = "justify-center ph2 mr3 disappear960"
 const labNameClass = "db mb2 dark-gray f5 f5-l fw5"
 const desktopNavbarSecClass = "pr2 disappear960"
 // nonMembersLink
-const desktopNonMembersLinkClass = "dib ph3 pb3 dark-gray f5 f5-l link dim grow"
+const desktopNonMembersLinkClass = "dib ph2 pb3 dark-gray f5 f5-l link dim grow"
 const mobileNonMembersLinkClass = "db pl4 pv2 tl near-white f5 f5-l fw5 link dim"
 // membersLink
 const desktopMembersLinkSecClass = "dib relative dropdown"
 const mobileMembersLinkSecClass = "db dropdown"
-const desktopMembersLinkClass = "dib ph3 pb3 dark-gray f5 f5-l link"
+const desktopMembersLinkClass = "dib ph2 pb3 dark-gray f5 f5-l link"
 const membersLinkCursor = "default"
 const membersLinkLetterSpacing = "0.05em"
 const reverseTriangleClass = "dib"

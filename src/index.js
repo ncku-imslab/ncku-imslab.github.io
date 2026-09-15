@@ -9,6 +9,7 @@ import Professor from "./pages/professor";
 import Students from "./pages/students";
 import Alumni from "./pages/alumni";
 import Honors from "./pages/honors";
+import Gallery from "./pages/gallery";
 import Resources from "./pages/resources";
 import Contact from "./pages/contact";
 import App from "./App";
@@ -35,6 +36,15 @@ const router = createBrowserRouter([
       }, {
         path: "/honors",
         element: <Honors />,
+      }, {
+        path: "/gallery",
+        element: <Gallery />,
+      }, {
+        path: "/gallery/:albumId",
+        element: <Gallery />,
+      }, {
+        path: "/gallery/:albumId/:photoId",
+        element: <Gallery />,
       }, {
         path: "/resources",
         element: <Resources />,
