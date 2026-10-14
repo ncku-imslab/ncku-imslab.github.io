@@ -25,7 +25,7 @@
                 {
                     "name_ch": "鄭皓文",
                     "name_en": "Zheng Haowen",
-                    "image": "zhw.jpg"
+                    "image": "hwzheng.jpg"
                 }
             ]
         },
@@ -39,12 +39,12 @@
                 {
                     "name_ch": "廖信詠",
                     "name_en": "",
-                    "image": "syliao.jpeg"
+                    "image": "syliao.jpg"
                 },
                 {
                     "name_ch": "簡成瑑",
                     "name_en": "",
-                    "image": "czjian.png"
+                    "image": "czjian.jpg"
                 },
                 {
                     "name_ch": "洪祥銘",
@@ -54,17 +54,17 @@
                 {
                     "name_ch": "林家賢",
                     "name_en": "",
-                    "image": "ljs.jpg"
+                    "image": "jslin.jpg"
                 },
                 {
                     "name_ch": "張若薇",
                     "name_en": "",
-                    "image": "crw.jpg"
+                    "image": "rwchang.jpg"
                 },
                 {
                     "name_ch": "林煒倫",
                     "name_en": "",
-                    "image": "wllin.jpeg"
+                    "image": "wllin.jpg"
                 }
             ],
             "碩二 Second Year": [
@@ -76,7 +76,7 @@
                 {
                     "name_ch": "黃柏竣",
                     "name_en": "",
-                    "image": "bjhuang.png"
+                    "image": "bjhuang.jpg"
                 },
                 {
                     "name_ch": "陳宏彰",
@@ -88,17 +88,17 @@
                 {
                     "name_ch": "廖偉辰",
                     "name_en": "",
-                    "image": "lwc.jpg"
+                    "image": "wcliao.jpg"
                 },
                 {
                     "name_ch": "陳俊安",
                     "name_en": "",
-                    "image": "cca.jpg"
+                    "image": "cachen.jpg"
                 },
                 {
                     "name_ch": "洪慎廷",
                     "name_en": "",
-                    "image": "hst.jpg"
+                    "image": "sthung.jpg"
                 },
                 {
                     "name_ch": "黃哲宇",
@@ -108,7 +108,7 @@
                 {
                     "name_ch": "羅珮芹",
                     "name_en": "",
-                    "image": "lpc.jpg"
+                    "image": "pclo.jpg"
                 }
             ]
         },
@@ -117,7 +117,7 @@
                 {
                     "name_ch": "江宸安",
                     "name_en": "",
-                    "image": "cajiang.jpg"
+                    "image": "chiangca.jpg"
                 },
                 {
                     "name_ch": "施羿廷",
@@ -127,7 +127,7 @@
                 {
                     "name_ch": "陳靖昀",
                     "name_en": "",
-                    "image": "jychen.jpeg"
+                    "image": "jychen.jpg"
                 },
                 {
                     "name_ch": "李知恆",
@@ -233,13 +233,13 @@
                 {
                     "name_ch": "蔡怡葶",
                     "name_en": "",
-                    "image": "yttsai.png",
+                    "image": "ettsai.jpg",
                     "paper": "基於 ns-3 模擬之具建築物 5G 異質網路下叢集式小基地台睡眠策略之效能評估"
                 },
                 {
                     "name_ch": "黃家綺",
                     "name_en": "",
-                    "image": "cchuang.png",
+                    "image": "cchuang.jpg",
                     "paper": ""
                 },
                 {
@@ -253,13 +253,13 @@
                 {
                     "name_ch": "林彥廷",
                     "name_en": "Yen-Ting Lin",
-                    "image": "ytlin.jpeg",
+                    "image": "ytlin.jpg",
                     "paper": "具韌性的無線可充電感測網路分區排程"
                 },
                 {
                     "name_ch": "余彥亨",
                     "name_en": "",
-                    "image": "yhyu.png",
+                    "image": "yhyu.jpg",
                     "paper": "可充電無線傳感器網路中應用叢集與角度充電於部分充電排程"
                 },
                 {
@@ -273,19 +273,19 @@
                 {
                     "name_ch": "黃妤婷",
                     "name_en": "",
-                    "image": "ythuang.png",
+                    "image": "ythuang.jpg",
                     "paper": "降低具CAI和CMAI威脅之物聯網互動中的使用者操作負擔"
                 },
                 {
                     "name_ch": "鄭皓文",
                     "name_en": "Zheng Haowen",
-                    "image": "zhw.jpg",
+                    "image": "hwzheng.jpg",
                     "paper": "監控模型竊取者: 基於CPU Usage的物聯網設備旁通道攻擊與防禦實作"
                 },
                 {
                     "name_ch": "黃睿澤",
                     "name_en": "Jui-Tse Huang",
-                    "image": "rchuang.png",
+                    "image": "rchuang.jpg",
                     "paper": "利用 Kademlia DHT 提升加密貨幣系統之吞吐量及對惡意節點的容忍度"
                 },
                 {
@@ -324,7 +324,7 @@
                 {
                     "name_ch": "馮希敏",
                     "name_en": "Fung Hei Man",
-                    "image": "hmfung.jpeg",
+                    "image": "hmfung.jpg",
                     "paper": "以 Kubernetes 設計與實作之微服務架構敏捷校園監控平台",
                     "job": "友達光電"
                 }
@@ -558,7 +558,7 @@
                 {
                     "name_ch": "葉峻誠",
                     "name_en": "",
-                    "image": "jcyeh.jpeg",
+                    "image": "jcyeh.jpg",
                     "proj": "Revolutionizing PC Classroom with FreeBSD"
                 }
             ],
